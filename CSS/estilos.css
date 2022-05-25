@@ -1,0 +1,1676 @@
+@import url('https://fonts.googleapis.com/css?family=Exo:400,700');
+* {
+    margin:0;
+    padding:0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+/* CSS INDEX  */
+
+/* Fondo y fuente de la página */
+
+
+
+/* Box container*/
+
+@media only screen and (min-width:401px){
+    
+.container {
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 40px;
+    grid-template-rows: 50px 700px 1fr 50px;
+}
+}
+@media (min-width:401px) and (min-width:767px){
+.container {
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    grid-template-rows: 50px 350px 1fr 80px;
+}
+}
+@media only screen and (max-width:400px){
+    .container {
+    display:flex;
+    flex-flow: column nowrap;
+    align-content: center;
+}
+}
+
+/* Encabezado*/
+
+@media only screen and (min-width:401px){
+
+.container .titulo {
+    grid-column: 1/5;
+    grid-row: 2;
+    font-family: 'Source Serif Pro', serif;
+    color: rgba(142,255,168,1);
+    text-shadow: 6px 6px 6px black ;
+    font-weight: bold; 
+    font-size: 190px;
+    text-align: center;
+}
+.container .titulo h3{
+    font-size: 60px;
+    text-shadow: 3px 3px 3px black ;
+}
+.container .redes {
+    grid-column:1;
+    grid-row:1;
+    text-align: center;
+    background-color:#333;
+    box-shadow: 9px 9px #999;
+    width: 100%;
+    margin: 15px;
+    height: 30px;
+}
+.container .redes:active {
+    transform: translateY(4px);
+}
+.container .redes:active a{
+    color:rgba(142,255,168,1);
+}
+.container .redes:hover {
+    background-color: black;
+    box-shadow: 9px 9px rgba(142,255,168,1);
+}
+
+.container .redes a{
+    font-size: 30px;
+    color:white;
+}
+.container .redes a:hover {
+    color: rgba(142,255,168,1);
+}
+}
+
+@media (min-width:401px) and (min-width:767px){
+
+}
+
+@media only screen and (max-width:400px){
+    .container .titulo {
+    display: flex;
+    flex-flow:column nowrap;
+    justify-content: center;
+    font-family: 'Source Serif Pro', serif;
+    color: rgba(142,255,168,1);
+    text-shadow: 6px 6px 6px black ;
+    font-weight: bold; 
+    font-size: 30px;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    }
+    .container .titulo h3{
+    font-family: 'Source Serif Pro', serif;
+    color: rgba(142,255,168,1);
+    text-shadow: 3px 3px 3px black ;
+    font-weight: bold; 
+    font-size: 50px;
+    }
+    .container .redes {
+        display:none; 
+    }
+}
+
+/* Fin encabezado */
+
+/* Menu */
+@media only screen and (min-width:401px){
+.container .menu {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row:3;
+    background-color: #333;
+    margin: 0px 150px 0px 150px;
+}
+
+.container .menu ul{
+    display: flex;
+    flex-flow: row;
+    list-style-type: none;
+    align-items: center;
+    height: 100%;
+    box-shadow: 9px 9px #999;
+}
+
+.container .menu ul li a{
+    font-size: 30px;
+    padding: 0px 15px 0px 15px;
+    color: white;
+}
+.container .menu ul li a:hover{
+    background-color:black;
+    color:rgba(142,255,168,1);
+
+}
+.container .menu ul:hover {
+    box-shadow: 9px 9px rgba(142,255,168,1);
+}
+.container .menu ul li:active{
+    transform: translateY(4px);
+    }
+
+.container .menu ul li:active a{
+        color:rgba(142,255,168,1);
+}
+#menu-icon {
+    display: hidden;
+    width: 35px;
+    height: 35px;
+    background: url(https://res.cloudinary.com/dgpmuegqe/image/upload/v1492571257/nav_xe79ju.png) center;
+  }
+}
+
+@media only screen and (max-width:400px){
+
+    /* Boton 3 lineas horizontales */
+    #menu-icon {
+        display: hidden;
+        width: 35px;
+        height: 35px;
+        background: url(https://res.cloudinary.com/dgpmuegqe/image/upload/v1492571257/nav_xe79ju.png) center;
+      }
+    /* Fin boton 3 lineas horizontales */
+
+    /* Menu vertical */
+    
+        .container .menu {
+            grid-column: 1/5;
+            grid-row:1; 
+            background-color: #333;
+            padding: 10px 0px 0px 50px;
+            box-shadow: 0px 9px #999;
+    
+        }
+        #menu-icon {
+        display: inline-block;
+        }
+
+        .container .menu nav ul, .container .menu nav:active ul {
+        display: none;
+        z-index: 1000;
+        position: absolute;
+        background: #333;
+        margin-left: -50px;
+        width: 100%;
+        height: 245px;
+        box-shadow: 0px 0px;
+        }
+        .container .menu ul li a{
+            font-size: 20px;
+            padding: 0px 15px 0px 15px;
+            color: white;
+        }
+        .container .menu nav:hover ul {
+        display: block;
+        }
+        .container .menu nav li {
+        text-align: center;
+        width: 100%;
+        border: 1px solid #999;
+        padding: 20px 0px 0px 0px;
+        }
+        .container .menu ul li:active{
+        transform: none;
+        }
+        .container .menu ul li:active a{
+            color:white;
+        }
+        .container .menu ul:hover {
+        box-shadow: none;
+        }
+        .container .menu ul li a:hover{
+        color:rgba(142,255,168,1);
+        background-color: transparent;
+        }
+        .container .menu ul li:hover{
+            background-color: black;
+            }
+    /* Fin menu vertical */
+}
+/* Fin Menu */
+
+/* Secciones */
+@media only screen and (min-width:401px) {
+.container .secciones {
+    grid-column:1/5;
+    grid-row:4;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    min-height: 200px;
+    max-height: 900px;
+    height: 700px;
+    margin: 50px 100px 100px 100px;
+    opacity: 0.9;
+    
+}
+.container .secciones section#nosotros {
+    background-image: url(/img/empresa.png);
+    background-repeat: no-repeat;
+    background-size:30%;
+    background-position-x:right;
+    background-position-y:bottom;
+    background-color: #333;
+    padding: 2% 2% 0% 2%;
+    border: 3px solid #333;
+    box-shadow: 9px 9px #999;
+    width: 20%;
+    overflow: hidden;
+    color:white;
+}
+.container .secciones section#nosotros:hover {
+    box-shadow: 9px 9px rgba(142,255,168,1);
+    background-color:black;
+    color: white;
+}
+.container .secciones section#nosotros  h3{
+    font-size: 27px;
+}
+.container .secciones section#nosotros  p{
+    font-size: 20px;
+    font-style:italic;
+}
+.container .secciones section#nosotros:hover p a{
+    color: white;
+}
+.container .secciones section#nosotros p a {
+    color: white;
+    text-decoration:underline;
+}
+.container .secciones section#nosotros p a:hover{
+    color: rgba(142,255,168,1);
+}
+
+.container .secciones section#servicios {
+    background-image: url(/img/objetivo.png);
+    background-repeat: no-repeat;
+    background-size:30%;
+    background-position-x:right;
+    background-position-y:bottom;
+    background-color: #333;
+    padding: 2% 2% 0% 2%;
+    border: 3px solid #333;
+    box-shadow: 9px 9px #999;
+    width: 20%;
+    overflow: hidden;
+    color:white;
+}
+.container .secciones section#servicios:hover {
+    box-shadow: 9px 9px rgba(142,255,168,1);
+    background-color:black;
+    color: white;
+}
+.container .secciones section#servicios h3{
+    font-size: 27px;
+}
+.container .secciones section#servicios article ul {
+    font-size: 20px;
+    font-style: italic;
+    list-style-type:square;
+    list-style-position:inside;
+}
+.container .secciones section#servicios article p{
+    font-size: 20px;
+    font-style:italic;
+}
+.container .secciones section#servicios article p a{
+    color: white;
+    text-decoration:underline;
+}
+.container .secciones section#servicios:hover article p a{
+    color: white;
+}
+.container .secciones section#servicios article p a:hover{
+    color: rgba(142,255,168,1);
+}
+.container .secciones section#aseguradoras {
+    background-image: url(/img/compania.png);
+    background-repeat: no-repeat;
+    background-size:30%;
+    background-position-x:right;
+    background-position-y:bottom;
+    background-color: #333;
+    padding: 2% 2% 0% 2%;
+    border: 3px solid #333;
+    box-shadow: 9px 9px #999;
+    width: 20%;
+    overflow: hidden;
+    color:white;
+}
+.container .secciones section#aseguradoras:hover {
+    box-shadow: 9px 9px rgba(142,255,168,1);
+    background-color:black;
+    color: white;
+}
+.container .secciones section#aseguradoras h3{
+    font-size: 27px;
+}
+.container .secciones section#aseguradoras p{
+    font-size: 20px;
+    font-style:italic;
+}
+.container .secciones section#aseguradoras article p a{
+    color: white;
+    text-decoration:underline;
+}
+.container .secciones section#aseguradoras:hover article p a{
+    color: white;
+}
+.container .secciones section#aseguradoras article p a:hover{
+    color: rgba(142,255,168,1);
+}
+
+.container .secciones section#contacto {
+    background-image: url(/img/ubicacion.png);
+    background-repeat: no-repeat;
+    background-size:30%;
+    background-position-x:right;
+    background-position-y:bottom;
+    background-color: #333;
+    padding: 2% 2% 0% 2%;
+    border: 3px solid #333;
+    box-shadow: 9px 9px #999;
+    width: 20%;
+    overflow:hidden;
+    color:white;
+}
+.container .secciones section#contacto:hover {
+    box-shadow: 9px 9px rgba(142,255,168,1);
+    background-color:black;
+    color: white;
+}
+.container .secciones section#contacto h3 {
+    font-size: 27px;
+}
+.container .secciones section#contacto p{
+    font-size: 20px;
+    font-style:italic;
+}
+.container .secciones section#contacto article p a{
+    color: white;
+    text-decoration:underline;
+}
+.container .secciones section#contacto:hover article p a{
+    color: white;
+}
+.container .secciones section#contacto article p a:hover{
+    color: rgba(142,255,168,1);
+}
+}
+
+@media only screen and (max-width:400px) {
+        
+
+        .container .secciones {
+            grid-column:1/5;
+            grid-row:3;
+            display: flex;
+            flex-flow: column;
+            align-content: center;
+            margin: 0% 10% 0% 10%;
+            opacity: 0.9;
+        }
+        .container .secciones section#nosotros {
+    
+            background-image: url(/img/empresa.png);
+            background-repeat: no-repeat;
+            background-size:20%;
+            background-position-x:right;
+            background-position-y:bottom;
+            background-color: #333;
+            margin-bottom: 5%;
+            padding: 5% 5% 0% 5%;
+            border: 3px solid #333;
+            box-shadow: 9px 9px #999;
+            height: 300px;
+            color:white;
+        }
+        .container .secciones section#nosotros:hover {
+            box-shadow: 9px 9px rgba(142,255,168,1);
+            background-color:black;
+            color: white;
+        }
+        .container .secciones section#nosotros  h3{
+            font-size: 25px;
+        }
+        .container .secciones section#nosotros  p{
+            font-size: 18px;
+            font-style:italic;
+        }
+        .container .secciones section#nosotros:hover p a{
+            color: white;
+        }
+        .container .secciones section#nosotros p a {
+            color: white;
+            text-decoration:underline;
+        }
+        .container .secciones section#nosotros p a:hover{
+            color: rgba(142,255,168,1);
+        }
+
+        .container .secciones section#servicios {
+            background-image: url(/img/objetivo.png);
+            background-repeat: no-repeat;
+            background-size:20%;
+            background-position-x:right;
+            background-position-y:bottom;
+            background-color: #333;
+            margin-bottom: 5%;
+            padding: 5% 5% 0% 5%;
+            border: 3px solid #333;
+            box-shadow: 9px 9px #999;
+            height: 250px;
+            color:white;
+        }
+        .container .secciones section#servicios:hover {
+            box-shadow: 9px 9px rgba(142,255,168,1);
+            background-color:black;
+            color: white;
+        }
+        .container .secciones section#servicios h3{
+            font-size: 25px;
+        }
+        .container .secciones section#servicios article ul {
+            font-size: 18px;
+            font-style: italic;
+            list-style-type:square;
+            list-style-position:inside;
+        }
+        .container .secciones section#servicios article p{
+            font-size: 18px;
+            font-style:italic;
+        }
+        .container .secciones section#servicios article p a{
+            color: white;
+            text-decoration:underline;
+        }
+        .container .secciones section#servicios:hover article p a{
+            color: white;
+        }
+        .container .secciones section#servicios article p a:hover{
+            color: rgba(142,255,168,1);
+        }
+
+        .container .secciones section#aseguradoras {
+            background-image: url(/img/compania.png);
+            background-repeat: no-repeat;
+            background-size:20%;
+            background-position-x:right;
+            background-position-y:bottom;
+            background-color: #333;
+            margin-bottom: 5%;
+            padding: 5% 5% 0% 5%;
+            border: 3px solid #333;
+            box-shadow: 9px 9px #999;
+            height: 310px;
+            color:white;
+        }
+        .container .secciones section#aseguradoras:hover {
+            box-shadow: 9px 9px rgba(142,255,168,1);
+            background-color:black;
+            color: white;
+        }
+        .container .secciones section#aseguradoras h3{
+            font-size: 25px;
+        }
+        .container .secciones section#aseguradoras p{
+            font-size: 18px;
+            font-style:italic;
+        }
+        .container .secciones section#aseguradoras article p a{
+            color: white;
+            text-decoration:underline;
+        }
+        .container .secciones section#aseguradoras:hover article p a{
+            color: white;
+        }
+        .container .secciones section#aseguradoras article p a:hover{
+            color: rgba(142,255,168,1);
+        }
+
+        .container .secciones section#contacto {
+            background-image: url(/img/ubicacion.png);
+            background-repeat: no-repeat;
+            background-size:20%;
+            background-position-x:right;
+            background-position-y:bottom;
+            background-color: #333;
+            margin-bottom: 5%;
+            padding: 5% 5% 0% 5%;
+            border: 3px solid #333;
+            box-shadow: 9px 9px #999;
+            height: 220px;
+            color:white;
+        }
+        .container .secciones section#contacto h3 {
+            font-size: 25px;
+        }
+        .container .secciones section#contacto:hover {
+            box-shadow: 9px 9px rgba(142,255,168,1);
+            background-color:black;
+            color: white;
+        }
+        .container .secciones section#contacto p{
+            font-size: 18px;
+            font-style:italic;
+        }
+        .container .secciones section#contacto article p a{
+            color: white;
+            text-decoration:underline;
+        }
+        .container .secciones section#contacto:hover article p a{
+            color: white;
+        }
+        .container .secciones section#contacto article p a:hover{
+            color: rgba(142,255,168,1);
+        }
+
+}
+/* Fin secciones */
+/* Footer */
+@media only screen and (min-width:401px){
+.container footer#redes {
+    display: flex;
+    grid-row: 5;
+    grid-column: 1/5;
+    background-color: #333;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    box-shadow: 9px -9px #999;
+    
+}
+.container footer#redes:hover {
+    box-shadow: 9px -9px rgba(142,255,168,1);
+    background-color: black;
+}
+.container footer#redes .redes1 {
+    justify-items: center;
+    padding: 10px 0px 0px 50px;
+} 
+
+.container footer#redes .ubic-F {
+    padding: 10px 85px 10px 10px;
+    color:white;
+    font-size: 13px;
+} 
+.container footer#redes .redes1 a{
+    padding:0px 55px 0px 50px;
+}
+}
+@media only screen and (max-width:400px) {
+    .container footer#redes {
+        grid-column: 1/5;
+        grid-row:4; 
+        background-color: #333;
+        box-shadow: 0px -9px #999;
+        height: 100%;
+    }
+    .container footer#redes:hover {
+        box-shadow: 0px -9px rgba(142,255,168,1);
+        background-color: black;
+    }
+    .container footer#redes .redes1 {
+        justify-items: center;
+        padding: 10px;
+    } 
+    
+    .container footer#redes .ubic-F {
+        display:none;
+    }
+    .container footer#redes .redes1 a{
+        padding:0px 30px 0px 30px;
+    } 
+}
+/* Fin Footer */
+/* Fin Box container*/
+
+
+/* FIN CSS INDEX */
+
+/* CSS NOSOTROS */
+@media only screen and (min-width:401px){
+.container section#nosotrosp {
+    background-image: url(/img/history-book.png);
+    background-repeat: no-repeat;
+    background-size:35%;
+    background-position-x: 95%;
+    background-position-y:center;
+    background-color: #333;
+    grid-column:1/5;
+    grid-row:4;
+    display:flex;
+    flex-flow: column nowrap;
+    height: 700px;
+    margin: 50px 100px 100px 100px;
+    opacity: 0.9;
+    border: 3px solid #333;
+    box-shadow: 9px 9px #999;
+    overflow: scroll;
+    padding: 2% 2% 0% 2%;
+}
+.container section#nosotrosp::-webkit-scrollbar{
+    display: none;
+} 
+section#nosotrosp h3{
+    font-size:40px;
+    color: white;
+}
+section#nosotrosp article{
+    font-style: italic;
+    font-size: 25px;
+    width: 50%;
+    color: white;
+}
+.container section#nosotrosp:hover {
+    box-shadow: 9px 9px rgba(142,255,168,1);
+    background-color:black;
+    color: white;
+}
+
+}
+@media only screen and (max-width:400px) {
+    .container section#nosotrosp {
+        grid-column:1/5;
+        grid-row:4;
+        background-color: #333;
+        margin: 0% 10% 10% 10%;
+        padding: 5% 5% 5% 5%;
+        border: 3px solid #333;
+        box-shadow: 9px 9px #999;
+        color:white;
+    }
+    section#nosotrosp h3{
+        font-size:25px;
+    }
+    section#nosotrosp article{
+        font-style: italic;
+        font-size: 18x;
+    }
+    .container section#nosotrosp:hover {
+        box-shadow: 9px 9px rgba(142,255,168,1);
+        background-color: black;
+    }
+}
+/* FIN CSS NOSOTROS */
+
+
+/* CSS SERVICIOS */
+
+@media only screen and (max-width:400px) {
+    section#serviciosp {
+        grid-column:1/5;
+        grid-row:4/5;
+        display:flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        margin: 50px 250px 100px 250px;
+        opacity: 0.9;
+        flex-grow: 2;
+        height: 750px;
+        
+    }
+    .container section#serviciosp::-webkit-scrollbar{
+        display: none;
+    } 
+    
+    /* Seccion: Seguros Generales */
+    section#serviciosp .sg {
+        padding: 2% 0% 0% 0%;
+        box-shadow: 9px 9px #999;
+        background-color: #333;
+        opacity: 0.9;
+        margin-bottom: 50px;
+        height: 250px;
+    }
+    section#serviciosp .sg h3{
+        text-align: start;
+        text-indent: 30px;
+        color: white;
+        font-size: 40px;
+    }
+    
+    section#serviciosp .sg1 {
+        display: flex;
+        flex-flow: row wrap;
+        font-size: 30px;
+        margin: 2% 0% 0px 0px;
+        justify-content: space-around;
+        border: 2px solid #333;
+    }
+    section#serviciosp .sg:hover {
+        box-shadow: 9px 9px rgba(142,255,168,1);
+        background-color:black;
+        color: white;
+    }
+    
+    
+            /* Vehiculos */
+            section#serviciosp .veh{
+                text-indent: 15px;
+                font-size: 25px;
+                width: 100%;
+                text-shadow: 5px 5px 5px rgb(0, 0, 0);
+            }
+            section#serviciosp .veh p{
+                font-size: 25px;  
+                background-color: #999;
+                color: white;
+            }
+            section#serviciosp .veh1 p {
+                display: none;
+            }
+            section#serviciosp .veh p:hover {
+                color:rgba(142,255,168,1) ;
+            }
+            section#serviciosp .veh:hover .veh1 p{
+                display:flex;
+                flex-flow: column wrap;
+                font-size: 20px;  
+                background-color: black;
+                color: white;
+                text-shadow: 5px 5px 5px rgb(0, 0, 0);
+                border-top: 1px solid white;
+            }
+            section#serviciosp .veh:hover .veh1 {
+                background-color: black;
+                opacity: 0.9;
+            }
+            section#serviciosp .veh:hover p{
+                background-color: black;
+            }
+            section#serviciosp .veh .veh1 p:hover{
+                color: rgba(142,255,168,1);
+                background-color: black;
+            }
+            /* Fin Vehiculos */
+    
+            /* Accidentes personales */
+            section#serviciosp .acc-p{
+                text-indent: 15px;
+                font-size: 25px;
+                width: 100%;
+                text-shadow: 5px 5px 5px rgb(0, 0, 0);
+            }
+            section#serviciosp .acc-p p{
+                font-size: 25px;  
+                background-color: #999;
+                color: white;
+            }
+            section#serviciosp .acc-p1 p{
+                display:none;
+            }
+            section#serviciosp .acc-p p:hover {
+                color:rgba(142,255,168,1) ;
+            }
+            section#serviciosp .acc-p:hover .acc-p1 p{
+                display:flex;
+                flex-flow: column wrap;
+                font-size: 20px;  
+                background-color: black;
+                color: white;
+                text-shadow: 5px 5px 5px rgb(0, 0, 0);
+                border-top: 1px solid white;
+            }
+            section#serviciosp .acc-p:hover .acc-p1 {
+                background-color: black;
+                opacity: 0.9;
+            }
+            section#serviciosp .acc-p:hover p{
+                background-color: black;
+            }
+            section#serviciosp .acc-p .acc-p1 p:hover{
+                color: rgba(142,255,168,1);
+                background-color: black;
+            }
+            /* Fin Accidentes personales */
+    
+            /* Combinado familiar */
+            section#serviciosp .comb-f{
+                text-indent: 15px;
+                font-size: 25px;
+                width: 100%;
+                text-shadow: 5px 5px 5px rgb(0, 0, 0);
+            }
+            section#serviciosp .comb-f p{
+                font-size: 25px;  
+                background-color: #999;
+                color: white;
+            }
+            section#serviciosp .comb-f1 p{
+                display:none;
+            }
+            section#serviciosp .comb-f p:hover {
+                color:rgba(142,255,168,1);
+            }
+            section#serviciosp .comb-f:hover .comb-f1 p{
+                display:flex;
+                flex-flow: column wrap;
+                font-size: 20px;  
+                background-color: black;
+                color: white;
+                text-shadow: 5px 5px 5px rgb(0, 0, 0);
+                border-top: 1px solid white; 
+            }
+            section#serviciosp .comb-f:hover .comb-f1 {
+                background-color: black;
+                opacity: 0.9;
+            }
+            section#serviciosp .comb-f:hover p{
+                background-color: black;
+            }
+            section#serviciosp .comb-f .comb-f1 p:hover{
+                color: rgba(142,255,168,1);
+                background-color: black;
+            }
+            /* Fin Combinado familiar */
+    /* Fin seccion: Seguros generales */
+    
+    
+    /* Seccion: Gestoria del automotor */
+    
+    section#serviciosp .gda {
+        padding: 2% 0% 0% 0%;
+        box-shadow: 9px 9px #999;
+        background-color: #333;
+        opacity: 0.9;
+        margin-bottom: 50px;
+        height: 250px;
+    }
+    section#serviciosp .gda h3{
+        text-align: start;
+        text-indent: 30px;
+        color: white;
+        font-size: 40px;
+    }
+    
+    section#serviciosp .gda1 {
+        display: flex;
+        flex-flow: row wrap;
+        font-size: 30px;
+        margin: 2% 0% 0px 0px;
+        justify-content: space-around;
+        border: 2px solid #333;
+    }
+    section#serviciosp .gda:hover {
+        box-shadow: 9px 9px rgba(142,255,168,1);
+        background-color:black;
+        color: white;
+    }
+    
+            /* Asesoramiento */
+            section#serviciosp .asesorami{
+                text-indent: 15px;
+                font-size: 25px;
+                width: 100%;
+                text-shadow: 5px 5px 5px rgb(0, 0, 0);
+            }
+            section#serviciosp .asesorami p{
+                font-size: 25px;  
+                background-color: #999;
+                color: white;
+            }
+            section#serviciosp .asesorami1 p{
+                display:none;
+            }
+            section#serviciosp .asesorami p:hover {
+                color:rgba(142,255,168,1) ;
+            }
+            
+            section#serviciosp .asesorami:hover .asesorami1 p{
+                display:flex;
+                flex-flow: column wrap;
+                font-size: 20px;  
+                background-color: black;
+                color: white;
+                text-shadow: 5px 5px 5px rgb(0, 0, 0);
+                border-top: 1px solid white;
+            }
+            section#serviciosp .asesorami:hover .asesorami {
+                background-color: black;
+                opacity: 0.9;
+            }
+            section#serviciosp .asesorami:hover p{
+                background-color: black;
+            }
+            section#serviciosp .asesorami .asesorami1 p:hover{
+                color: rgba(142,255,168,1);
+                background-color: black;
+            }
+            /* Fin asesoramiento */
+    
+    
+    /* Fin seccion: Gestoria del automotor */
+    
+    /* Seccion: Estudio contable */
+    
+    section#serviciosp .ec {
+        padding: 2% 0% 0% 0%;
+        box-shadow: 9px 9px #999;
+        background-color: #333;
+        opacity: 0.9;
+        margin-bottom: 50px;
+        height: 250px;
+    }
+    section#serviciosp .ec h3{
+        text-align: start;
+        text-indent: 30px;
+        color: white;
+        font-size: 40px;
+    }
+    
+    section#serviciosp .ec1 {
+        display: flex;
+        flex-flow: row wrap;
+        font-size: 30px;
+        margin: 2% 0% 0px 0px;
+        justify-content: space-around;
+        border: 2px solid #333;
+        
+    }
+    section#serviciosp .ec:hover {
+        box-shadow: 9px 9px rgba(142,255,168,1);
+        background-color:black;
+        color: white;
+    }
+            /* Monotributo */
+            section#serviciosp .monotrib{
+                text-indent: 15px;
+                font-size: 25px;
+                width: 100%;
+                text-shadow: 5px 5px 5px rgb(0, 0, 0);
+            }
+            section#serviciosp .monotrib p{
+                font-size: 25px;  
+                background-color: #999;
+                color: white;
+            }
+            section#serviciosp .monotrib1 p {
+                display: none;
+            }
+            section#serviciosp .monotrib p:hover {
+                color:rgba(142,255,168,1);
+            }
+            section#serviciosp .monotrib:hover .monotrib1 p{
+                display:flex;
+                flex-flow: column wrap;
+                font-size: 20px;  
+                background-color: black;
+                color: white;
+                text-shadow: 5px 5px 5px rgb(0, 0, 0);
+                border-top: 1px solid white;
+            }
+            section#serviciosp .monotrib:hover .monotrib1 {
+                background-color: black;
+                opacity: 0.9;
+            }
+            section#serviciosp .monotrib:hover p{
+                background-color: black;
+            }
+            section#serviciosp .monotrib .monotrib1 p:hover {
+                color: rgba(142,255,168,1);
+                background-color: black;
+            }
+            /* Fin Monotributo */
+    
+            /* Regimen General */
+            section#serviciosp .regimeng{
+                text-indent: 15px;
+                font-size: 25px;
+                width: 100%;
+                text-shadow: 5px 5px 5px rgb(0, 0, 0);
+            }
+            section#serviciosp .regimeng p{
+                font-size: 25px;  
+                background-color: #999;
+                color: white;
+            }
+            section#serviciosp .regimeng1 p{
+                display:none;
+            }
+            section#serviciosp .regimeng p:hover {
+                color:rgba(142,255,168,1) ;
+            }
+            section#serviciosp .regimeng:hover .regimeng1 p{
+                display:flex;
+                flex-flow: column wrap;
+                font-size: 20px;  
+                background-color: black;
+                color: white;
+                text-shadow: 5px 5px 5px rgb(0, 0, 0);
+                border-top: 1px solid white;
+            }
+            section#serviciosp .regimeng:hover .regimeng1 {
+                background-color: black;
+                opacity: 0.9;
+            }
+            section#serviciosp .regimeng:hover p{
+                background-color: black;
+            }
+            section#serviciosp .regimeng .regimeng1 p:hover {
+                color: rgba(142,255,168,1);
+                background-color: black;
+            }
+            /* Fin Regimen General */
+    
+            /* Asesoramiento */
+            section#serviciosp .asesoram{
+                text-indent: 15px;
+                font-size: 25px;
+                width: 100%;
+                text-shadow: 5px 5px 5px rgb(0, 0, 0);
+            }
+            section#serviciosp .asesoram p{
+                font-size: 25px;  
+                background-color: #999;
+                color: white;
+            }
+            section#serviciosp .asesoram1 p{
+                display:none;
+            }
+            section#serviciosp .asesoram:hover p{
+                color:rgba(142,255,168,1) ;
+            }
+            section#serviciosp .asesoram:hover .asesoram1 p{
+                display:flex;
+                flex-flow: column wrap;
+                font-size: 20px;  
+                background-color: black;
+                color: white;
+                text-shadow: 5px 5px 5px rgb(0, 0, 0);
+                border-top: 1px solid white;
+            }
+            section#serviciosp .asesoram:hover .asesoram1 {
+                background-color: black;
+                opacity: 0.9;
+            }
+            section#serviciosp .asesoram:hover p{
+                background-color: black;
+            }
+            section#serviciosp .asesoram .asesoram1 p:hover{
+                color: rgba(142,255,168,1);
+                background-color: black;
+            }
+            /* Fin Asesoramiento */
+    
+    /* Fin seccion: Estudio contable */
+}
+
+@media only screen and (min-width:401px){
+section#serviciosp {
+    grid-column:1/5;
+    grid-row:4/5;
+    display:flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    margin: 50px 250px 100px 250px;
+    opacity: 0.9;
+    flex-grow: 2;
+    height: 750px;
+    
+}
+.container section#serviciosp::-webkit-scrollbar{
+    display: none;
+} 
+
+/* Seccion: Seguros Generales */
+section#serviciosp .sg {
+    padding: 2% 0% 0% 0%;
+    box-shadow: 9px 9px #999;
+    background-color: #333;
+    opacity: 0.9;
+    margin-bottom: 50px;
+    height: 250px;
+}
+section#serviciosp .sg h3{
+    text-align: start;
+    text-indent: 30px;
+    color: white;
+    font-size: 40px;
+}
+
+section#serviciosp .sg1 {
+    display: flex;
+    flex-flow: row wrap;
+    font-size: 30px;
+    margin: 2% 0% 0px 0px;
+    justify-content: space-around;
+    border: 2px solid #333;
+}
+section#serviciosp .sg:hover {
+    box-shadow: 9px 9px rgba(142,255,168,1);
+    background-color:black;
+    color: white;
+}
+
+
+        /* Vehiculos */
+        section#serviciosp .veh{
+            text-indent: 15px;
+            font-size: 25px;
+            width: 100%;
+            text-shadow: 5px 5px 5px rgb(0, 0, 0);
+        }
+        section#serviciosp .veh p{
+            font-size: 25px;  
+            background-color: #999;
+            color: white;
+        }
+        section#serviciosp .veh1 p {
+            display: none;
+        }
+        section#serviciosp .veh p:hover {
+            color:rgba(142,255,168,1) ;
+        }
+        section#serviciosp .veh:hover .veh1 p{
+            display:flex;
+            flex-flow: column wrap;
+            font-size: 20px;  
+            background-color: black;
+            color: white;
+            text-shadow: 5px 5px 5px rgb(0, 0, 0);
+            border-top: 1px solid white;
+        }
+        section#serviciosp .veh:hover .veh1 {
+            background-color: black;
+            opacity: 0.9;
+        }
+        section#serviciosp .veh:hover p{
+            background-color: black;
+        }
+        section#serviciosp .veh .veh1 p:hover{
+            color: rgba(142,255,168,1);
+            background-color: black;
+        }
+        /* Fin Vehiculos */
+
+        /* Accidentes personales */
+        section#serviciosp .acc-p{
+            text-indent: 15px;
+            font-size: 25px;
+            width: 100%;
+            text-shadow: 5px 5px 5px rgb(0, 0, 0);
+        }
+        section#serviciosp .acc-p p{
+            font-size: 25px;  
+            background-color: #999;
+            color: white;
+        }
+        section#serviciosp .acc-p1 p{
+            display:none;
+        }
+        section#serviciosp .acc-p p:hover {
+            color:rgba(142,255,168,1) ;
+        }
+        section#serviciosp .acc-p:hover .acc-p1 p{
+            display:flex;
+            flex-flow: column wrap;
+            font-size: 20px;  
+            background-color: black;
+            color: white;
+            text-shadow: 5px 5px 5px rgb(0, 0, 0);
+            border-top: 1px solid white;
+        }
+        section#serviciosp .acc-p:hover .acc-p1 {
+            background-color: black;
+            opacity: 0.9;
+        }
+        section#serviciosp .acc-p:hover p{
+            background-color: black;
+        }
+        section#serviciosp .acc-p .acc-p1 p:hover{
+            color: rgba(142,255,168,1);
+            background-color: black;
+        }
+        /* Fin Accidentes personales */
+
+        /* Combinado familiar */
+        section#serviciosp .comb-f{
+            text-indent: 15px;
+            font-size: 25px;
+            width: 100%;
+            text-shadow: 5px 5px 5px rgb(0, 0, 0);
+        }
+        section#serviciosp .comb-f p{
+            font-size: 25px;  
+            background-color: #999;
+            color: white;
+        }
+        section#serviciosp .comb-f1 p{
+            display:none;
+        }
+        section#serviciosp .comb-f p:hover {
+            color:rgba(142,255,168,1);
+        }
+        section#serviciosp .comb-f:hover .comb-f1 p{
+            display:flex;
+            flex-flow: column wrap;
+            font-size: 20px;  
+            background-color: black;
+            color: white;
+            text-shadow: 5px 5px 5px rgb(0, 0, 0);
+            border-top: 1px solid white; 
+        }
+        section#serviciosp .comb-f:hover .comb-f1 {
+            background-color: black;
+            opacity: 0.9;
+        }
+        section#serviciosp .comb-f:hover p{
+            background-color: black;
+        }
+        section#serviciosp .comb-f .comb-f1 p:hover{
+            color: rgba(142,255,168,1);
+            background-color: black;
+        }
+        /* Fin Combinado familiar */
+/* Fin seccion: Seguros generales */
+
+
+/* Seccion: Gestoria del automotor */
+
+section#serviciosp .gda {
+    padding: 2% 0% 0% 0%;
+    box-shadow: 9px 9px #999;
+    background-color: #333;
+    opacity: 0.9;
+    margin-bottom: 50px;
+    height: 250px;
+}
+section#serviciosp .gda h3{
+    text-align: start;
+    text-indent: 30px;
+    color: white;
+    font-size: 40px;
+}
+
+section#serviciosp .gda1 {
+    display: flex;
+    flex-flow: row wrap;
+    font-size: 30px;
+    margin: 2% 0% 0px 0px;
+    justify-content: space-around;
+    border: 2px solid #333;
+}
+section#serviciosp .gda:hover {
+    box-shadow: 9px 9px rgba(142,255,168,1);
+    background-color:black;
+    color: white;
+}
+
+        /* Asesoramiento */
+        section#serviciosp .asesorami{
+            text-indent: 15px;
+            font-size: 25px;
+            width: 100%;
+            text-shadow: 5px 5px 5px rgb(0, 0, 0);
+        }
+        section#serviciosp .asesorami p{
+            font-size: 25px;  
+            background-color: #999;
+            color: white;
+        }
+        section#serviciosp .asesorami1 p{
+            display:none;
+        }
+        section#serviciosp .asesorami p:hover {
+            color:rgba(142,255,168,1) ;
+        }
+        
+        section#serviciosp .asesorami:hover .asesorami1 p{
+            display:flex;
+            flex-flow: column wrap;
+            font-size: 20px;  
+            background-color: black;
+            color: white;
+            text-shadow: 5px 5px 5px rgb(0, 0, 0);
+            border-top: 1px solid white;
+        }
+        section#serviciosp .asesorami:hover .asesorami {
+            background-color: black;
+            opacity: 0.9;
+        }
+        section#serviciosp .asesorami:hover p{
+            background-color: black;
+        }
+        section#serviciosp .asesorami .asesorami1 p:hover{
+            color: rgba(142,255,168,1);
+            background-color: black;
+        }
+        /* Fin asesoramiento */
+
+
+/* Fin seccion: Gestoria del automotor */
+
+/* Seccion: Estudio contable */
+
+section#serviciosp .ec {
+    padding: 2% 0% 0% 0%;
+    box-shadow: 9px 9px #999;
+    background-color: #333;
+    opacity: 0.9;
+    margin-bottom: 50px;
+    height: 250px;
+}
+section#serviciosp .ec h3{
+    text-align: start;
+    text-indent: 30px;
+    color: white;
+    font-size: 40px;
+}
+
+section#serviciosp .ec1 {
+    display: flex;
+    flex-flow: row wrap;
+    font-size: 30px;
+    margin: 2% 0% 0px 0px;
+    justify-content: space-around;
+    border: 2px solid #333;
+    
+}
+section#serviciosp .ec:hover {
+    box-shadow: 9px 9px rgba(142,255,168,1);
+    background-color:black;
+    color: white;
+}
+        /* Monotributo */
+        section#serviciosp .monotrib{
+            text-indent: 15px;
+            font-size: 25px;
+            width: 100%;
+            text-shadow: 5px 5px 5px rgb(0, 0, 0);
+        }
+        section#serviciosp .monotrib p{
+            font-size: 25px;  
+            background-color: #999;
+            color: white;
+        }
+        section#serviciosp .monotrib1 p {
+            display: none;
+        }
+        section#serviciosp .monotrib p:hover {
+            color:rgba(142,255,168,1);
+        }
+        section#serviciosp .monotrib:hover .monotrib1 p{
+            display:flex;
+            flex-flow: column wrap;
+            font-size: 20px;  
+            background-color: black;
+            color: white;
+            text-shadow: 5px 5px 5px rgb(0, 0, 0);
+            border-top: 1px solid white;
+        }
+        section#serviciosp .monotrib:hover .monotrib1 {
+            background-color: black;
+            opacity: 0.9;
+        }
+        section#serviciosp .monotrib:hover p{
+            background-color: black;
+        }
+        section#serviciosp .monotrib .monotrib1 p:hover {
+            color: rgba(142,255,168,1);
+            background-color: black;
+        }
+        /* Fin Monotributo */
+
+        /* Regimen General */
+        section#serviciosp .regimeng{
+            text-indent: 15px;
+            font-size: 25px;
+            width: 100%;
+            text-shadow: 5px 5px 5px rgb(0, 0, 0);
+        }
+        section#serviciosp .regimeng p{
+            font-size: 25px;  
+            background-color: #999;
+            color: white;
+        }
+        section#serviciosp .regimeng1 p{
+            display:none;
+        }
+        section#serviciosp .regimeng p:hover {
+            color:rgba(142,255,168,1) ;
+        }
+        section#serviciosp .regimeng:hover .regimeng1 p{
+            display:flex;
+            flex-flow: column wrap;
+            font-size: 20px;  
+            background-color: black;
+            color: white;
+            text-shadow: 5px 5px 5px rgb(0, 0, 0);
+            border-top: 1px solid white;
+        }
+        section#serviciosp .regimeng:hover .regimeng1 {
+            background-color: black;
+            opacity: 0.9;
+        }
+        section#serviciosp .regimeng:hover p{
+            background-color: black;
+        }
+        section#serviciosp .regimeng .regimeng1 p:hover {
+            color: rgba(142,255,168,1);
+            background-color: black;
+        }
+        /* Fin Regimen General */
+
+        /* Asesoramiento */
+        section#serviciosp .asesoram{
+            text-indent: 15px;
+            font-size: 25px;
+            width: 100%;
+            text-shadow: 5px 5px 5px rgb(0, 0, 0);
+        }
+        section#serviciosp .asesoram p{
+            font-size: 25px;  
+            background-color: #999;
+            color: white;
+        }
+        section#serviciosp .asesoram1 p{
+            display:none;
+        }
+        section#serviciosp .asesoram:hover p{
+            color:rgba(142,255,168,1) ;
+        }
+        section#serviciosp .asesoram:hover .asesoram1 p{
+            display:flex;
+            flex-flow: column wrap;
+            font-size: 20px;  
+            background-color: black;
+            color: white;
+            text-shadow: 5px 5px 5px rgb(0, 0, 0);
+            border-top: 1px solid white;
+        }
+        section#serviciosp .asesoram:hover .asesoram1 {
+            background-color: black;
+            opacity: 0.9;
+        }
+        section#serviciosp .asesoram:hover p{
+            background-color: black;
+        }
+        section#serviciosp .asesoram .asesoram1 p:hover{
+            color: rgba(142,255,168,1);
+            background-color: black;
+        }
+        /* Fin Asesoramiento */
+
+/* Fin seccion: Estudio contable */
+}
+
+/* FIN CSS SERVICIOS */
+
+
+/* CSS ASEGURADORAS */
+
+@media screen and (min-width:401px) {
+.container .aseg1 {
+        grid-column:1/4;
+        grid-row:4;
+}
+div#companias h3{
+        color: black;
+        background-image: url();
+        background-repeat: no-repeat;
+        background-size:0%;
+        background-position-x:right;
+        background-position-y:bottom;
+        background-color: white;
+        display:inline-block;
+        position: absolute;
+        width: 40%;
+        height: 100px;
+        margin: 2% 30% 0% 30%;
+        padding: 2% 2% 4% 2%;
+        border: 3px solid #333;
+        box-shadow: 9px 9px #999;
+        text-align: center;
+        font-size: 27px;
+}
+
+div#parana{
+
+    background-color: white;
+    display:inline-block;
+    position: absolute;
+    width: 306px;
+    height: 206px;
+    margin: 11% 0% 0% 24%;
+    border: 3px solid #333;
+    box-shadow: 9px 9px #999;
+
+}
+div#lps{
+
+    background-color: white;
+    display:inline-block;
+    position: absolute;
+    width: 306px;
+    height: 206px;
+    margin: 11% 0% 0% 42%;
+    border: 3px solid #333;
+    box-shadow: 9px 9px #999;
+
+}
+div#benef{
+
+    background-color: white;
+    display:inline-block;
+    position: absolute;
+    width: 306px;
+    height: 206px;
+    margin: 11% 0% 0% 60%;
+    border: 3px solid #333;
+    box-shadow: 9px 9px #999;
+    
+}
+div#smg{
+
+    background-color: white;
+    display:inline-block;
+    position: absolute;
+    width: 306px;
+    height: 206px;
+    margin: 24% 0% 0% 24%;
+    border: 3px solid #333;
+    box-shadow: 9px 9px #999;
+    
+}
+div#medicar{
+
+    background-color: white;
+    display:inline-block;
+    position: absolute;
+    width: 306px;
+    height: 206px;
+    margin: 24% 0% 0% 42%;
+    border: 3px solid #333;
+    box-shadow: 9px 9px #999;
+    
+}
+div#rivadavia{
+
+    background-color: white;
+    display:inline-block;
+    position: absolute;
+    width: 306px;
+    height: 206px;
+    margin: 24% 0% 0% 60%;
+    padding: 0% 0% 0% 0%;
+    border: 3px solid #333;
+    box-shadow: 9px 9px #999;
+    
+}
+}
+
+@media only screen and (max-width:400px) {
+
+}
+
+/* FIN CSS ASEGURADORAS */
+
+/* CSS CONTACTO */
+
+@media only screen and (min-width:401px) {
+
+div#contactosp {color: black;
+        background-image: url();
+        background-repeat: no-repeat;
+        background-size:30%;
+        background-position-x:right;
+        background-position-y:bottom;
+        background-color: white;
+        grid-column:1/2;
+        grid-row:4;
+        margin: 2% 0% 0% 5%;
+        padding: 1% 2% 0% 2%;
+        border: 3px solid #333;
+        box-shadow: 9px 9px #999;
+}
+div#contactosp h3 {
+    font-size: 27px;
+}
+
+div#ubicacionp {
+        color: black;
+        background-image: url();
+        background-repeat: no-repeat;
+        background-size:100%;
+        background-position-x:right;
+        background-position-y:bottom;
+        background-color: white;
+        grid-column:2/4;
+        grid-row:4;
+        margin: 2% 0% 0% 50%;
+        padding: 1% 2% 0% 2%;
+        border: 3px solid #333;
+        box-shadow: 9px 9px #999;
+}
+div#ubicacionp h3 {
+    font-size: 27px;
+}
+}
+
+
+@media only screen and (min-width:401px) {
+    .container .cntct {
+        grid-column:;
+        grid-row;
+}
+div#contactosp h3 {
+    
+}
+
+div#ubicacionp {
+        
+}
+div#ubicacionp h3 {
+   
+}
+}
+/* FIN CSS CONTACTO */
+
