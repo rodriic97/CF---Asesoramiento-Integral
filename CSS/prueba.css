@@ -13,13 +13,13 @@ body {
     font-family: 'Source Serif Pro', serif;
 }
 /* Box container*/
-@media (max-width:400px){
-    .container {
+@media (max-width:400px){ 
+.tainercon {
         display: grid;
-        grid-template-areas:"menu menu"
-                            "tit tit"
-                            "main main"
-                            "footer footer"   ;
+        grid-template-areas:"nume nume"
+                            "titulop titulop"
+                            "niam niam"
+                            "retoof retoof"   ;
         grid-template-rows:50px 250px 1fr 70px;
         grid-template-columns: 1fr;
         grid-gap:1rem;
@@ -28,8 +28,8 @@ body {
 
 /* Encabezado*/
    
-    .container .titulo{
-        grid-area: tit;
+    .tainercon .titulop{
+        grid-area: titulop;
         display: flex;
         flex-flow: column nowrap;
         justify-content: center;
@@ -40,12 +40,17 @@ body {
         font-weight: bold; 
         font-size: 60px;
     }
-    .container .titulo h3{
+    .tainercon .titulop h1{
+        font-family: 'Source Serif Pro', serif;
+        font-size: 120px;
+        font-weight: bold; 
+    }
+    .tainercon .titulop h3{
         text-shadow: 1px 1px 1px rgb(247, 184, 173);
         font-weight: bold; 
         font-size: 35px;
         }
-    .container .redes {
+    .tainercon .redes {
         display:none; 
     }
 
@@ -53,7 +58,7 @@ body {
 /* Fin encabezado */
     
 /* Menu */
-    #menu-icon {
+    #nume-icon {
         display: hidden;
         width: 35px;
         height: 35px;
@@ -62,62 +67,67 @@ body {
     /* Fin boton 3 lineas horizontales */
 
     /* Menu vertical */
-    .container .menu {
-        grid-area: menu;
+    .tainercon .nume {
+        grid-area: nume;
         background-color: #333;
         padding: 10px 0px 0px 40px;
         box-shadow: 0px 9px #999;
         position: fixed;
         width: 100%;
+        border-radius: 0px 0px 15px 15px;
     }
-    #menu-icon {
+    #nume-icon {
         display: inline-block;
     }
-    .container .menu nav ul, .container .menu nav:active ul {
+    .tainercon .nume nav ul, .tainercon .nume nav:active ul {
         display: none;
         z-index: 2;
         position: absolute;
-        background: #333;
+        background: #999;
         margin-left: -40px;
         width: 100%;
         list-style-type: none;
         box-shadow: 0px 0px;
+        border-radius: 15px 15px 15px 15px;
     }
 
-    .container .menu ul li a {
+    .tainercon .nume ul li a {
         font-size: 25px;
-        color: white;
+        color: #333;
         font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
         margin-left:40px;
     }
-    .container .menu nav:hover ul {
+    .tainercon .nume nav:hover ul {
         display: flex;
         flex-flow: column nowrap;
         justify-content: space-evenly;
         align-items: center;
     }
-    .container .menu nav li {
+    .tainercon .nume nav li {
         width: 100%;
-        border: 2px solid #999;
+        border: 0px solid #999;
         height: 100%;
         padding: 5px 0 5px 0;
     }
-    .container .menu ul li:active{
+    .tainercon .nume ul li:active{
         transform: none;
     }
-    .container .menu ul li:active a{
+    .tainercon .nume ul li:active a{
         color:black;
     }
-    .container .menu ul:hover {
+    .tainercon .nume ul:hover {
         box-shadow: none;
     }
-    .container .menu ul li a:hover{
+    .tainercon .nume ul li a:hover{
         color:black;
         background-color: transparent;
+        text-decoration: none;
     }
-    .container .menu ul li:hover{
+    .tainercon .nume ul li:hover{
         background-color: rgb(247, 184, 173);
         color: black;
+        border-radius: 15px 15px 15px 15px;
+        
     }
     
 
@@ -125,15 +135,15 @@ body {
 
 /* Secciones */
 
-.container .secciones {
-    grid-area:main;
+.tainercon .secciones {
+    grid-area:niam;
     display: flex;
     flex-flow: column nowrap;
     align-content:center;
     margin: 10% 10% 10% 10%;
 }
 
-.container .secciones section#nosotros {
+.tainercon .secciones section#nosotros {
 
     background-image: url(/img/empresa.png);
     background-repeat: no-repeat;
@@ -146,34 +156,35 @@ body {
     box-shadow: 9px 9px #999;
     height: 350px;
     color:white;
+    border-radius: 15px 15px;
 }
-.container .secciones section#nosotros:hover {
+.tainercon .secciones section#nosotros:hover {
     box-shadow: 9px 9px black;
     background-color:rgb(247, 184, 173);
     color: black;
 }
-.container .secciones section#nosotros  h3{
+.tainercon .secciones section#nosotros  h3{
     font-size: 25px;
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
 }
-.container .secciones section#nosotros  p{
+.tainercon .secciones section#nosotros  p{
     margin-top:5%;
     font-size: 18px;
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
     font-style:italic;
 }
-.container .secciones section#nosotros:hover p a{
+.tainercon .secciones section#nosotros:hover p a{
     color: black;
 }
-.container .secciones section#nosotros p a {
+.tainercon .secciones section#nosotros p a {
     color: white;
     text-decoration:underline;
 }
-.container .secciones section#nosotros p a:hover{
+.tainercon .secciones section#nosotros p a:hover{
     color: tomato;
 }
 
-.container .secciones section#servicios {
+.tainercon .secciones section#servicios {
     background-image: url(/img/objetivo.png);
     background-repeat: no-repeat;
     background-size:20%;
@@ -185,17 +196,18 @@ body {
     box-shadow: 9px 9px #999;
     height: 300px;
     color:white;
+    border-radius: 15px 15px;
 }
-.container .secciones section#servicios:hover {
+.tainercon .secciones section#servicios:hover {
     box-shadow: 9px 9px black;
     background-color:rgb(247, 184, 173);
     color: black;
 }
-.container .secciones section#servicios h3{
+.tainercon .secciones section#servicios h3{
     font-size: 25px;
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
 }
-.container .secciones section#servicios article ul {
+.tainercon .secciones section#servicios article ul {
     margin-top:5%;
     font-size: 18px;
     font-style: italic;
@@ -203,62 +215,63 @@ body {
     list-style-type:square;
     list-style-position:inside;
 }
-.container .secciones section#servicios article p{
+.tainercon .secciones section#servicios article p{
     margin-top:5%;
     font-size: 18px;
     font-style:italic;
 }
-.container .secciones section#servicios article p a{
+.tainercon .secciones section#servicios article p a{
     color: white;
     text-decoration:underline;
 }
-.container .secciones section#servicios:hover article p a{
+.tainercon .secciones section#servicios:hover article p a{
     color: black;
 }
-.container .secciones section#servicios article p a:hover{
+.tainercon .secciones section#servicios article p a:hover{
     color: tomato;
 }
 
-.container .secciones section#aseguradoras {
+.tainercon .secciones section#aseguradoras {
     background-image: url(/img/compania.png);
     background-repeat: no-repeat;
     background-size:20%;
     background-position-x:95%;
-        background-position-y:95%;
+    background-position-y:95%;
     background-color: #333;
     margin-bottom: 15%;
     padding: 5% 5% 0% 5%;
     box-shadow: 9px 9px #999;
     height: 380px;
     color:white;
+    border-radius: 15px 15px;
 }
-.container .secciones section#aseguradoras:hover {
+.tainercon .secciones section#aseguradoras:hover {
     box-shadow: 9px 9px black;
     background-color:rgb(247, 184, 173);
     color: black;
 }
-.container .secciones section#aseguradoras h3{
+.tainercon .secciones section#aseguradoras h3{
     font-size: 25px;
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
 }
-.container .secciones section#aseguradoras p{
+.tainercon .secciones section#aseguradoras p{
     margin-top:5%;
     font-size: 18px;
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
     font-style:italic;
 }
-.container .secciones section#aseguradoras article p a{
+.tainercon .secciones section#aseguradoras article p a{
     color: white;
     text-decoration:underline;
 }
-.container .secciones section#aseguradoras:hover article p a{
+.tainercon .secciones section#aseguradoras:hover article p a{
     color: black;
 }
-.container .secciones section#aseguradoras article p a:hover{
+.tainercon .secciones section#aseguradoras article p a:hover{
     color: tomato;
 }
 
-.container .secciones section#contacto {
+.tainercon .secciones section#contacto {
     background-image: url(/img/ubicacion.png);
     background-repeat: no-repeat;
     background-size:20%;
@@ -270,30 +283,31 @@ body {
     box-shadow: 9px 9px #999;
     height: 270px;
     color:white;
+    border-radius: 15px 15px;
 }
-.container .secciones section#contacto h3 {
+.tainercon .secciones section#contacto h3 {
     font-size: 25px;
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
 }
-.container .secciones section#contacto:hover {
+.tainercon .secciones section#contacto:hover {
     box-shadow: 9px 9px black;
     background-color:rgb(247, 184, 173);
     color: black;
 }
-.container .secciones section#contacto p{
+.tainercon .secciones section#contacto p{
     margin-top:5%;
     font-size: 18px;
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
     font-style:italic;
 }
-.container .secciones section#contacto article p a{
+.tainercon .secciones section#contacto article p a{
     color: white;
     text-decoration:underline;
 }
-.container .secciones section#contacto:hover article p a{
+.tainercon .secciones section#contacto:hover article p a{
     color: black;
 }
-.container .secciones section#contacto article p a:hover{
+.tainercon .secciones section#contacto article p a:hover{
     color: tomato;
 }
 
@@ -301,27 +315,28 @@ body {
 /* Fin secciones */
 /* Footer */
 
-    .container footer#redes {
-        grid-area: footer;
+    .tainercon footer#redes {
+        grid-area: retoof;
         background-color: #333;
         box-shadow: 0px -9px #999;
         width: 100%; 
+        border-radius: 15px 15px 0px 0px;
     }
-    .container footer#redes:hover {
+    .tainercon footer#redes:hover {
         box-shadow: 0px -9px rgb(247, 184, 173);
         background-color: black;
     }
-    .container footer#redes .redes1 {
+    .tainercon footer#redes .redes1 {
         display:flex;
         flex-flow: row nowrap;
         justify-content: space-evenly;
         justify-items: center;
         padding-top: 10px;
     } 
-    .container footer#redes .ubic-F {
+    .tainercon footer#redes .ubic-F {
         display:none;
     }
-    .container footer#redes .redes1 a{
+    .tainercon footer#redes .redes1 a{
         padding:0px 0% 0px 0%;
     } 
 
@@ -339,12 +354,12 @@ body {
 /* Box container*/
 @media (min-width: 401px) and (max-width:960px) {
     
-    .container {
+    .tainercon {
         display: grid;
-        grid-template-areas:"menu menu"
-                            "tit tit"
-                            "main main"
-                            "footer footer"   ;
+        grid-template-areas:"nume nume"
+                            "titulop titulop"
+                            "niam niam"
+                            "retoof retoof"   ;
         grid-template-rows:50px 300px 1fr 70px;
         grid-template-columns: 1fr;
         grid-gap:1rem;
@@ -353,8 +368,8 @@ body {
 
 /* Encabezado*/
    
-    .container .titulo{
-        grid-area: tit;
+    .tainercon .titulop{
+        grid-area: titulop;
         display: flex;
         flex-flow: column nowrap;
         justify-content: center;
@@ -365,12 +380,17 @@ body {
         font-weight: bold; 
         font-size: 70px;
     }
-    .container .titulo h3{
+    .tainercon .titulop h1{
+        font-family: 'Source Serif Pro', serif;
+        font-weight: bold; 
+        font-size: 140px;
+    }
+    .tainercon .titulop h3{
         text-shadow: 1px 1px 1px rgb(247, 184, 173) ;
         font-weight: bold; 
         font-size: 40px;
         }
-    .container .redes {
+    .tainercon .redes {
         display:none; 
     }
 
@@ -378,7 +398,7 @@ body {
 /* Fin encabezado */
     
 /* Menu */
-    #menu-icon {
+    #nume-icon {
         display: hidden;
         width: 35px;
         height: 35px;
@@ -387,79 +407,82 @@ body {
     /* Fin boton 3 lineas horizontales */
 
     /* Menu vertical */
-    .container .menu {
-        grid-area: menu;
+    .tainercon .nume {
+        grid-area: nume;
         background-color: #333;
         padding: 10px 0px 0px 40px;
         box-shadow: 0px 9px #999;
         position: fixed;
         width: 100%;
+        border-radius: 0px 0px 15px 15px;
         /* opacity: 0.6; */
     }
-    #menu-icon {
+    #nume-icon {
         display: inline-block;
     }
-    .container .menu nav ul, .container .menu nav:active ul {
+    .tainercon .nume nav ul, .tainercon .nume nav:active ul {
         display: none;
         z-index: 1000;
         position: absolute;
-        background: #333;
+        background: #999;
         margin-left: -40px;
         width: 100%;
         list-style-type: none;
         box-shadow: 0px 0px;
+        border-radius: 15px 15px 15px 15px;
     }
 
-    .container .menu ul li a {
+    .tainercon .nume ul li a {
         font-size: 25px;
-        color: white;
+        color: #333;
         font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
         margin-left:40px;
     }
-    .container .menu nav:hover ul {
+    .tainercon .nume nav:hover ul {
         display: flex;
         flex-flow: column nowrap;
         justify-content: space-evenly;
         align-items: center;
     }
-    .container .menu nav li {
+    .tainercon .nume nav li {
         width: 100%;
-        border: 2px solid #999;
+        border: 0px solid #999;
         height: 100%;
         padding: 5px 0 5px 0;
-    
     }
-    .container .menu ul li:active{
+    .tainercon .nume ul li:active{
         transform: none;
     }
-    .container .menu ul li:active a{
+    .tainercon .nume ul li:active a{
         color:black;
     }
-    .container .menu ul:hover {
+    .tainercon .nume ul:hover {
         box-shadow: none;
     }
-    .container .menu ul li a:hover{
+    .tainercon .nume ul li a:hover{
         color:black;
         background-color: transparent;
+        text-decoration: none;
     }
-    .container .menu ul li:hover{
+    .tainercon .nume ul li:hover{
         background-color: rgb(247, 184, 173);
         color: black;
+        border-radius: 15px 15px 15px 15px;
     }
 
 /* Fin Menu */
 
 /* Secciones */
 
-    .container .secciones {
-        grid-area:main;
+    .tainercon .secciones {
+        grid-area:niam;
         display: flex;
         flex-flow: column nowrap;
         align-content:center;
         margin: 10% 10% 10% 10%;
     }
    
-    .container .secciones section#nosotros {
+    .tainercon .secciones section#nosotros {
     
         background-image: url(/img/empresa.png);
         background-repeat: no-repeat;
@@ -472,34 +495,35 @@ body {
         box-shadow: 9px 9px #999;
         height: 300px;
         color:white;
+        border-radius: 15px 15px;
     }
-    .container .secciones section#nosotros:hover {
+    .tainercon .secciones section#nosotros:hover {
         box-shadow: 9px 9px black;
         background-color:rgb(247, 184, 173);
         color: black;
     }
-    .container .secciones section#nosotros  h3{
+    .tainercon .secciones section#nosotros  h3{
         font-size: 25px;
         font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
     }
-    .container .secciones section#nosotros  p{
+    .tainercon .secciones section#nosotros  p{
         margin-top:5%;
         font-size: 18px;
         font-style:italic;
         font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
     }
-    .container .secciones section#nosotros:hover p a{
+    .tainercon .secciones section#nosotros:hover p a{
         color: black;
     }
-    .container .secciones section#nosotros p a {
+    .tainercon .secciones section#nosotros p a {
         color: white;
         text-decoration:underline;
     }
-    .container .secciones section#nosotros p a:hover{
+    .tainercon .secciones section#nosotros p a:hover{
         color: tomato;
     }
 
-    .container .secciones section#servicios {
+    .tainercon .secciones section#servicios {
         background-image: url(/img/objetivo.png);
         background-repeat: no-repeat;
         background-size:15%;
@@ -511,41 +535,42 @@ body {
         box-shadow: 9px 9px #999;
         height: 300px;
         color:white;
+        border-radius: 15px 15px;
     }
-    .container .secciones section#servicios:hover {
+    .tainercon .secciones section#servicios:hover {
         box-shadow: 9px 9px black;
         background-color:rgb(247, 184, 173);
         color: black;
     }
-    .container .secciones section#servicios h3{
+    .tainercon .secciones section#servicios h3{
         font-size: 25px;
         font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
     }
-    .container .secciones section#servicios article ul {
+    .tainercon .secciones section#servicios article ul {
         margin-top:5%;
         font-size: 18px;
         font-style: italic;
         list-style-type:square;
         list-style-position:inside;
     }
-    .container .secciones section#servicios article p{
+    .tainercon .secciones section#servicios article p{
         margin-top:5%;
         font-size: 18px;
         font-style:italic;
         font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
     }
-    .container .secciones section#servicios article p a{
+    .tainercon .secciones section#servicios article p a{
         color: white;
         text-decoration:underline;
     }
-    .container .secciones section#servicios:hover article p a{
+    .tainercon .secciones section#servicios:hover article p a{
         color: black;
     }
-    .container .secciones section#servicios article p a:hover{
+    .tainercon .secciones section#servicios article p a:hover{
         color: tomato;
     }
 
-    .container .secciones section#aseguradoras {
+    .tainercon .secciones section#aseguradoras {
         background-image: url(/img/compania.png);
         background-repeat: no-repeat;
         background-size:15%;
@@ -557,34 +582,35 @@ body {
         box-shadow: 9px 9px #999;
         height: 350px;
         color:white;
+        border-radius: 15px 15px;
     }
-    .container .secciones section#aseguradoras:hover {
+    .tainercon .secciones section#aseguradoras:hover {
         box-shadow: 9px 9px black;
         background-color:rgb(247, 184, 173);
         color: black;
     }
-    .container .secciones section#aseguradoras h3{
+    .tainercon .secciones section#aseguradoras h3{
         font-size: 25px;
         font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
     }
-    .container .secciones section#aseguradoras p{
+    .tainercon .secciones section#aseguradoras p{
         margin-top:5%;
         font-size: 18px;
         font-style:italic;
         font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
     }
-    .container .secciones section#aseguradoras article p a{
+    .tainercon .secciones section#aseguradoras article p a{
         color: white;
         text-decoration:underline;
     }
-    .container .secciones section#aseguradoras:hover article p a{
+    .tainercon .secciones section#aseguradoras:hover article p a{
         color: black;
     }
-    .container .secciones section#aseguradoras article p a:hover{
+    .tainercon .secciones section#aseguradoras article p a:hover{
         color: tomato;
     }
 
-    .container .secciones section#contacto {
+    .tainercon .secciones section#contacto {
         background-image: url(/img/ubicacion.png);
         background-repeat: no-repeat;
         background-size:15%;
@@ -596,30 +622,31 @@ body {
         box-shadow: 9px 9px #999;
         height: 270px;
         color:white;
+        border-radius: 15px 15px;
     }
-    .container .secciones section#contacto h3 {
+    .tainercon .secciones section#contacto h3 {
         font-size: 25px;
         font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
     }
-    .container .secciones section#contacto:hover {
+    .tainercon .secciones section#contacto:hover {
         box-shadow: 9px 9px black;
         background-color:rgb(247, 184, 173);
         color: black;
     }
-    .container .secciones section#contacto p{
+    .tainercon .secciones section#contacto p{
         margin-top:5%;
         font-size: 18px;
         font-style:italic;
         font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
     }
-    .container .secciones section#contacto article p a{
+    .tainercon .secciones section#contacto article p a{
         color: white;
         text-decoration:underline;
     }
-    .container .secciones section#contacto:hover article p a{
+    .tainercon .secciones section#contacto:hover article p a{
         color: black;
     }
-    .container .secciones section#contacto article p a:hover{
+    .tainercon .secciones section#contacto article p a:hover{
         color: tomato;
     }
 
@@ -627,27 +654,28 @@ body {
 /* Fin secciones */
 /* Footer */
 
-    .container footer#redes {
-        grid-area: footer;
+    .tainercon footer#redes {
+        grid-area: retoof;
         background-color: #333;
         box-shadow: 0px -9px #999;
         width: 100%; 
+        border-radius: 15px 15px 0px 0px;
     }
-    .container footer#redes:hover {
+    .tainercon footer#redes:hover {
         box-shadow: 0px -9px rgb(247, 184, 173);
         background-color: black;
     }
-    .container footer#redes .redes1 {
+    .tainercon footer#redes .redes1 {
         display:flex;
         flex-flow: row nowrap;
         justify-content: space-evenly;
         justify-items: center;
         padding-top: 10px;
     } 
-    .container footer#redes .ubic-F {
+    .tainercon footer#redes .ubic-F {
         display:none;
     }
-    .container footer#redes .redes1 a{
+    .tainercon footer#redes .redes1 a{
         padding:0px 10% 0px 10%;
     } 
 /* Fin Footer */
@@ -665,19 +693,19 @@ body {
 /* Box container*/
 @media (min-width: 960px) {
     
-    .container {
+    .tainercon {
         display: grid;
-        grid-template-areas:"nave nave"
-                            "tit tit"
-                            "main main"
-                            "footer footer"   ;
-        grid-template-rows:50px 0.5fr 1fr 83px;
+        grid-template-areas:"vega vega"
+                            "titulop titulop"
+                            "niam niam"
+                            "retoof retoof"   ;
+        grid-template-rows:50px 0.5fr 1fr 135px;
         grid-template-columns: 160px 1fr;
     }
 
 
 /* Encabezado*/
-    .container .titulo{
+    .tainercon .titulop { 
         grid-row:1/3;
         grid-column:1/3;
         background-image: url(../img/fdp1.jpg);
@@ -695,10 +723,14 @@ body {
         font-size: 120px;
         opacity: 0.8;
     }
-    .container .titulo h3{
+    .tainercon .titulop h1{
+        font-size: 240px;
+        font-weight: bold; 
+    }
+    .tainercon .titulop h3{
         display:none;
     }
-    .container .redes {
+    .tainercon .redes {
         grid-row:1;
         grid-column: 1/2;
         background-color: transparent;
@@ -707,24 +739,25 @@ body {
         padding: 0px 15px 0px 15px;
         position: fixed; 
     }
-    .container .redes:active {
+    .tainercon .redes:active {
         transform: translateY(4px);
     }
-    .container .redes:active a{
+    .tainercon .redes:active a{
         color:black;
     }
-    .container .redes:hover {
+    .tainercon .redes:hover {
         background-color: rgb(247, 184, 173);
         box-shadow: 0px 9px black;
     }
     
-    .container .redes a{
+    .tainercon .redes a{
+        text-decoration: none;
         font-size: 30px;
         color:white;
         font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
         transform: scale(1.2,1.2);
     }
-    .container .redes a:hover {
+    .tainercon .redes a:hover {
         color: black;
     }
 
@@ -740,13 +773,13 @@ body {
     background: url(https://res.cloudinary.com/dgpmuegqe/image/upload/v1492571257/nav_xe79ju.png) center;
     }
 
-    .container .menu {
-        grid-area:nave;
+    .tainercon .nume {
+        grid-area:vega;
         position: fixed;
         width: 100%;
     }
     
-    .container .menu ul{
+    .tainercon .nume ul{
         display: flex;
         flex-flow: row;
         justify-content: flex-end;
@@ -757,29 +790,30 @@ body {
         box-shadow: 0px 9px #333;
     }
 
-    .container .menu ul li {
+    .tainercon .nume ul li {
         padding: 0px 15px 0px 15px;
         margin: 0px 5px 0px 5px;
     }
-    .container .menu ul li a{
+    .tainercon .nume ul li a{
+        text-decoration: none;
         font-size: 30px;
         color: white;
         font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";        
     }
-    .container .menu ul li:hover {
+    .tainercon .nume ul li:hover {
         background-color:rgb(247, 184, 173);
         box-shadow: 0px 9px black;
         transform: scale(1.2,1.2);
     }
-    .container .menu ul li a:hover {
+    .tainercon .nume ul li a:hover {
         color:black;
     }
 
-    .container .menu ul li:active{
+    .tainercon .nume ul li:active{
         transform: translateY(4px);
         }
     
-    .container .menu ul li:active a{
+    .tainercon .nume ul li:active a{
             color:black;
     }
 
@@ -787,8 +821,8 @@ body {
 
 /* Secciones */
 
-    .container .secciones {
-        grid-area:main;
+    .tainercon .secciones {
+        grid-area:niam;
         display: flex;
         flex-flow: row wrap;
         align-content:flex-start;
@@ -796,7 +830,7 @@ body {
     }
 
    
-    .container .secciones section#nosotros {
+    .tainercon .secciones section#nosotros {
         width:50%;
         background-image: url(/img/empresa.png);
         background-repeat: no-repeat;
@@ -812,35 +846,35 @@ body {
         height: 50%;
         color:white;
     }
-    .container .secciones section#nosotros:hover {
+    .tainercon .secciones section#nosotros:hover {
         background-color:rgb(247, 184, 173);
         color: black;
         box-shadow: 0px -9px black;
         border-right: 2px solid black;
         border-bottom: 2px solid black;
     }
-    .container .secciones section#nosotros h3{
+    .tainercon .secciones section#nosotros h3{
         font-size: 30px;
         font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
     }
-    .container .secciones section#nosotros p{
+    .tainercon .secciones section#nosotros p{
         margin-top:5%;
         font-size: 23px;
         font-style:italic;
         font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
     }
-    .container .secciones section#nosotros:hover p a{
+    .tainercon .secciones section#nosotros:hover p a{
         color: black;
     }
-    .container .secciones section#nosotros p a {
+    .tainercon .secciones section#nosotros p a {
         color: white;
         text-decoration:underline;
     }
-    .container .secciones section#nosotros p a:hover{
+    .tainercon .secciones section#nosotros p a:hover{
         color: tomato;
     }
 
-    .container .secciones section#servicios {
+    .tainercon .secciones section#servicios {
         width:50%;
         background-image: url(/img/objetivo.png);
         background-repeat: no-repeat;
@@ -856,7 +890,7 @@ body {
         height: 50%;
         color:white;
     }
-    .container .secciones section#servicios:hover {
+    .tainercon .secciones section#servicios:hover {
         background-color:rgb(247, 184, 173);
         color: black;
         box-shadow: 0px -9px black;
@@ -864,11 +898,11 @@ body {
         border-bottom: 2px solid black;
         
     }
-    .container .secciones section#servicios h3{
+    .tainercon .secciones section#servicios h3{
         font-size: 30px;
         font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
     }
-    .container .secciones section#servicios article ul {
+    .tainercon .secciones section#servicios article ul {
         margin-top:5%;
         font-size: 23px;
         font-style: italic;
@@ -876,24 +910,24 @@ body {
         list-style-type:square;
         list-style-position:inside;
     }
-    .container .secciones section#servicios article p{
+    .tainercon .secciones section#servicios article p{
         margin-top:5%;
         font-size: 23px;
         font-style:italic;
         font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
     }
-    .container .secciones section#servicios article p a{
+    .tainercon .secciones section#servicios article p a{
         color: white;
         text-decoration:underline;
     }
-    .container .secciones section#servicios:hover article p a{
+    .tainercon .secciones section#servicios:hover article p a{
         color: black;
     }
-    .container .secciones section#servicios article p a:hover{
+    .tainercon .secciones section#servicios article p a:hover{
         color: tomato;
     }
 
-    .container .secciones section#aseguradoras {
+    .tainercon .secciones section#aseguradoras {
         width:50%;
         background-image: url(/img/compania.png);
         background-repeat: no-repeat;
@@ -908,35 +942,35 @@ body {
         height: 50%;
         color:white;
     }
-    .container .secciones section#aseguradoras:hover {
+    .tainercon .secciones section#aseguradoras:hover {
         background-color:rgb(247, 184, 173);
         color: black;
         box-shadow: 0px 9px black;
         border-right: 2px solid black;
         border-top: 2px solid black;
     }
-    .container .secciones section#aseguradoras h3{
+    .tainercon .secciones section#aseguradoras h3{
         font-size: 30px;
         font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
     }
-    .container .secciones section#aseguradoras p{
+    .tainercon .secciones section#aseguradoras p{
         margin-top:5%;
         font-size: 23px;
         font-style:italic;
         font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
     }
-    .container .secciones section#aseguradoras article p a{
+    .tainercon .secciones section#aseguradoras article p a{
         color: white;
         text-decoration:underline;
     }
-    .container .secciones section#aseguradoras:hover article p a{
+    .tainercon .secciones section#aseguradoras:hover article p a{
         color: black;
     }
-    .container .secciones section#aseguradoras article p a:hover{
+    .tainercon .secciones section#aseguradoras article p a:hover{
         color: tomato;
     }
 
-    .container .secciones section#contacto {
+    .tainercon .secciones section#contacto {
         width:50%;
         background-image: url(/img/ubicacion.png);
         background-repeat: no-repeat;
@@ -952,31 +986,31 @@ body {
         color:white;
         
     }
-    .container .secciones section#contacto h3 {
+    .tainercon .secciones section#contacto h3 {
         font-size: 30px;
         font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
     }
-    .container .secciones section#contacto:hover {
+    .tainercon .secciones section#contacto:hover {
         background-color:rgb(247, 184, 173);
         color: black;
         box-shadow: 0px 9px black;
         border-left: 2px solid black;
         border-top: 2px solid black;
     }
-    .container .secciones section#contacto p{
+    .tainercon .secciones section#contacto p{
         margin-top:5%;
         font-size: 23px;
         font-style:italic;
         font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
     }
-    .container .secciones section#contacto article p a{
+    .tainercon .secciones section#contacto article p a{
         color: white;
         text-decoration:underline;
     }
-    .container .secciones section#contacto:hover article p a{
+    .tainercon .secciones section#contacto:hover article p a{
         color: black;
     }
-    .container .secciones section#contacto article p a:hover{
+    .tainercon .secciones section#contacto article p a:hover{
         color: tomato;
     }
 
@@ -984,8 +1018,8 @@ body {
 /* Fin secciones */
 /* Footer */
 
-    .container footer#redes {
-        grid-area: footer;
+    .tainercon footer#redes {
+        grid-area: retoof;
         display: flex;
         background-color: #333;
         flex-flow: row;
@@ -993,25 +1027,31 @@ body {
         align-items: center;
         height: 100%;
     }
-    .container footer#redes:hover {
+    .tainercon footer#redes:hover {
         background-color:black;
         color: white;
         box-shadow: 0px -9px rgb(247, 184, 173);
     }
-    .container footer#redes .redes1 {
+    .tainercon footer#redes .redes1 {
         justify-items: center;
         padding: 10px 0px 0px 50px;
     } 
-    .container footer#redes .ubic-F {
-        padding: 10px 85px 10px 10px;
-        color:white;
-        font-size: 15px;
+    .tainercon footer#redes .ubic-F h3{
+        font-size: 23px;
+        font-style: normal;
         font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
     }
-    .container footer#redes:hover .ubic-F {
+    .tainercon footer#redes .ubic-F{
+        padding: 10px 85px 10px 10px;
+        color:white;
+        font-size: 16px;
+        font-style: italic;
+        font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
+    }
+    .tainercon footer#redes:hover .ubic-F {
         color: white;
     }
-    .container footer#redes .redes1 a{
+    .tainercon footer#redes .redes1 a{
         padding:0px 55px 0px 50px;
     } 
     /* Fin Footer */
@@ -1028,28 +1068,27 @@ body {
 
 @media (max-width:400px) {
      /* Encabezado */
-     .container .portadan {
-        grid-area: tit;
+     .tainercon .portadan {
+        grid-area: titulop;
         display: flex;
         flex-flow: column nowrap;
         justify-content: center;
         align-items: center;
         color: #333;
         text-shadow: 2px 2px 2px rgb(247, 184, 173) ;
-        font-weight: bold; 
-        font-size: 40px;
         text-align: center;
-        background-image: url(../img/presentacion.gif);
-        background-repeat: no-repeat;
-        background-size: 20%;
-        background-position-x: 0%;
-        background-position-y: 0%;
+        
+        }
+        .tainercon .portadan h3{
+            font-size: 3rem;
+            font-weight: bold; 
+            text-align: center;
         }
     /*Fin Encabezado */
 
     /* Seccion nosotros */
-    .container section#nosotrosp {
-        grid-area:main;
+    .tainercon section#nosotrosp {
+        grid-area:niam;
         display: flex;
         flex-flow: column nowrap;
         align-content:center;
@@ -1059,8 +1098,9 @@ body {
         box-shadow: 9px 9px #999;
         height: 95%;
         color:white;
+        border-radius: 15px 15px;
     }
-    .container section#nosotrosp::-webkit-scrollbar{
+    .tainercon section#nosotrosp::-webkit-scrollbar{
         display: none;
     } 
     section#nosotrosp article{
@@ -1070,12 +1110,12 @@ body {
         width: 100%;
         color: white;
     }
-    .container section#nosotrosp:hover {
+    .tainercon section#nosotrosp:hover {
         background-color:rgb(247, 184, 173);
         color: black;
         box-shadow: 9px 9px black;
     }
-    .container section#nosotrosp:hover article {
+    .tainercon section#nosotrosp:hover article {
         color: black;
     }
     /* Fin Seccion nosotros */
@@ -1087,28 +1127,31 @@ body {
 
 @media (min-width: 401px) and (max-width:960px) {
     /* Encabezado */
-    .container .portadan {
-        grid-area: tit;
+    .tainercon .portadan {
+        grid-area: titulop;
         display: flex;
         flex-flow: column nowrap;
         justify-content: center;
         align-items: center;
         color: #333;
         text-shadow: 2px 2px 2px rgb(247, 184, 173) ;
-        font-weight: bold; 
-        font-size: 50px;
         text-align: center;
-        background-image: url(../img/presentacion.gif);
+        /* background-image: url(../img/presentacion.gif);
         background-repeat: no-repeat;
         background-size: 15%;
         background-position-x: 0%;
-        background-position-y: 0%;
+        background-position-y: 0%; */
         }
+
+    .tainercon .portadan h3 {
+        font-weight: bold; 
+        font-size: 3.5rem;
+    }
     /*Fin Encabezado */
 
     /* Seccion nosotros */
-    .container section#nosotrosp {
-        grid-area:main;
+    .tainercon section#nosotrosp {
+        grid-area:niam;
         display: flex;
         flex-flow: column nowrap;
         align-content:center;
@@ -1118,8 +1161,9 @@ body {
         box-shadow: 9px 9px #999;
         height: 95%;
         color:white;
+        border-radius: 15px 15px;
     }
-    .container section#nosotrosp::-webkit-scrollbar{
+    .tainercon section#nosotrosp::-webkit-scrollbar{
         display: none;
     } 
     section#nosotrosp article{
@@ -1129,12 +1173,12 @@ body {
         width: 100%;
         color: white;
     }
-    .container section#nosotrosp:hover {
+    .tainercon section#nosotrosp:hover {
         background-color:rgb(247, 184, 173);
         color: black;
         box-shadow: 9px 9px black;
     }
-    .container section#nosotrosp:hover article {
+    .tainercon section#nosotrosp:hover article {
         color: black;
     }
     /* Fin Seccion nosotros */
@@ -1148,29 +1192,32 @@ body {
 
 
     /* Encabezado */
-    .container .portadan {
+    .tainercon .portadan {
         grid-row:1/3;
         grid-column:1/3;
         background-image: url(../img/teamwork1.jpg);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
-        height: 30rem;
+        height: 35rem;
         display: flex;
         flex-flow: column nowrap;
         justify-content: center;
         align-items: center;
         color: #333;
-        text-shadow: 2px 2px 2px rgb(247, 184, 173) ;
-        font-weight: bold; 
-        font-size: 50px;
+        text-shadow: 2px 2px 2px rgb(247, 184, 173);
         opacity: 0.6;
+        }
+
+        .tainercon .portadan h3 {
+            font-size: 3.5rem;
+            font-weight: bold; 
         }
     /*Fin Encabezado */
 
     /* Seccion nosotros */
-    .container section#nosotrosp {
-        grid-area:main;
+    .tainercon section#nosotrosp {
+        grid-area:niam;
         display: flex;
         flex-flow: column nowrap;
         align-content:center;
@@ -1188,7 +1235,7 @@ body {
         color:white;
         margin-bottom: 50px;
     }
-    .container section#nosotrosp::-webkit-scrollbar{
+    .tainercon section#nosotrosp::-webkit-scrollbar{
         display: none;
     } 
     section#nosotrosp h3{
@@ -1203,14 +1250,14 @@ body {
         width: 50%;
         color: white;
     }
-    .container section#nosotrosp:hover {
+    .tainercon section#nosotrosp:hover {
         background-color:rgb(247, 184, 173);
         color: black;
         box-shadow: 0px 9px black;
         border-bottom: 9px solid black;
         border-top: 9px solid black;
     }
-    .container section#nosotrosp:hover article {
+    .tainercon section#nosotrosp:hover article {
         color: black;
     }
     /* Fin Seccion nosotros */
@@ -1225,28 +1272,31 @@ body {
 /* CSS SERVICIOS MOBILE FIRST */
 @media (max-width:400px) {
     /* Encabezado */
-    .container .portadas {
-        grid-area: tit;
+    .tainercon .portadas {
+        grid-area: titulop;
         display: flex;
         flex-flow: column nowrap;
         justify-content: center;
         align-items: center;
         color: #333;
         text-shadow: 2px 2px 2px rgb(247, 184, 173) ;
-        font-weight: bold; 
-        font-size: 40px;
         text-align: center;
-        background-image: url(../img/apoyo-tecnico.gif);
+        /* background-image: url(../img/apoyo-tecnico.gif);
         background-repeat: no-repeat;
         background-size: 20%;
         background-position-x: 0%;
-        background-position-y: 0%;
+        background-position-y: 0%; */
+        }
+        .tainercon .portadas h3{
+            font-size: 3rem;
+            font-weight: bold; 
+            text-align: center;
         }
     /*Fin Encabezado */
 
     /* Seccion servicios */
-    .container #serviciosp {
-        grid-area:main;
+    .tainercon #serviciosp {
+        grid-area:niam;
         display: flex;
         flex-flow: column nowrap;
         align-content:center;
@@ -1254,7 +1304,7 @@ body {
     }
     
      /* Seccion servicios: seguros generales */
-    .container #serviciosp .sg {
+    .tainercon #serviciosp .sg {
     
         background-image: url(/img/verified.png);
         background-repeat: no-repeat;
@@ -1265,19 +1315,20 @@ body {
         margin-bottom: 15%;
         padding: 5% 5% 0% 5%;
         box-shadow: 9px 9px #999;
-        height: 550px;
+        height: 700px;
         color:white;
+        border-radius: 15px 15px;
     }
-    .container #serviciosp .sg:hover {
+    .tainercon #serviciosp .sg:hover {
         box-shadow: 9px 9px black;
         background-color:rgb(247, 184, 173);
         color: black;
     }
-    .container #serviciosp .sg h3{
+    .tainercon #serviciosp .sg h3{
         font-size: 25px;
         font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
     }
-    .container #serviciosp .sg .sg1 {
+    .tainercon #serviciosp .sg .sg1 {
         margin-top:5%;
         font-size: 18px;
         font-style: italic;
@@ -1285,43 +1336,43 @@ body {
         list-style-type:square;
         list-style-position:inside;
     }
-    .container #serviciosp .sg .sg1 p{
+    .tainercon #serviciosp .sg .sg1 p{
         margin-top:2%;
         font-size: 18px;
         font-style:italic;
     }
     
             /* Seguros generales ITEMS */
-            .container #serviciosp .sg .sg1 .veh{
+            .tainercon #serviciosp .sg .sg1 .veh{
                 padding: 5%;
             }
-            .container #serviciosp .sg .sg1 .veh p{
+            .tainercon #serviciosp .sg .sg1 .veh p{
                 font-style: normal;
                 text-decoration: underline;
             }
-            .container #serviciosp .sg .sg1 .veh .veh1 p{
+            .tainercon #serviciosp .sg .sg1 .veh .veh1 p{
                 font-style: italic;
                 text-decoration: none;
             }
-            .container #serviciosp .sg .sg1 .acc-p{
+            .tainercon #serviciosp .sg .sg1 .acc-p{
                 padding: 5%;
             }
-            .container #serviciosp .sg .sg1 .acc-p p{
+            .tainercon #serviciosp .sg .sg1 .acc-p p{
                 font-style: normal;
                 text-decoration: underline;
             }
-            .container #serviciosp .sg .sg1 .acc-p .acc-p1 p{
+            .tainercon #serviciosp .sg .sg1 .acc-p .acc-p1 p{
                 font-style: italic;
                 text-decoration: none;
             }
-            .container #serviciosp .sg .sg1 .comb-f{
+            .tainercon #serviciosp .sg .sg1 .comb-f{
                 padding: 5%;
             }
-            .container #serviciosp .sg .sg1 .comb-f p{
+            .tainercon #serviciosp .sg .sg1 .comb-f p{
                 font-style: normal;
                 text-decoration: underline;
             }
-            .container #serviciosp .sg .sg1 .comb-f1 p{
+            .tainercon #serviciosp .sg .sg1 .comb-f1 p{
                 font-style: italic;
                 text-decoration: none;
             }
@@ -1330,46 +1381,8 @@ body {
 /* Fin seccion servicios: seguros generales */
 
 /* Seccion servicios: gestoria del automotor */
-    .container #serviciosp .gda {
+    .tainercon #serviciosp .gda {
         background-image: url(/img/coche-de-reparto.png);
-        background-repeat: no-repeat;
-        background-size:25%;
-        background-position-x:95%;
-        background-position-y:95%;
-        background-color: #333;
-        margin-bottom: 15%;
-        padding: 5% 5% 0% 5%;
-        box-shadow: 9px 9px #999;
-        height: 450px;
-        color:white;
-    }
-    .container #serviciosp .gda:hover {
-        box-shadow: 9px 9px black;
-        background-color:rgb(247, 184, 173);
-        color: black;
-    }
-    .container #serviciosp .gda h3{
-        font-size: 25px;
-        font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
-    }
-    .container #serviciosp .gda .gda1 {
-        margin-top:5%;
-        font-size: 18px;
-        font-style: italic;
-        font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
-        list-style-type:square;
-        list-style-position:inside;
-    }
-    .container #serviciosp .gda .gda1 p{
-        margin-top:2%;
-        font-size: 18px;
-        font-style:italic;
-    }
-/* Fin seccion servicios: gestoria del automotor */
-
-/* Seccion servicios: Estudio contable*/
-    .container #serviciosp .ec {
-        background-image: url(/img/contabilidad.png);
         background-repeat: no-repeat;
         background-size:25%;
         background-position-x:95%;
@@ -1380,17 +1393,18 @@ body {
         box-shadow: 9px 9px #999;
         height: 600px;
         color:white;
+        border-radius: 15px 15px;
     }
-    .container #serviciosp .ec:hover {
+    .tainercon #serviciosp .gda:hover {
         box-shadow: 9px 9px black;
         background-color:rgb(247, 184, 173);
         color: black;
     }
-    .container #serviciosp .ec h3{
+    .tainercon #serviciosp .gda h3{
         font-size: 25px;
         font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
     }
-    .container #serviciosp .ec .ec1 {
+    .tainercon #serviciosp .gda .gda1 {
         margin-top:5%;
         font-size: 18px;
         font-style: italic;
@@ -1398,42 +1412,81 @@ body {
         list-style-type:square;
         list-style-position:inside;
     }
-    .container #serviciosp .ec .ec1 p{
+    .tainercon #serviciosp .gda .gda1 p{
+        margin-top:2%;
+        font-size: 18px;
+        font-style:italic;
+    }
+/* Fin seccion servicios: gestoria del automotor */
+
+/* Seccion servicios: Estudio contable*/
+    .tainercon #serviciosp .ec {
+        background-image: url(/img/contabilidad.png);
+        background-repeat: no-repeat;
+        background-size:25%;
+        background-position-x:95%;
+        background-position-y:95%;
+        background-color: #333;
+        margin-bottom: 15%;
+        padding: 5% 5% 0% 5%;
+        box-shadow: 9px 9px #999;
+        height: 750px;
+        color:white;
+        border-radius: 15px 15px;
+    }
+    .tainercon #serviciosp .ec:hover {
+        box-shadow: 9px 9px black;
+        background-color:rgb(247, 184, 173);
+        color: black;
+    }
+    .tainercon #serviciosp .ec h3{
+        font-size: 25px;
+        font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
+    }
+    .tainercon #serviciosp .ec .ec1 {
+        margin-top:5%;
+        font-size: 18px;
+        font-style: italic;
+        font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
+        list-style-type:square;
+        list-style-position:inside;
+    }
+    .tainercon #serviciosp .ec .ec1 p{
         margin-top:2%;
         font-size: 18px;
         font-style:italic;
     }
    /* Estudio contable ITEMS */
-        .container #serviciosp .ec .ec1 .monotrib{
+        .tainercon #serviciosp .ec .ec1 .monotrib{
             padding: 5%;
         }
-        .container #serviciosp .ec .ec1 .monotrib p{
+        .tainercon #serviciosp .ec .ec1 .monotrib p{
             font-style: normal;
             text-decoration: underline;
         }
-        .container #serviciosp .ec .ec1 .monotrib .monotrib1 p{
+        .tainercon #serviciosp .ec .ec1 .monotrib .monotrib1 p{
             font-style: italic;
             text-decoration: none;
         }
-        .container #serviciosp .ec .ec1 .regimeng{
+        .tainercon #serviciosp .ec .ec1 .regimeng{
             padding: 5%;
         }
-        .container #serviciosp .ec .ec1 .regimeng p{
+        .tainercon #serviciosp .ec .ec1 .regimeng p{
             font-style: normal;
             text-decoration: underline;
         }
-        .container #serviciosp .ec .ec1 .regimeng .regimeng1 p{
+        .tainercon #serviciosp .ec .ec1 .regimeng .regimeng1 p{
             font-style: italic;
             text-decoration: none;
         }
-        .container #serviciosp .ec .ec1 .asesoram{
+        .tainercon #serviciosp .ec .ec1 .asesoram{
             padding: 5%;
         }
-        .container #serviciosp .ec .ec1 .asesoram p{
+        .tainercon #serviciosp .ec .ec1 .asesoram p{
             font-style: normal;
             text-decoration: underline;
         }
-        .container #serviciosp .ec .ec1 .asesoram1 p{
+        .tainercon #serviciosp .ec .ec1 .asesoram1 p{
             font-style: italic;
             text-decoration: none;
         }
@@ -1451,28 +1504,26 @@ body {
 /* CSS SERVICIOS TABLET */
 @media (min-width: 401px) and (max-width:960px) {
 /* Encabezado */
-.container .portadas {
-    grid-area: tit;
+.tainercon .portadas {
+    grid-area: titulop;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
     color: #333;
     text-shadow: 2px 2px 2px rgb(247, 184, 173) ;
-    font-weight: bold; 
-    font-size: 50px;
     text-align: center;
-    background-image: url(../img/apoyo-tecnico.gif);
-    background-repeat: no-repeat;
-    background-size: 15%;
-    background-position-x: 0%;
-    background-position-y: 0%;
+    }
+
+    .tainercon .portadas h3 {
+        font-weight: bold; 
+        font-size: 3.5rem;
     }
 /*Fin Encabezado */
 
 /* Seccion servicios */
-.container #serviciosp {
-    grid-area:main;
+.tainercon #serviciosp {
+    grid-area:niam;
     display: flex;
     flex-flow: column nowrap;
     align-content:center;
@@ -1480,7 +1531,7 @@ body {
 }
 
  /* Seccion servicios: seguros generales */
-.container #serviciosp .sg {
+.tainercon #serviciosp .sg {
 
     background-image: url(/img/verified.png);
     background-repeat: no-repeat;
@@ -1491,62 +1542,63 @@ body {
     margin-bottom: 15%;
     padding: 5% 5% 0% 5%;
     box-shadow: 9px 9px #999;
-    height: 800px;
+    height: 900px;
     color:white;
+    border-radius: 15px 15px;
 }
-.container #serviciosp .sg:hover {
+.tainercon #serviciosp .sg:hover {
     box-shadow: 9px 9px black;
     background-color:rgb(247, 184, 173);
     color: black;
 }
-.container #serviciosp .sg h3{
+.tainercon #serviciosp .sg h3{
     font-size: 30px;
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
 }
-.container #serviciosp .sg .sg1 {
+.tainercon #serviciosp .sg .sg1 {
     margin-top:5%;
     font-style: italic;
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
     list-style-type:square;
     list-style-position:inside;
 }
-.container #serviciosp .sg .sg1 p{
+.tainercon #serviciosp .sg .sg1 p{
     margin-top:2%;
     font-size: 22px;
     font-style:italic;
 }
 
         /* Seguros generales ITEMS */
-        .container #serviciosp .sg .sg1 .veh{
+        .tainercon #serviciosp .sg .sg1 .veh{
             padding: 5%;
         }
-        .container #serviciosp .sg .sg1 .veh p{
+        .tainercon #serviciosp .sg .sg1 .veh p{
             font-style: normal;
             text-decoration: underline;
         }
-        .container #serviciosp .sg .sg1 .veh .veh1 p{
+        .tainercon #serviciosp .sg .sg1 .veh .veh1 p{
             font-style: italic;
             text-decoration: none;
         }
-        .container #serviciosp .sg .sg1 .acc-p{
+        .tainercon #serviciosp .sg .sg1 .acc-p{
             padding: 5%;
         }
-        .container #serviciosp .sg .sg1 .acc-p p{
+        .tainercon #serviciosp .sg .sg1 .acc-p p{
             font-style: normal;
             text-decoration: underline;
         }
-        .container #serviciosp .sg .sg1 .acc-p .acc-p1 p{
+        .tainercon #serviciosp .sg .sg1 .acc-p .acc-p1 p{
             font-style: italic;
             text-decoration: none;
         }
-        .container #serviciosp .sg .sg1 .comb-f{
+        .tainercon #serviciosp .sg .sg1 .comb-f{
             padding: 5%;
         }
-        .container #serviciosp .sg .sg1 .comb-f p{
+        .tainercon #serviciosp .sg .sg1 .comb-f p{
             font-style: normal;
             text-decoration: underline;
         }
-        .container #serviciosp .sg .sg1 .comb-f1 p{
+        .tainercon #serviciosp .sg .sg1 .comb-f1 p{
             font-style: italic;
             text-decoration: none;
         }
@@ -1555,7 +1607,7 @@ body {
 /* Fin seccion servicios: seguros generales */
 
 /* Seccion servicios: gestoria del automotor */
-.container #serviciosp .gda {
+.tainercon #serviciosp .gda {
     background-image: url(/img/coche-de-reparto.png);
     background-repeat: no-repeat;
     background-size:25%;
@@ -1567,24 +1619,25 @@ body {
     box-shadow: 9px 9px #999;
     height: 600px;
     color:white;
+    border-radius: 15px 15px;
 }
-.container #serviciosp .gda:hover {
+.tainercon #serviciosp .gda:hover {
     box-shadow: 9px 9px black;
     background-color:rgb(247, 184, 173);
     color: black;
 }
-.container #serviciosp .gda h3{
+.tainercon #serviciosp .gda h3{
     font-size: 30px;
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
 }
-.container #serviciosp .gda .gda1 {
+.tainercon #serviciosp .gda .gda1 {
     margin-top:5%;
     font-style: italic;
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
     list-style-type:square;
     list-style-position:inside;
 }
-.container #serviciosp .gda .gda1 p{
+.tainercon #serviciosp .gda .gda1 p{
     margin-top:2%;
     font-size: 22px;
     font-style:italic;
@@ -1592,71 +1645,72 @@ body {
 /* Fin seccion servicios: gestoria del automotor */
 
 /* Seccion servicios: Estudio contable*/
-.container #serviciosp .ec {
+.tainercon #serviciosp .ec {
     background-image: url(/img/contabilidad.png);
     background-repeat: no-repeat;
     background-size:25%;
     background-position-x:95%;
     background-position-y:95%;
     background-color: #333;
-    margin-bottom: 15%;
+    margin-bottom: 10%;
     padding: 5% 5% 0% 5%;
     box-shadow: 9px 9px #999;
-    height: 900px;
+    height: 1000px;
     color:white;
+    border-radius: 15px 15px;
 }
-.container #serviciosp .ec:hover {
+.tainercon #serviciosp .ec:hover {
     box-shadow: 9px 9px black;
     background-color:rgb(247, 184, 173);
     color: black;
 }
-.container #serviciosp .ec h3{
+.tainercon #serviciosp .ec h3{
     font-size: 30px;
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
 }
-.container #serviciosp .ec .ec1 {
+.tainercon #serviciosp .ec .ec1 {
     margin-top:5%;
     font-style: italic;
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
     list-style-type:square;
     list-style-position:inside;
 }
-.container #serviciosp .ec .ec1 p{
+.tainercon #serviciosp .ec .ec1 p{
     margin-top:2%;
     font-size: 22px;
     font-style:italic;
 }
 /* Estudio contable ITEMS */
-    .container #serviciosp .ec .ec1 .monotrib{
+    .tainercon #serviciosp .ec .ec1 .monotrib{
         padding: 5%;
     }
-    .container #serviciosp .ec .ec1 .monotrib p{
+    .tainercon #serviciosp .ec .ec1 .monotrib p{
         font-style: normal;
         text-decoration: underline;
     }
-    .container #serviciosp .ec .ec1 .monotrib .monotrib1 p{
+    .tainercon #serviciosp .ec .ec1 .monotrib .monotrib1 p{
         font-style: italic;
         text-decoration: none;
     }
-    .container #serviciosp .ec .ec1 .regimeng{
+    .tainercon #serviciosp .ec .ec1 .regimeng{
         padding: 5%;
     }
-    .container #serviciosp .ec .ec1 .regimeng p{
+    .tainercon #serviciosp .ec .ec1 .regimeng p{
         font-style: normal;
         text-decoration: underline;
     }
-    .container #serviciosp .ec .ec1 .regimeng .regimeng1 p{
+    .tainercon #serviciosp .ec .ec1 .regimeng .regimeng1 p{
         font-style: italic;
         text-decoration: none;
     }
-    .container #serviciosp .ec .ec1 .asesoram{
+    .tainercon #serviciosp .ec .ec1 .asesoram{
         padding: 5%;
     }
-    .container #serviciosp .ec .ec1 .asesoram p{
+    .tainercon #serviciosp .ec .ec1 .asesoram p{
         font-style: normal;
         text-decoration: underline;
     }
-    .container #serviciosp .ec .ec1 .asesoram1 p{
+    .tainercon #serviciosp .ec .ec1 .asesoram1 p{
         font-style: italic;
         text-decoration: none;
     }
@@ -1674,30 +1728,32 @@ body {
 /* CSS SERVICIOS DESKTOP */
 @media (min-width: 960px) {
 /* Encabezado */
-.container .portadas {
+.tainercon .portadas {
     grid-row:1/3;
     grid-column:1/3;
     background-image: url(../img/serviciosp4.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 30rem;
+    height: 35rem;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
     color: #333;
     text-shadow: 2px 2px 2px rgb(247, 184, 173) ;
-    font-weight: bold; 
-    font-size: 50px;
     opacity: 0.6;
     }
 
+    .tainercon .portadas h3 {
+        font-size: 3.5rem;
+        font-weight: bold;
+    }    
 /*Fin Encabezado */
 
 /* Seccion servicios */
 #serviciosp {
-    grid-area:main;
+    grid-area:niam;
     display: flex;
     flex-flow: column nowrap;
     margin-bottom: 9px;
@@ -1949,27 +2005,30 @@ body {
 
 /* CSS ASEGURADORAS MOBILE FIRST */
 @media (max-width:400px) {
-    .container .portadaa {
-        grid-area: tit;
+    .tainercon .portadaa {
+        grid-area: titulop;
         display: flex;
         flex-flow: column nowrap;
         justify-content: center;
         align-items: center;
         color: #333;
         text-shadow: 2px 2px 2px rgb(247, 184, 173) ;
-        font-weight: bold; 
-        font-size: 40px;
-        text-align: center;
-        background-image: url(../img/hexagonal.gif);
+        /* background-image: url(../img/hexagonal.gif);
         background-repeat: no-repeat;
         background-size: 15%;
         background-position-x: 0%;
-        background-position-y: 0%;
+        background-position-y: 0%; */
+        }
+    
+        .tainercon .portadaa h3{
+            font-size: 3rem;
+            font-weight: bold; 
+            text-align: center;
         }
     /*Fin Encabezado */
     /* Seccion aseguradoras */
-    .container .aseg1 {
-        grid-area:main;
+    .tainercon .aseg1 {
+        grid-area:niam;
         display: flex;
         flex-flow: column nowrap;
         align-content:center;
@@ -1977,7 +2036,7 @@ body {
     }
     
             /* Parana */
-            .container .aseg1 #parana {
+            .tainercon .aseg1 #parana {
                 background-image: url(../img/parana-seguros-removebg-preview.png);
                 background-repeat: no-repeat;
                 background-size:50%;
@@ -1989,17 +2048,18 @@ body {
                 box-shadow: 9px 9px #999;
                 height: 350px;
                 color:white;
+                border-radius: 15px 15px;
             }
-            .container .aseg1 #parana:hover {
+            .tainercon .aseg1 #parana:hover {
                 box-shadow: 9px 9px black;
                 background-color:rgb(247, 184, 173);
                 color: black;
             }
-            .container .aseg1 #parana h3{
+            .tainercon .aseg1 #parana h3{
                 font-size: 22px;
                 font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
             }
-            .container .aseg1 #parana p {
+            .tainercon .aseg1 #parana p {
                 margin-top:5%;
                 font-size: 18px;
                 font-style: italic;
@@ -2009,7 +2069,7 @@ body {
                 list-style-type:square;
                 list-style-position:inside;
             }
-            .container .aseg1 #parana p a{
+            .tainercon .aseg1 #parana p a{
                 color: white;
                 text-decoration: underline;
                 text-align: center;
@@ -2017,26 +2077,26 @@ body {
                 font-size: 18px;
                 font-style:italic;
             }
-            .container .aseg1 #parana:hover {
+            .tainercon .aseg1 #parana:hover {
                 box-shadow: 9px 9px black;
                 background-color:rgb(247, 184, 173);
             }
-            .container .aseg1 #parana:hover h3{
+            .tainercon .aseg1 #parana:hover h3{
                 color:black;
             }
-            .container .aseg1 #parana:hover p{
+            .tainercon .aseg1 #parana:hover p{
                 color:black;
             }
-            .container .aseg1 #parana:hover p a{
+            .tainercon .aseg1 #parana:hover p a{
                 color:black;
             }
-            .container .aseg1 #parana p a:hover{
+            .tainercon .aseg1 #parana p a:hover{
                 color:tomato;
             }
             /* Fin Parana */
 
             /* LPS */
-            .container .aseg1 #lps {
+            .tainercon .aseg1 #lps {
                 background-image: url(../img/la-perseverancia-seguros-removebg-preview.png);
                 background-repeat: no-repeat;
                 background-size:50%;
@@ -2048,17 +2108,18 @@ body {
                 box-shadow: 9px 9px #999;
                 height: 400px;
                 color:white;
+                border-radius: 15px 15px;
             }
-            .container .aseg1 #lps:hover {
+            .tainercon .aseg1 #lps:hover {
                 box-shadow: 9px 9px black;
                 background-color:rgb(247, 184, 173);
                 color: black;
             }
-            .container .aseg1 #lps h3{
+            .tainercon .aseg1 #lps h3{
                 font-size: 22px;
                 font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
             }
-            .container .aseg1 #lps p {
+            .tainercon .aseg1 #lps p {
                 margin-top:5%;
                 font-size: 18px;
                 font-style: italic;
@@ -2067,7 +2128,7 @@ body {
                 list-style-type:square;
                 list-style-position:inside;
             }
-            .container .aseg1 #lps p a{
+            .tainercon .aseg1 #lps p a{
                 color: white;
                 text-decoration: underline;
                 text-align: center;
@@ -2075,48 +2136,49 @@ body {
                 font-size: 18px;
                 font-style:italic;
             }
-            .container .aseg1 #lps:hover {
+            .tainercon .aseg1 #lps:hover {
                 box-shadow: 9px 9px black;
                 background-color:rgb(247, 184, 173);
             }
-            .container .aseg1 #lps:hover h3{
+            .tainercon .aseg1 #lps:hover h3{
                 color:black;
             }
-            .container .aseg1 #lps:hover p{
+            .tainercon .aseg1 #lps:hover p{
                 color:black;
             }
-            .container .aseg1 #lps:hover p a{
+            .tainercon .aseg1 #lps:hover p a{
                 color:black;
             }
-            .container .aseg1 #lps p a:hover{
+            .tainercon .aseg1 #lps p a:hover{
                 color:tomato;
             }
             /* Fin LPS */
 
             /* BENEF */
-            .container .aseg1 #benef {
+            .tainercon .aseg1 #benef {
                 background-image: url(../img/beneficio_sa-removebg-preview.png);
                 background-repeat: no-repeat;
-                background-size:50%;
-                background-position-x:right;
-                background-position-y:bottom;
+                background-size:40%;
+                background-position-x:90%;
+                background-position-y:95%;
                 background-color: #333;
                 margin-bottom: 15%;
                 padding: 5% 5% 0% 5%;
                 box-shadow: 9px 9px #999;
                 height: 400px;
                 color:white;
+                border-radius: 15px 15px;
             }
-            .container .aseg1 #benef:hover {
+            .tainercon .aseg1 #benef:hover {
                 box-shadow: 9px 9px black;
                 background-color:rgb(247, 184, 173);
                 color: black;
             }
-            .container .aseg1 #benef h3{
+            .tainercon .aseg1 #benef h3{
                 font-size: 22px;
                 font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
             }
-            .container .aseg1 #benef p {
+            .tainercon .aseg1 #benef p {
                 margin-top:5%;
                 font-size: 18px;
                 font-style: italic;
@@ -2126,7 +2188,7 @@ body {
                 list-style-type:square;
                 list-style-position:inside;
             }
-            .container .aseg1 #benef p a{
+            .tainercon .aseg1 #benef p a{
                 color: white;
                 text-decoration: underline;
                 text-align: center;
@@ -2134,48 +2196,49 @@ body {
                 font-size: 18px;
                 font-style:italic;
             }
-            .container .aseg1 #benef:hover {
+            .tainercon .aseg1 #benef:hover {
                 box-shadow: 9px 9px black;
                 background-color:rgb(247, 184, 173);
             }
-            .container .aseg1 #benef:hover h3{
+            .tainercon .aseg1 #benef:hover h3{
                 color:black;
             }
-            .container .aseg1 #benef:hover p{
+            .tainercon .aseg1 #benef:hover p{
                 color:black;
             }
-            .container .aseg1 #benef:hover p a{
+            .tainercon .aseg1 #benef:hover p a{
                 color:black;
             }
-            .container .aseg1 #benef p a:hover{
+            .tainercon .aseg1 #benef p a:hover{
                 color:tomato;
             }
             /* Fin BENEF */
 
             /* SMG */
-            .container .aseg1 #smg{
+            .tainercon .aseg1 #smg{
                 background-image: url(../img/swiss_medical-removebg-preview.png);
                 background-repeat: no-repeat;
                 background-size:50%;
-                background-position-x:right;
-                background-position-y:bottom;
+                background-position-x:100%;
+                background-position-y:100%;
                 background-color: #333;
                 margin-bottom: 15%;
                 padding: 5% 5% 0% 5%;
                 box-shadow: 9px 9px #999;
                 height: 400px;
                 color:white;
+                border-radius: 15px 15px;
             }
-            .container .aseg1 #smg:hover {
+            .tainercon .aseg1 #smg:hover {
                 box-shadow: 9px 9px black;
                 background-color:rgb(247, 184, 173);
                 color: black;
             }
-            .container .aseg1 #smg h3{
+            .tainercon .aseg1 #smg h3{
                 font-size: 22px;
                 font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
             }
-            .container .aseg1 #smg p {
+            .tainercon .aseg1 #smg p {
                 margin-top:5%;
                 font-size: 18px;
                 font-style: italic;
@@ -2184,7 +2247,7 @@ body {
                 list-style-type:square;
                 list-style-position:inside;
             }
-            .container .aseg1 #smg p a{
+            .tainercon .aseg1 #smg p a{
                 color: white;
                 text-decoration: underline;
                 text-align: center;
@@ -2192,30 +2255,30 @@ body {
                 font-size: 18px;
                 font-style:italic;
             }
-            .container .aseg1 #smg:hover {
+            .tainercon .aseg1 #smg:hover {
                 box-shadow: 9px 9px black;
                 background-color:rgb(247, 184, 173);
             }
-            .container .aseg1 #smg:hover h3{
+            .tainercon .aseg1 #smg:hover h3{
                 color:black;
             }
-            .container .aseg1 #smg:hover p{
+            .tainercon .aseg1 #smg:hover p{
                 color:black;
             }
-            .container .aseg1 #smg:hover p a{
+            .tainercon .aseg1 #smg:hover p a{
                 color:black;
             }
-            .container .aseg1 #smg p a:hover{
+            .tainercon .aseg1 #smg p a:hover{
                 color:tomato;
             }
             /* Fin SMG */
 
             /* MEDICAR */
-            .container .aseg1 #medicar {
+            .tainercon .aseg1 #medicar {
                 background-image: url(../img/medicar_work-removebg-preview.png);
                 background-repeat: no-repeat;
                 background-size:35%;
-                background-position-x:right;
+                background-position-x:95%;
                 background-position-y:bottom;
                 background-color: #333;
                 margin-bottom: 15%;
@@ -2223,17 +2286,18 @@ body {
                 box-shadow: 9px 9px #999;
                 height: 400px;
                 color:white;
+                border-radius: 15px 15px;
             }
-            .container .aseg1 #medicar:hover {
+            .tainercon .aseg1 #medicar:hover {
                 box-shadow: 9px 9px black;
                 background-color:rgb(247, 184, 173);
                 color: black;
             }
-            .container .aseg1 #medicar h3{
+            .tainercon .aseg1 #medicar h3{
                 font-size: 22px;
                 font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
             }
-            .container .aseg1 #medicar p {
+            .tainercon .aseg1 #medicar p {
                 margin-top:5%;
                 font-size: 18px;
                 font-style: italic;
@@ -2242,7 +2306,7 @@ body {
                 list-style-type:square;
                 list-style-position:inside;
             }
-            .container .aseg1 #medicar p a{
+            .tainercon .aseg1 #medicar p a{
                 color: white;
                 text-decoration: underline;
                 text-align: center;
@@ -2250,30 +2314,30 @@ body {
                 font-size: 18px;
                 font-style:italic;
             }
-            .container .aseg1 #medicar:hover {
+            .tainercon .aseg1 #medicar:hover {
                 box-shadow: 9px 9px black;
                 background-color:rgb(247, 184, 173);
             }
-            .container .aseg1 #medicar:hover h3{
+            .tainercon .aseg1 #medicar:hover h3{
                 color:black;
             }
-            .container .aseg1 #medicar:hover p{
+            .tainercon .aseg1 #medicar:hover p{
                 color:black;
             }
-            .container .aseg1 #medicar:hover p a{
+            .tainercon .aseg1 #medicar:hover p a{
                 color:black;
             }
-            .container .aseg1 #medicar p a:hover{
+            .tainercon .aseg1 #medicar p a:hover{
                 color:tomato;
             }
             /* Fin MEDICAR */
 
             /* RIVADAVIA */
-            .container .aseg1 #rivadavia {
+            .tainercon .aseg1 #rivadavia {
                 background-image: url(../img/seguros-rivadavia-removebg-preview.png);
                 background-repeat: no-repeat;
-                background-size:50%;
-                background-position-x:right;
+                background-size:60%;
+                background-position-x:100%;
                 background-position-y:bottom;
                 background-color: #333;
                 margin-bottom: 15%;
@@ -2281,17 +2345,18 @@ body {
                 box-shadow: 9px 9px #999;
                 height: 400px;
                 color:white;
+                border-radius: 15px 15px;
             }
-            .container .aseg1 #rivadavia:hover {
+            .tainercon .aseg1 #rivadavia:hover {
                 box-shadow: 9px 9px black;
                 background-color:rgb(247, 184, 173);
                 color: black;
             }
-            .container .aseg1 #rivadavia h3{
+            .tainercon .aseg1 #rivadavia h3{
                 font-size: 22px;
                 font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
             }
-            .container .aseg1 #rivadavia p {
+            .tainercon .aseg1 #rivadavia p {
                 margin-top:5%;
                 font-size: 18px;
                 font-style: italic;
@@ -2300,7 +2365,7 @@ body {
                 list-style-type:square;
                 list-style-position:inside;
             }
-            .container .aseg1 #rivadavia p a{
+            .tainercon .aseg1 #rivadavia p a{
                 color: white;
                 text-decoration: underline;
                 text-align: center;
@@ -2308,20 +2373,20 @@ body {
                 font-size: 18px;
                 font-style:italic;
             }
-            .container .aseg1 #rivadavia:hover {
+            .tainercon .aseg1 #rivadavia:hover {
                 box-shadow: 9px 9px black;
                 background-color:rgb(247, 184, 173);
             }
-            .container .aseg1 #rivadavia:hover h3{
+            .tainercon .aseg1 #rivadavia:hover h3{
                 color:black;
             }
-            .container .aseg1 #rivadavia:hover p{
+            .tainercon .aseg1 #rivadavia:hover p{
                 color:black;
             }
-            .container .aseg1 #rivadavia:hover p a{
+            .tainercon .aseg1 #rivadavia:hover p a{
                 color:black;
             }
-            .container .aseg1 #rivadavia p a:hover{
+            .tainercon .aseg1 #rivadavia p a:hover{
                 color:tomato;
             }
             /* Fin Parana */
@@ -2330,27 +2395,29 @@ body {
 
 /* CSS ASEGURADORAS TABLET */
 @media (min-width: 401px) and (max-width:960px) {
-    .container .portadaa {
-        grid-area: tit;
+    .tainercon .portadaa {
+        grid-area: titulop;
         display: flex;
         flex-flow: column nowrap;
         justify-content: center;
         align-items: center;
         color: #333;
         text-shadow: 2px 2px 2px rgb(247, 184, 173) ;
-        font-weight: bold; 
-        font-size: 50px;
         text-align: center;
-        background-image: url(../img/hexagonal.gif);
+        /* background-image: url(../img/hexagonal.gif);
         background-repeat: no-repeat;
         background-size: 10%;
         background-position-x: 0%;
-        background-position-y: 0%;
+        background-position-y: 0%; */
+        }
+        .tainercon .portadaa h3 {
+            font-weight: bold; 
+            font-size: 3.5rem;
         }
     /*Fin Encabezado */
     /* Seccion aseguradoras */
-    .container .aseg1 {
-        grid-area:main;
+    .tainercon .aseg1 {
+        grid-area:niam;
         display: flex;
         flex-flow: column nowrap;
         align-content:center;
@@ -2358,10 +2425,10 @@ body {
     }
     
             /* Parana */
-            .container .aseg1 #parana {
+            .tainercon .aseg1 #parana {
                 background-image: url(../img/parana-seguros-removebg-preview.png);
                 background-repeat: no-repeat;
-                background-size:50%;
+                background-size:40%;
                 background-position-x:right;
                 background-position-y:bottom;
                 background-color: #333;
@@ -2370,17 +2437,18 @@ body {
                 box-shadow: 9px 9px #999;
                 height: 350px;
                 color:white;
+                border-radius: 15px 15px;
             }
-            .container .aseg1 #parana:hover {
+            .tainercon .aseg1 #parana:hover {
                 box-shadow: 9px 9px black;
                 background-color:rgb(247, 184, 173);
                 color: black;
             }
-            .container .aseg1 #parana h3{
+            .tainercon .aseg1 #parana h3{
                 font-size: 25px;
                 font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
             }
-            .container .aseg1 #parana p {
+            .tainercon .aseg1 #parana p {
                 margin-top:5%;
                 font-size: 18px;
                 font-style: italic;
@@ -2390,7 +2458,7 @@ body {
                 list-style-type:square;
                 list-style-position:inside;
             }
-            .container .aseg1 #parana p a{
+            .tainercon .aseg1 #parana p a{
                 color: white;
                 text-decoration: underline;
                 text-align: center;
@@ -2398,48 +2466,49 @@ body {
                 font-size: 18px;
                 font-style:italic;
             }
-            .container .aseg1 #parana:hover {
+            .tainercon .aseg1 #parana:hover {
                 box-shadow: 9px 9px black;
                 background-color:rgb(247, 184, 173);
             }
-            .container .aseg1 #parana:hover h3{
+            .tainercon .aseg1 #parana:hover h3{
                 color:black;
             }
-            .container .aseg1 #parana:hover p{
+            .tainercon .aseg1 #parana:hover p{
                 color:black;
             }
-            .container .aseg1 #parana:hover p a{
+            .tainercon .aseg1 #parana:hover p a{
                 color:black;
             }
-            .container .aseg1 #parana p a:hover{
+            .tainercon .aseg1 #parana p a:hover{
                 color:tomato;
             }
             /* Fin Parana */
 
             /* LPS */
-            .container .aseg1 #lps {
+            .tainercon .aseg1 #lps {
                 background-image: url(../img/la-perseverancia-seguros-removebg-preview.png);
                 background-repeat: no-repeat;
-                background-size:50%;
+                background-size:40%;
                 background-position-x:right;
-                background-position-y:bottom;
+                background-position-y:95%;
                 background-color: #333;
                 margin-bottom: 15%;
                 padding: 5% 5% 0% 5%;
                 box-shadow: 9px 9px #999;
                 height: 400px;
                 color:white;
+                border-radius: 15px 15px;
             }
-            .container .aseg1 #lps:hover {
+            .tainercon .aseg1 #lps:hover {
                 box-shadow: 9px 9px black;
                 background-color:rgb(247, 184, 173);
                 color: black;
             }
-            .container .aseg1 #lps h3{
+            .tainercon .aseg1 #lps h3{
                 font-size: 25px;
                 font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
             }
-            .container .aseg1 #lps p {
+            .tainercon .aseg1 #lps p {
                 margin-top:5%;
                 font-size: 18px;
                 font-style: italic;
@@ -2448,7 +2517,7 @@ body {
                 list-style-type:square;
                 list-style-position:inside;
             }
-            .container .aseg1 #lps p a{
+            .tainercon .aseg1 #lps p a{
                 color: white;
                 text-decoration: underline;
                 text-align: center;
@@ -2456,48 +2525,49 @@ body {
                 font-size: 18px;
                 font-style:italic;
             }
-            .container .aseg1 #lps:hover {
+            .tainercon .aseg1 #lps:hover {
                 box-shadow: 9px 9px black;
                 background-color:rgb(247, 184, 173);
             }
-            .container .aseg1 #lps:hover h3{
+            .tainercon .aseg1 #lps:hover h3{
                 color:black;
             }
-            .container .aseg1 #lps:hover p{
+            .tainercon .aseg1 #lps:hover p{
                 color:black;
             }
-            .container .aseg1 #lps:hover p a{
+            .tainercon .aseg1 #lps:hover p a{
                 color:black;
             }
-            .container .aseg1 #lps p a:hover{
+            .tainercon .aseg1 #lps p a:hover{
                 color:tomato;
             }
             /* Fin LPS */
 
             /* BENEF */
-            .container .aseg1 #benef {
+            .tainercon .aseg1 #benef {
                 background-image: url(../img/beneficio_sa-removebg-preview.png);
                 background-repeat: no-repeat;
-                background-size:50%;
-                background-position-x:right;
-                background-position-y:bottom;
+                background-size:30%;
+                background-position-x:95%;
+                background-position-y:95%;
                 background-color: #333;
                 margin-bottom: 15%;
                 padding: 5% 5% 0% 5%;
                 box-shadow: 9px 9px #999;
                 height: 400px;
                 color:white;
+                border-radius: 15px 15px;
             }
-            .container .aseg1 #benef:hover {
+            .tainercon .aseg1 #benef:hover {
                 box-shadow: 9px 9px black;
                 background-color:rgb(247, 184, 173);
                 color: black;
             }
-            .container .aseg1 #benef h3{
+            .tainercon .aseg1 #benef h3{
                 font-size: 25px;
                 font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
             }
-            .container .aseg1 #benef p {
+            .tainercon .aseg1 #benef p {
                 margin-top:5%;
                 font-size: 18px;
                 font-style: italic;
@@ -2507,7 +2577,7 @@ body {
                 list-style-type:square;
                 list-style-position:inside;
             }
-            .container .aseg1 #benef p a{
+            .tainercon .aseg1 #benef p a{
                 color: white;
                 text-decoration: underline;
                 text-align: center;
@@ -2515,26 +2585,26 @@ body {
                 font-size: 18px;
                 font-style:italic;
             }
-            .container .aseg1 #benef:hover {
+            .tainercon .aseg1 #benef:hover {
                 box-shadow: 9px 9px black;
                 background-color:rgb(247, 184, 173);
             }
-            .container .aseg1 #benef:hover h3{
+            .tainercon .aseg1 #benef:hover h3{
                 color:black;
             }
-            .container .aseg1 #benef:hover p{
+            .tainercon .aseg1 #benef:hover p{
                 color:black;
             }
-            .container .aseg1 #benef:hover p a{
+            .tainercon .aseg1 #benef:hover p a{
                 color:black;
             }
-            .container .aseg1 #benef p a:hover{
+            .tainercon .aseg1 #benef p a:hover{
                 color:tomato;
             }
             /* Fin BENEF */
 
             /* SMG */
-            .container .aseg1 #smg{
+            .tainercon .aseg1 #smg{
                 background-image: url(../img/swiss_medical-removebg-preview.png);
                 background-repeat: no-repeat;
                 background-size:50%;
@@ -2546,17 +2616,18 @@ body {
                 box-shadow: 9px 9px #999;
                 height: 400px;
                 color:white;
+                border-radius: 15px 15px;
             }
-            .container .aseg1 #smg:hover {
+            .tainercon .aseg1 #smg:hover {
                 box-shadow: 9px 9px black;
                 background-color:rgb(247, 184, 173);
                 color: black;
             }
-            .container .aseg1 #smg h3{
+            .tainercon .aseg1 #smg h3{
                 font-size: 25px;
                 font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
             }
-            .container .aseg1 #smg p {
+            .tainercon .aseg1 #smg p {
                 margin-top:5%;
                 font-size: 18px;
                 font-style: italic;
@@ -2565,7 +2636,7 @@ body {
                 list-style-type:square;
                 list-style-position:inside;
             }
-            .container .aseg1 #smg p a{
+            .tainercon .aseg1 #smg p a{
                 color: white;
                 text-decoration: underline;
                 text-align: center;
@@ -2573,30 +2644,30 @@ body {
                 font-size: 18px;
                 font-style:italic;
             }
-            .container .aseg1 #smg:hover {
+            .tainercon .aseg1 #smg:hover {
                 box-shadow: 9px 9px black;
                 background-color:rgb(247, 184, 173);
             }
-            .container .aseg1 #smg:hover h3{
+            .tainercon .aseg1 #smg:hover h3{
                 color:black;
             }
-            .container .aseg1 #smg:hover p{
+            .tainercon .aseg1 #smg:hover p{
                 color:black;
             }
-            .container .aseg1 #smg:hover p a{
+            .tainercon .aseg1 #smg:hover p a{
                 color:black;
             }
-            .container .aseg1 #smg p a:hover{
+            .tainercon .aseg1 #smg p a:hover{
                 color:tomato;
             }
             /* Fin SMG */
 
             /* MEDICAR */
-            .container .aseg1 #medicar {
+            .tainercon .aseg1 #medicar {
                 background-image: url(../img/medicar_work-removebg-preview.png);
                 background-repeat: no-repeat;
-                background-size:35%;
-                background-position-x:right;
+                background-size:30%;
+                background-position-x:95%;
                 background-position-y:bottom;
                 background-color: #333;
                 margin-bottom: 15%;
@@ -2604,17 +2675,18 @@ body {
                 box-shadow: 9px 9px #999;
                 height: 400px;
                 color:white;
+                border-radius: 15px 15px;
             }
-            .container .aseg1 #medicar:hover {
+            .tainercon .aseg1 #medicar:hover {
                 box-shadow: 9px 9px black;
                 background-color:rgb(247, 184, 173);
                 color: black;
             }
-            .container .aseg1 #medicar h3{
+            .tainercon .aseg1 #medicar h3{
                 font-size: 25px;
                 font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
             }
-            .container .aseg1 #medicar p {
+            .tainercon .aseg1 #medicar p {
                 margin-top:5%;
                 font-size: 18px;
                 font-style: italic;
@@ -2623,7 +2695,7 @@ body {
                 list-style-type:square;
                 list-style-position:inside;
             }
-            .container .aseg1 #medicar p a{
+            .tainercon .aseg1 #medicar p a{
                 color: white;
                 text-decoration: underline;
                 text-align: center;
@@ -2631,26 +2703,26 @@ body {
                 font-size: 18px;
                 font-style:italic;
             }
-            .container .aseg1 #medicar:hover {
+            .tainercon .aseg1 #medicar:hover {
                 box-shadow: 9px 9px black;
                 background-color:rgb(247, 184, 173);
             }
-            .container .aseg1 #medicar:hover h3{
+            .tainercon .aseg1 #medicar:hover h3{
                 color:black;
             }
-            .container .aseg1 #medicar:hover p{
+            .tainercon .aseg1 #medicar:hover p{
                 color:black;
             }
-            .container .aseg1 #medicar:hover p a{
+            .tainercon .aseg1 #medicar:hover p a{
                 color:black;
             }
-            .container .aseg1 #medicar p a:hover{
+            .tainercon .aseg1 #medicar p a:hover{
                 color:tomato;
             }
             /* Fin MEDICAR */
 
             /* RIVADAVIA */
-            .container .aseg1 #rivadavia {
+            .tainercon .aseg1 #rivadavia {
                 background-image: url(../img/seguros-rivadavia-removebg-preview.png);
                 background-repeat: no-repeat;
                 background-size:50%;
@@ -2662,17 +2734,18 @@ body {
                 box-shadow: 9px 9px #999;
                 height: 400px;
                 color:white;
+                border-radius: 15px 15px;
             }
-            .container .aseg1 #rivadavia:hover {
+            .tainercon .aseg1 #rivadavia:hover {
                 box-shadow: 9px 9px black;
                 background-color:rgb(247, 184, 173);
                 color: black;
             }
-            .container .aseg1 #rivadavia h3{
+            .tainercon .aseg1 #rivadavia h3{
                 font-size: 25px;
                 font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
             }
-            .container .aseg1 #rivadavia p {
+            .tainercon .aseg1 #rivadavia p {
                 margin-top:5%;
                 font-size: 18px;
                 font-style: italic;
@@ -2681,7 +2754,7 @@ body {
                 list-style-type:square;
                 list-style-position:inside;
             }
-            .container .aseg1 #rivadavia p a{
+            .tainercon .aseg1 #rivadavia p a{
                 color: white;
                 text-decoration: underline;
                 text-align: center;
@@ -2689,20 +2762,20 @@ body {
                 font-size: 18px;
                 font-style:italic;
             }
-            .container .aseg1 #rivadavia:hover {
+            .tainercon .aseg1 #rivadavia:hover {
                 box-shadow: 9px 9px black;
                 background-color:rgb(247, 184, 173);
             }
-            .container .aseg1 #rivadavia:hover h3{
+            .tainercon .aseg1 #rivadavia:hover h3{
                 color:black;
             }
-            .container .aseg1 #rivadavia:hover p{
+            .tainercon .aseg1 #rivadavia:hover p{
                 color:black;
             }
-            .container .aseg1 #rivadavia:hover p a{
+            .tainercon .aseg1 #rivadavia:hover p a{
                 color:black;
             }
-            .container .aseg1 #rivadavia p a:hover{
+            .tainercon .aseg1 #rivadavia p a:hover{
                 color:tomato;
             }
             /* Fin Parana */
@@ -2712,29 +2785,31 @@ body {
 /* CSS ASEGURADORAS DESKTOP */
 @media (min-width: 960px) {
 /* Encabezado */
-.container .portadaa {
+.tainercon .portadaa {
     grid-row:1/3;
     grid-column:1/3;
     background-image: url(../img/aseguradoras3.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 30rem;
+    height: 35rem;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
     color: #333;
-    text-shadow: 2px 2px 2px rgb(247, 184, 173) ;
-    font-weight: bold; 
-    font-size: 50px;
+    text-shadow: 2px 2px 2px rgb(247, 184, 173);
     opacity: 0.7;
+    }
+    .tainercon .portadaa h3 {
+        font-size: 3.5rem;
+        font-weight: bold; 
     }
 /*Fin Encabezado */
 
 /* Seccion servicios */
-.container .aseg1 {
-    grid-area: main;
+.tainercon .aseg1 {
+    grid-area: niam;
     display: flex;
     flex-flow: row nowrap;
     background-color: white;
@@ -2743,7 +2818,7 @@ body {
     height: 100%;
 }
 /* Parana */
-.container .aseg1 #parana{
+.tainercon .aseg1 #parana{
     width: 100%;
     height: 100%;
     background-color: #333;
@@ -2754,14 +2829,14 @@ body {
     background-position-x: 50%;
     border-right: 2px solid #999;
 }
-.container .aseg1 #parana h3 {
+.tainercon .aseg1 #parana h3 {
     text-align: center;
     padding-top:10%;
     font-size: 25px;
     color: white;
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
 }
-.container .aseg1 #parana p{
+.tainercon .aseg1 #parana p{
     text-align: center;
     font-size: 14px;
     color: white;
@@ -2769,31 +2844,31 @@ body {
     padding-left: 5%;
     padding-right: 5%;
 }
-.container .aseg1 #parana p a{
+.tainercon .aseg1 #parana p a{
     text-decoration: underline;
     color: white;
 }
-.container .aseg1 #parana:hover {
+.tainercon .aseg1 #parana:hover {
     box-shadow: 0px -9px black;
     background-color:rgb(247, 184, 173);
     border-right: 2px solid black;
 }
-.container .aseg1 #parana:hover h3{
+.tainercon .aseg1 #parana:hover h3{
     color:black;
 }
-.container .aseg1 #parana:hover p{
+.tainercon .aseg1 #parana:hover p{
     color:black;
 }
-.container .aseg1 #parana:hover p a{
+.tainercon .aseg1 #parana:hover p a{
     color:black;
 }
-.container .aseg1 #parana p a:hover{
+.tainercon .aseg1 #parana p a:hover{
     color:tomato;
 }
 
 /* Fin parana */
 /* LPS */
-.container .aseg1 #lps{
+.tainercon .aseg1 #lps{
     width: 100%;
     height: 100%;
     background-color: #333;
@@ -2805,7 +2880,7 @@ body {
     border-right: 2px solid #999;
     border-left: 2px solid #999;
 }
-.container .aseg1 #lps h3 {
+.tainercon .aseg1 #lps h3 {
     text-align: center;
     padding-top:10%;
     font-size: 25px;
@@ -2813,7 +2888,7 @@ body {
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
      
 }
-.container .aseg1 #lps p{
+.tainercon .aseg1 #lps p{
     text-align: center;
     font-size: 14px;
     color: white;
@@ -2821,50 +2896,50 @@ body {
     padding-left: 5%;
     padding-right: 5%;
 }
-.container .aseg1 #lps p a{
+.tainercon .aseg1 #lps p a{
     text-decoration: underline;
     color: white;
 }
-.container .aseg1 #lps:hover {
+.tainercon .aseg1 #lps:hover {
     box-shadow: 0px -9px black;
     background-color:rgb(247, 184, 173);
     border-right: 2px solid black;
     border-left: 2px solid black;
 }
-.container .aseg1 #lps:hover h3{
+.tainercon .aseg1 #lps:hover h3{
     color:black;
 }
-.container .aseg1 #lps:hover p{
+.tainercon .aseg1 #lps:hover p{
     color:black;
 }
-.container .aseg1 #lps:hover p a{
+.tainercon .aseg1 #lps:hover p a{
     color:black;
 }
-.container .aseg1 #lps p a:hover{
+.tainercon .aseg1 #lps p a:hover{
     color:tomato;
 }
 /* Fin LPS */
 /* BENEF */
-.container .aseg1 #benef{
+.tainercon .aseg1 #benef{
     width: 100%;
     height: 100%;
     background-color: #333;
     background-image: url(../img/beneficio_sa-removebg-preview.png);
     background-repeat: no-repeat;
     background-size: 60%;
-    background-position-y: 100%;
+    background-position-y: 90%;
     background-position-x: 50%;
     border-right: 2px solid #999;
     border-left: 2px solid #999;
 }
-.container .aseg1 #benef h3 {
+.tainercon .aseg1 #benef h3 {
     text-align: center;
     padding-top:10%;
     font-size: 25px;
     color: white;
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
 }
-.container .aseg1 #benef p{
+.tainercon .aseg1 #benef p{
     text-align: center;
     font-size: 14px;
     color: white;
@@ -2872,50 +2947,50 @@ body {
     padding-left: 5%;
     padding-right: 5%;
 }
-.container .aseg1 #benef p a{
+.tainercon .aseg1 #benef p a{
     text-decoration: underline;
     color: white;
 }
-.container .aseg1 #benef:hover {
+.tainercon .aseg1 #benef:hover {
     box-shadow: 0px -9px black;
     background-color:rgb(247, 184, 173);
     border-right: 2px solid black;
     border-left: 2px solid black;
 }
-.container .aseg1 #benef:hover h3{
+.tainercon .aseg1 #benef:hover h3{
     color:black;
 }
-.container .aseg1 #benef:hover p{
+.tainercon .aseg1 #benef:hover p{
     color:black;
 }
-.container .aseg1 #benef:hover p a{
+.tainercon .aseg1 #benef:hover p a{
     color:black;
 }
-.container .aseg1 #benef p a:hover{
+.tainercon .aseg1 #benef p a:hover{
     color:tomato;
 }
 /* Fin Benef */
 /* SMG */
-.container .aseg1 #smg{
+.tainercon .aseg1 #smg{
     width: 100%;
     height: 100%;
     background-color: #333;
     background-image: url(../img/swiss_medical-removebg-preview.png);
     background-repeat: no-repeat;
-    background-size: 80%;
+    background-size: 90%;
     background-position-y: 100%;
     background-position-x: 50%;
     border-right: 2px solid #999;
     border-left: 2px solid #999;
 }
-.container .aseg1 #smg h3 {
+.tainercon .aseg1 #smg h3 {
     text-align: center;
     padding-top:10%;
     font-size: 25px;
     color: white;
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
 }
-.container .aseg1 #smg p{
+.tainercon .aseg1 #smg p{
     text-align: center;
     font-size: 14px;
     color: white;
@@ -2923,31 +2998,31 @@ body {
     padding-left: 5%;
     padding-right: 5%; 
 }
-.container .aseg1 #smg p a{
+.tainercon .aseg1 #smg p a{
     text-decoration: underline;
     color: white;
 }
-.container .aseg1 #smg:hover {
+.tainercon .aseg1 #smg:hover {
     box-shadow: 0px -9px black;
     background-color:rgb(247, 184, 173);
     border-right: 2px solid black;
     border-left: 2px solid black;
 }
-.container .aseg1 #smg:hover h3{
+.tainercon .aseg1 #smg:hover h3{
     color:black;
 }
-.container .aseg1 #smg:hover p{
+.tainercon .aseg1 #smg:hover p{
     color:black;
 }
-.container .aseg1 #smg:hover p a{
+.tainercon .aseg1 #smg:hover p a{
     color:black;
 }
-.container .aseg1 #smg p a:hover{
+.tainercon .aseg1 #smg p a:hover{
     color:tomato;
 }
 /* Fin SMG */
 /* MEDICAR */
-.container .aseg1 #medicar{
+.tainercon .aseg1 #medicar{
     width: 100%;
     height: 100%;
     background-color: #333;
@@ -2959,14 +3034,14 @@ body {
     border-right: 2px solid #999;
     border-left: 2px solid #999;
 }
-.container .aseg1 #medicar h3 {
+.tainercon .aseg1 #medicar h3 {
     text-align: center;
     padding-top:10%;
     font-size: 25px;
     color: white;
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
 }
-.container .aseg1 #medicar p{
+.tainercon .aseg1 #medicar p{
     text-align: center;
     font-size: 14px;
     color: white;
@@ -2974,31 +3049,31 @@ body {
     padding-left: 5%;
     padding-right: 5%;
 }
-.container .aseg1 #medicar p a{
+.tainercon .aseg1 #medicar p a{
     text-decoration: underline;
     color: white;
 }
-.container .aseg1 #medicar:hover {
+.tainercon .aseg1 #medicar:hover {
     box-shadow: 0px -9px black;
     background-color:rgb(247, 184, 173);
     border-right: 2px solid black;
     border-left: 2px solid black;
 }
-.container .aseg1 #medicar:hover h3{
+.tainercon .aseg1 #medicar:hover h3{
     color:black;
 }
-.container .aseg1 #medicar:hover p{
+.tainercon .aseg1 #medicar:hover p{
     color:black;
 }
-.container .aseg1 #medicar:hover p a{
+.tainercon .aseg1 #medicar:hover p a{
     color:black;
 }
-.container .aseg1 #medicar p a:hover{
+.tainercon .aseg1 #medicar p a:hover{
     color:tomato;
 }
 /* Fin MEDICAR */
 /* RIVADAVIA */
-.container .aseg1 #rivadavia{
+.tainercon .aseg1 #rivadavia{
     width: 100%;
     height: 100%;
     background-color: #333;
@@ -3009,14 +3084,14 @@ body {
     background-position-x: 50%;
     border-left: 2px solid #999;
 }
-.container .aseg1 #rivadavia h3 {
+.tainercon .aseg1 #rivadavia h3 {
     text-align: center;
     padding-top:10%;
     font-size: 25px;
     color: white;
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
 }
-.container .aseg1 #rivadavia p{
+.tainercon .aseg1 #rivadavia p{
     text-align: center;
     font-size: 14px;
     color: white;
@@ -3024,26 +3099,26 @@ body {
     padding-left: 5%;
     padding-right: 5%; 
 }
-.container .aseg1 #rivadavia p a{
+.tainercon .aseg1 #rivadavia p a{
     text-decoration: underline;
     color: white;
 }
 
-.container .aseg1 #rivadavia:hover {
+.tainercon .aseg1 #rivadavia:hover {
     box-shadow: 0px -9px black;
     background-color:rgb(247, 184, 173);
     border-left: 2px solid black;
 }
-.container .aseg1 #rivadavia:hover h3{
+.tainercon .aseg1 #rivadavia:hover h3{
     color:black;
 }
-.container .aseg1 #rivadavia:hover p{
+.tainercon .aseg1 #rivadavia:hover p{
     color:black;
 }
-.container .aseg1 #rivadavia:hover p a{
+.tainercon .aseg1 #rivadavia:hover p a{
     color:black;
 }
-.container .aseg1 #rivadavia p a:hover{
+.tainercon .aseg1 #rivadavia p a:hover{
     color:tomato;
 }
 /* Fin RIVADAVIA */
@@ -3057,35 +3132,44 @@ body {
 
 /* CSS CONTACTO MOBILE FIRST */
 @media (max-width:400px) {
-    .container .portadac {
-        grid-area:tit;
-        background-image: url(../img/mensaje.gif);
-        background-repeat: no-repeat;
-        background-size: 35%;
-        background-position: center;
+    .tainercon .portadac {
+        grid-area:titulop;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        color: #333;
+        text-shadow: 2px 2px 2px rgb(247, 184, 173) ;
+        text-align: center;
     }
-    .container .cntct {
-        grid-area: main;
+    .tainercon .portadac h3{
+        font-size: 3rem;
+        font-weight: bold; 
+        text-align: center;
+    }
+    .tainercon .cntct {
+        grid-area: niam;
         display: flex;
         flex-flow: column nowrap;
         align-content: center;
         background-color: #333;
         color: white;
-        margin: 10% 10% 10% 10%;
+        margin: 0% 10% 10% 10%;
         padding: 5% 5% 5% 5%;
         align-items: flex-end;
         box-shadow: 9px 9px #999;
+        border-radius: 15px 15px;
         font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
     }
 
-    .container .cntct #ubicacionp section h3{
+    .tainercon .cntct #ubicacionp section h3{
         display:none;
     }
 
-    .container .cntct #ubicacionp section article{
+    .tainercon .cntct #ubicacionp section article{
         padding-top:5%;
     }
-    .container .cntct:hover {
+    .tainercon .cntct:hover {
         box-shadow: 9px 9px black;
         background-color:rgb(247, 184, 173);
         color: black;
@@ -3096,35 +3180,43 @@ body {
 
 /* CSS CONTACTO TABLET */
 @media (min-width: 401px) and (max-width:960px){
-        .container .portadac {
-            grid-area:tit;
-            background-image: url(../img/mensaje.gif);
-            background-repeat: no-repeat;
-            background-size: 40%;
-            background-position: center;
+        .tainercon .portadac {
+            grid-area:titulop;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+            align-items: center;
+            color: #333;
+            text-shadow: 2px 2px 2px rgb(247, 184, 173) ;
+            text-align: center;
         }
-        .container .cntct {
-            grid-area: main;
+        .tainercon .portadac h3 {
+            font-weight: bold; 
+            font-size: 3.5rem;
+        }
+        .tainercon .cntct {
+            grid-area: niam;
             display: flex;
             flex-flow: column nowrap;
             align-content: center;
             background-color: #333;
             color: white;
-            margin: 10% 10% 10% 10%;
+            margin: 0% 10% 10% 10%;
             padding: 5% 0% 5% 0%;
             align-items: center;
             box-shadow: 9px 9px #999;
+            border-radius: 15px 15px;
             font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
         }
     
-        .container .cntct #ubicacionp section h3{
+        .tainercon .cntct #ubicacionp section h3{
             display:none;
         }
     
-        .container .cntct #ubicacionp section article{
+        .tainercon .cntct #ubicacionp section article{
             padding-top:5%;
         }
-        .container .cntct:hover {
+        .tainercon .cntct:hover {
             box-shadow: 9px 9px black;
             background-color:rgb(247, 184, 173);
             color: black;
@@ -3136,28 +3228,29 @@ body {
 /* CSS CONTACTO DESKTOP */
 @media (min-width: 960px){
 /* Encabezado */
-.container .portadac {
+.tainercon .portadac {
     grid-row:1/3;
     grid-column:1/3;
     background-image: url(../img/portadac3.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 30rem;
+    height: 35rem;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
     text-shadow: 2px 2px 2px rgb(247, 184, 173) ;
-    font-weight: bold; 
-    font-size: 50px;
     opacity: 0.7;
+    }
+    .tainercon .portadac h3 {
+        display: none;
     }
 /*Fin Encabezado */
 
 /* Seccion contacto*/
-.container .cntct {
-    grid-area: main;
+.tainercon .cntct {
+    grid-area: niam;
     display: flex;
     flex-flow: row nowrap;
     background-color: white;
@@ -3165,54 +3258,54 @@ body {
     border-top: 9px solid #999;
     height: 100%;
 }
-.container .cntct #contactosp {
+.tainercon .cntct #contactosp {
     width: 30%;
     background-color: #333;
     border-right: 2px solid #999;
 }
-.container .cntct #contactosp .formulario h3{
+.tainercon .cntct #contactosp .formulario h3{
     color:white;
     font-size: 25px;
-    padding: 1%;
+    padding: 2%;
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
 }
 
-.container .cntct #contactosp article{
+.tainercon .cntct #contactosp article{
     color: white;
     font-size: 18px;
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
     padding: 1% 0% 2% 5%;
 }
-.container .cntct #contactosp:hover {
+.tainercon .cntct #contactosp:hover {
     box-shadow: 0px -9px black;
     background-color:rgb(247, 184, 173);
     border-right: 2px solid black;
 }
-.container .cntct #contactosp:hover .formulario h3{
+.tainercon .cntct #contactosp:hover .formulario h3{
     color:black;
 }
-.container .cntct #contactosp:hover article{
+.tainercon .cntct #contactosp:hover article{
     color:black;
 }
-.container .cntct #ubicacionp {
+.tainercon .cntct #ubicacionp {
     width: 70%;
     background-color: #333;
 }
-.container .cntct #ubicacionp section h3{
+.tainercon .cntct #ubicacionp section h3{
     color:white;
     font-size: 25px;
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
     padding: 1%;
 }
-.container .cntct #ubicacionp section article{
+.tainercon .cntct #ubicacionp section article{
     padding: 1% 5% 0% 5%;
 }
-.container .cntct #ubicacionp:hover {
+.tainercon .cntct #ubicacionp:hover {
     box-shadow: 0px -9px black;
     background-color:rgb(247, 184, 173);
     border-left: 2px solid black;
 }
-.container .cntct #ubicacionp:hover section h3{
+.tainercon .cntct #ubicacionp:hover section h3{
     color:black;
 }
 }
