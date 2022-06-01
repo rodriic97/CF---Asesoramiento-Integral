@@ -16,22 +16,60 @@
 <body>
     
 <div class="tainercon">
-<!-- Logo y menu de navegación -->
 
+<!-- Logo y menu de navegación -->
 
     <div class="portadas">
         <h3>Servicios</h3>
     </div>
 
 
-
-    <div class="redes">
+    <!-- <div class="redes">
     <a href="#redes">Redes</a>
-    </div>
+    </div> -->
 
     <!-- Menu de navegación -->
     <div class="nume">
-        <nav>
+        <nav class="navbar sticky-top navbar-expand-lg navbar-light ">
+            <!-- <a class="navbar-brand " href="./index.html">
+                <img src="./img/cf-en-un-cuadrado.png" width="30" height="30" alt="logo">
+            </a> -->
+            <button class="navbar-toggler navbar-dark bg-dark" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto bg-dark rounded-lg mt-2 pr-2">
+                <li class="nav-item active">
+                  <a class="nav-link text-white ml-2" href="../index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white ml-2" href="./nosotros.html">Nosotros</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle text-white ml-2" href="./servicios.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+                    Servicios
+                  </a>
+                  <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item bg-dark text-white" href="./servicios.html#serviciosp">Seguros Generales</a>
+                    <a class="dropdown-item bg-dark text-white" href="./servicios.html#serviciosp">Gestoría del Automotor</a>
+                    <a class="dropdown-item bg-dark text-white" href="./servicios.html#serviciosp">Estudio Contable</a>
+                  </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white ml-2" href="./aseguradoras.html">Aseguradoras</a>
+                  </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white ml-2" href="./contacto.html">Contacto</a>
+                  </li>
+              </ul>
+              <form class="form-inline">
+                <button class="btn btn-dark p-0 my-2 my-sm-2 btn-sm" type="submit"><a class= "nav-link text-white h6 mb-0" href="#redes">Redes</a></button>
+              </form>
+            </div>
+          </nav>
+
+        <!-- <nav>
             <a href="#" id="nume-icon">
             </a>
             <ul>
@@ -41,18 +79,206 @@
                 <li class="aseguradoras"><a href="./aseguradoras.html"> Aseguradoras</a></li>
                 <li class="contacto"><a href="./contacto.html"> Contacto</a></li> 
             </ul>
-        </nav>
+        </nav> -->
     </div>
-
-
 
     <!-- Fin menu de navegacion -->
     
 
+
     <!-- Sección de servicios -->
     <section id="serviciosp">
-        
-            <div class="sg">
+
+        <div class="accordion" id="accordionExample">
+
+            <div class="card bg-dark rounded">
+              
+                <div class="card-header" id="headingOne">
+                <h2 class="mb-0">
+                  <button class="btn btn-dark text-left text-white" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    Seguros generales
+                  </button>
+                </h2>
+              </div>
+          
+              <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                <div class="card-body">
+                    <p>
+                        <a class="btn btn-light mb-1" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Vehículos</a>
+                        <button class="btn btn-light mb-1" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Accidentes personales</button>
+                        <button class="btn btn-light mb-1" type="button" data-toggle="collapse" data-target="#multiCollapseExample3" aria-expanded="false" aria-controls="multiCollapseExampl3">Combinado familiar</button>
+                        
+                      </p>
+                      <div class="column">
+                        <div class="column">
+                          <div class="collapse multi-collapse" id="multiCollapseExample1">
+                            <div class="card mb-1 border-secondary" style="max-width: 540px;">
+                                <div class="row no-gutters">
+                                  <div class="col-md-12 bg-secondary">
+                                    <div class="card-body">
+                                      <h5 class="card-title">Vehículos</h5>
+                                        <p class="card-text">> Autos</p>
+                                        <p class="card-text">> Motos</p>
+                                        <p class="card-text">> Camiones</p>
+                                        <p class="card-text">> Maquinarias Agrícolas</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
+                        </div>
+                        <div class="column">
+                          <div class="collapse multi-collapse" id="multiCollapseExample2">
+                            <div class="card mb-1 border-secondary" style="max-width: 540px;">
+                                <div class="row no-gutters">
+                                  <div class="col-md-12 bg-secondary">
+                                    <div class="card-body">
+                                      <h5 class="card-title">Accidentes personales</h5>
+                                        <p class="card-text">> Asistencia médica variable</p>
+                                        <p class="card-text">> ART</p>
+                                        <p class="card-text">> Deportistas</p>
+                            
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
+                        <div class="column">
+                          <div class="collapse multi-collapse" id="multiCollapseExample3">
+                            <div class="card mb-1 border-secondary" style="max-width: 540px;">
+                                <div class="row no-gutters">
+                                  <div class="col-md-12 bg-secondary">
+                                    <div class="card-body">
+                                      <h5 class="card-title">Combinado familiar</h5>
+                                        <p class="card-text">> Vivienda Familiar</p>
+                                        <p class="card-text">> Countries</p>
+
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card bg-dark">
+              <div class="card-header" id="headingTwo">
+                <h2 class="mb-0">
+                  <button class="btn  btn-dark text-left text-white" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Gestoría del automotor
+                  </button>
+                </h2>
+              </div>
+              <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                <div class="card-body">
+                    <p>
+                        <a class="btn btn-light" data-toggle="collapse" href="#multiCollapseExample4" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Vehículos</a>
+       
+                      </p>
+                      <div class="column">
+                        <div class="column">
+                          <div class="collapse multi-collapse" id="multiCollapseExample4">
+                            <div class="card mb-1 border-secondary" style="max-width: 540px;">
+                                <div class="row no-gutters">
+                                  <div class="col-md-12 bg-secondary">
+                                    <div class="card-body">
+                                      <h5 class="card-title">Vehículos</h5>
+                                      <p class="card-text">> Inscripción inicial</p>
+                                      <p class="card-text">> Transferencias</p>
+                                      <p class="card-text">> Informes de dominio</p>
+                                      <p class="card-text">> Informes de infracciones</p>
+                                      <p class="card-text">> Cambio de radicación</p>
+                                      <p class="card-text">> Cédula autorizado</p>
+                                      <p class="card-text">> Baja y alta de motor</p>
+                                      <p class="card-text">> Presupuestos</p>
+                                      <p class="card-text">> Asesoramiento</p>
+                                      <p class="card-text">> Denuncia de venta</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="card bg-dark">
+              <div class="card-header" id="headingThree">
+                <h2 class="mb-0">
+                  <button class="btn btn-dark text-left text-white" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Estudio contable
+                  </button>
+                </h2>
+              </div>
+              <div id="collapseThree" class="collapse show" aria-labelledby="headingThree" data-parent="#accordionExample">
+                <div class="card-body">
+                    <p>
+                        <a class="btn btn-light mb-1" data-toggle="collapse" href="#multiCollapseExample5" role="button" aria-expanded="false" aria-controls="multiCollapseExample5">Monotributo</a>
+                        <button class="btn btn-light mb-1" type="button" data-toggle="collapse" data-target="#multiCollapseExample6" aria-expanded="false" aria-controls="multiCollapseExample6">Régimen general</button>
+                        <button class="btn btn-light mb-1" type="button" data-toggle="collapse" data-target="#multiCollapseExample7" aria-expanded="false" aria-controls="multiCollapseExample7">Asesoramiento</button>
+                        
+                      </p>
+                      <div class="column">
+                        <div class="column">
+                          <div class="collapse multi-collapse" id="multiCollapseExample5">
+                            <div class="card mb-1 border-secondary" style="max-width: 540px;">
+                                <div class="row no-gutters">
+                                  <div class="col-md-12 bg-secondary">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Monotributo</h5>
+                                        <p class="card-text">> Altas</p>
+                                        <p class="card-text">> Recategorizaciones</p>
+                                        <p class="card-text">> Bajas</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
+                        </div>
+                        <div class="column">
+                          <div class="collapse multi-collapse" id="multiCollapseExample6">
+                            <div class="card mb-1 border-secondary" style="max-width: 540px;">
+                                <div class="row no-gutters">
+                                  <div class="col-md-12 bg-secondary">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Régimen General</h5>
+                                        <p class="card-text">> IVA</p>
+                                        <p class="card-text">> Ganancias</p>
+                                        <p class="card-text">> Bienes personales</p>
+                                        <p class="card-text">> Autónomos</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
+                        <div class="column">
+                          <div class="collapse multi-collapse" id="multiCollapseExample7">
+                            <div class="card mb-1 border-secondary" style="max-width: 540px;">
+                                <div class="row no-gutters">
+                                  <div class="col-md-12 bg-secondary">
+                                    <div class="card-body">
+                                      <h5 class="card-title">Asesoramiento</h5>
+                                      <p class="card-text">> Planes de pagos</p>
+                                        <p class="card-text">> Liquidación de sueldos</p>
+                                        <p class="card-text">> Clave fiscal</p>
+                                        <p class="card-text">> Facturación</p>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
+                        </div>
+                      </div>
+                </div>
+              </div>
+            </div>
+          </div>
+            <!-- <div class="sg">
                 <h3>Seguros generales</h3>
         
                     <div class="sg1">
@@ -143,7 +369,7 @@
                 </div>
             </div>
             
-            <article>
+            <article> -->
 
     </section>
     <!-- Fin sección servicios -->
@@ -172,8 +398,10 @@
     </footer>
     <!-- Fin Footer -->
 
-</div>
 <!-- JavaScript Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+
+</div>
 </body>
 </html>
