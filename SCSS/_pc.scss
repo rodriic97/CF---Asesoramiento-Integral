@@ -9,6 +9,7 @@
                             "retoof retoof";
                         rows:50px 0.5fr auto 135px;
                         columns: 160px 1fr;
+                        background-color: black;
         }
     
         .titulop { 
@@ -401,7 +402,7 @@
             text-shadow: 2px 2px 2px rgb(247, 184, 173);
             opacity: 0.6;
         
-            h3 {
+            h1 {
                 font: {
                     size: 3.5rem;
                     weight: bold; 
@@ -492,7 +493,7 @@
             text-shadow: 2px 2px 2px rgb(247, 184, 173) ;
             opacity: 0.6;
             
-            h3 {
+            h1 {
                 font: {
                     size: 3.5rem;
                     weight: bold;
@@ -537,7 +538,7 @@
             text-shadow: 2px 2px 2px rgb(247, 184, 173);
             opacity: 0.7;
             
-            h3 {
+            h1 {
                 font: {
                 size: 3.5rem;
                 weight: bold; 
@@ -955,7 +956,7 @@
             text-shadow: 2px 2px 2px rgb(247, 184, 173) ;
             opacity: 0.7;
             
-            h3 {
+            h1 {
             display: none;
             }
         }

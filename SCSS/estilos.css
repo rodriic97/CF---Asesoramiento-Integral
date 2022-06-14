@@ -294,7 +294,7 @@
     text-shadow: 2px 2px 2px #f7b8ad;
     text-align: center;
   }
-  .tainercon .portadan h3 {
+  .tainercon .portadan h1 {
     font-size: 3rem;
     font-weight: bold;
     font-family: 'Source Serif Pro', serif;
@@ -364,7 +364,7 @@
     text-shadow: 2px 2px 2px #f7b8ad;
     text-align: center;
   }
-  .tainercon .portadas h3 {
+  .tainercon .portadas h1 {
     color: #343a40;
     font-size: 3rem;
     font-weight: bold;
@@ -412,7 +412,7 @@
     color: #343a40;
     text-shadow: 2px 2px 2px #f7b8ad;
   }
-  .tainercon .portadaa h3 {
+  .tainercon .portadaa h1 {
     font-size: 3rem;
     font-weight: bold;
     text-align: center;
@@ -780,7 +780,7 @@
     text-shadow: 2px 2px 2px #f7b8ad;
     text-align: center;
   }
-  .tainercon .portadac h3 {
+  .tainercon .portadac h1 {
     font-size: 3rem;
     font-weight: bold;
     font-family: 'Source Serif Pro', serif;
@@ -1122,7 +1122,7 @@
     text-shadow: 2px 2px 2px #f7b8ad;
     text-align: center;
   }
-  .tainercon .portadan h3 {
+  .tainercon .portadan h1 {
     font-weight: bold;
     font-size: 3.5rem;
     font-family: 'Source Serif Pro', serif;
@@ -1191,7 +1191,7 @@
     text-shadow: 2px 2px 2px #f7b8ad;
     text-align: center;
   }
-  .tainercon .portadas h3 {
+  .tainercon .portadas h1 {
     font-family: 'Source Serif Pro', serif;
     font-weight: bold;
     font-size: 3.5rem;
@@ -1238,7 +1238,7 @@
     text-shadow: 2px 2px 2px #f7b8ad;
     text-align: center;
   }
-  .tainercon .portadaa h3 {
+  .tainercon .portadaa h1 {
     font-weight: bold;
     font-size: 3.5rem;
     font-family: 'Source Serif Pro', serif;
@@ -1605,7 +1605,7 @@
     text-shadow: 2px 2px 2px #f7b8ad;
     text-align: center;
   }
-  .tainercon .portadac h3 {
+  .tainercon .portadac h1 {
     font-weight: bold;
     font-size: 3.5rem;
     font-family: 'Source Serif Pro', serif;
@@ -1659,6 +1659,7 @@
         grid-template-rows: 50px 0.5fr auto 135px;
     -ms-grid-columns: 160px 1fr;
         grid-template-columns: 160px 1fr;
+    grid-template-background-color: black;
   }
   .tainercon .titulop {
     -ms-grid-row: 1;
@@ -2008,7 +2009,7 @@
     text-shadow: 2px 2px 2px #f7b8ad;
     opacity: 0.6;
   }
-  .tainercon .portadan h3 {
+  .tainercon .portadan h1 {
     font-size: 3.5rem;
     font-weight: bold;
     font-family: 'Source Serif Pro', serif;
@@ -2095,7 +2096,7 @@
     text-shadow: 2px 2px 2px #f7b8ad;
     opacity: 0.6;
   }
-  .tainercon .portadas h3 {
+  .tainercon .portadas h1 {
     font-size: 3.5rem;
     font-weight: bold;
     font-family: 'Source Serif Pro', serif;
@@ -2149,7 +2150,7 @@
     text-shadow: 2px 2px 2px #f7b8ad;
     opacity: 0.7;
   }
-  .tainercon .portadaa h3 {
+  .tainercon .portadaa h1 {
     font-size: 3.5rem;
     font-weight: bold;
     font-family: 'Source Serif Pro', serif;
@@ -2495,7 +2496,7 @@
     text-shadow: 2px 2px 2px #f7b8ad;
     opacity: 0.7;
   }
-  .tainercon .portadac h3 {
+  .tainercon .portadac h1 {
     display: none;
   }
   .tainercon .cntct {
