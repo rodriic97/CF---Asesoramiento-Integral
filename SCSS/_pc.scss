@@ -1,3 +1,5 @@
+@import 'variables';
+
 @media (min-width: 960px) {
     
     .tainercon {
@@ -9,7 +11,7 @@
                             "retoof retoof";
                         rows:50px 0.5fr auto 135px;
                         columns: 160px 1fr;
-                        background-color: black;
+                        
         }
     
         .titulop { 
@@ -26,8 +28,8 @@
             flex-flow: column nowrap;
             justify-content: center;
             align-items: center;
-            color: #6c757d;
-            text-shadow: 2px 2px 2px rgb(247, 184, 173) ;
+            color: map-get($colores, bordes);
+            text-shadow: 2px 2px 2px map-get($colores, textoTouchP);
             font: {
                 weight: bold; 
                 size: 120px;
@@ -71,37 +73,43 @@
             align-content:flex-start;
             margin-bottom: 9px;
         
-            #nosotros {
-                width:50%;
+            @mixin secc{
+                width: 50%;
                 height: 500px;
                 background: {
-                    image: url(/img/empresa.png);
                     repeat: no-repeat;
                     size:15%;
                     position-x:95%;
                     position-y:95%;
-                    color: #343a40;
+                    color: map-get($colores, fondo);
                 }
                 padding: 5% 5% 0% 5%;
-                box-shadow: 0px -9px #6c757d;
+                color: map-get($colores, texto);
+            }
+
+            #nosotros {
+                @include secc;
+                background: {
+                    image: url(/img/empresa.png);
+                }
+                box-shadow: 0px -9px map-get($colores,bordes);
                 border: {
-                    right: 2px solid #6c757d;
-                    bottom: 2px solid #6c757d;
+                    right: 2px solid map-get($colores,bordes);
+                    bottom: 2px solid map-get($colores,bordes);
                 }
                 margin-top: 9px;
-                color:white;
     
                 &:hover {
-                    background-color:rgb(247, 184, 173);
-                    color: #212529;
-                    box-shadow: 0px -9px #212529;
+                    background-color:map-get($colores, fondoTouch);
+                    color: map-get($colores, textoTouch);
+                    box-shadow: 0px -9px map-get($colores, bordesTouch);
                     border: {
-                        right: 2px solid #212529;
-                        bottom: 2px solid #212529;
+                        right: 2px solid map-get($colores, bordesTouch);
+                        bottom: 2px solid map-get($colores, bordesTouch);
                     }
                     p {
                         a{
-                            color:#212529
+                            color:map-get($colores, textoTouch);
                         }
                     }
                 }
@@ -120,49 +128,41 @@
                         family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
                     }
 
-                    a {
-                        color: white;
+                   /*  a {
+                        color: map-get($colores, texto);
                         text-decoration: underline;
-                    }
-                    a:hover {
-                        color: tomato;
-                    }
+                    } */
+                    /* a:hover {
+                        color: map-get($colores, textoTouchS);
+                    } */
                 }
             }
     
 
             #servicios {
-                width:50%;
-                height: 500px;
+                @include secc;
                 background: {
-                    image: url(/img/objetivo.png);
-                    repeat: no-repeat;
-                    size:15%;
-                    position-x:95%;
-                    position-y:95%;
-                    color: #343a40;
+                    image: url(/img/objetivo.png);   
                 }
                 border: {
-                    left: 2px solid #6c757d;
-                    bottom: 2px solid #6c757d;
+                    left: 2px solid map-get($colores, bordes);
+                    bottom: 2px solid map-get($colores, bordes);
                 }
-                box-shadow: 0px -9px #6c757d;
+                box-shadow: 0px -9px map-get($colores, bordes);
                 margin-top: 9px;
-                padding: 5% 5% 0% 5%;
-                color:white;
             
                 &:hover {
-                    background-color:rgb(247, 184, 173);
-                    color: #212529;
-                    box-shadow: 0px -9px #212529;
+                    background-color: map-get($colores, fondoTouch);
+                    color: map-get($colores, textoTouch);
+                    box-shadow: 0px -9px map-get($colores, bordesTouch);
                     border: {
-                        left: 2px solid #212529;
-                        bottom: 2px solid #212529;
+                        left: 2px solid map-get($colores, bordesTouch);
+                        bottom: 2px solid map-get($colores, bordesTouch);
                     }
                     article {
                         p {
                             a {
-                                color: #212529;
+                                color: map-get($colores, textoTouch);
                             }
                         }
                     }
@@ -194,13 +194,13 @@
                             style:italic;
                             family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
                         }
-                        a {
-                            color: white;
+                        /* a {
+                            color: map-get($colores, texto);
                             text-decoration: underline;
                         }
                         a:hover {
-                            color: tomato;
-                        }
+                            color: map-get($colores, textoTouchS);
+                        } */
                     }
                 }
             }
@@ -208,37 +208,29 @@
     
 
             #aseguradoras {
-                width:50%;
-                height: 500px;
+                @include secc;
                 background: {
                     image: url(/img/compania.png);
-                    repeat: no-repeat;
-                    size:15%;
-                    position-x:95%;
-                    position-y:95%;
-                    color: #343a40;
                 }
-                padding: 5% 5% 0% 5%;
                 border: {
-                    right: 2px solid #6c757d;
-                    top: 2px solid #6c757d;
+                    right: 2px solid map-get($colores, bordes);
+                    top: 2px solid map-get($colores, bordes);
                 }
-                box-shadow: 0px 9px #6c757d;
-                height: 500px;
-                color:white;
+                box-shadow: 0px 9px map-get($colores, bordes);
+                
             
                 &:hover {
-                    background-color:rgb(247, 184, 173);
-                    color: #212529;
-                    box-shadow: 0px 9px #212529;
+                    background-color:map-get($colores, fondoTouch);
+                    color: map-get($colores, textoTouch);
+                    box-shadow: 0px 9px map-get($colores, bordesTouch);
                     border: {
-                        right: 2px solid #212529;
-                        top: 2px solid #212529;
+                        right: 2px solid map-get($colores, bordesTouch);
+                        top: 2px solid map-get($colores, bordesTouch);
                     }
                     article {
                         p {
                             a {
-                                color: #212529;
+                                color: map-get($colores, textoTouch);
                             }
                         }
                     }
@@ -259,36 +251,28 @@
                             family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
                         }
                         
-                        a {
-                            color: white;
+                        /* a {
+                            color: map-get($colores, texto);
                             text-decoration: underline;
                         }
                         a:hover {
-                            color: tomato;
-                        }
+                            color: map-get($colores, textoTouchS);
+                        } */
                     }
                 }
             }
 
             #contacto {
-                width:50%;
-                height: 500px;
+                @include secc;
                 background: {
                     image: url(/img/ubicacion.png);
-                    repeat: no-repeat;
-                    size:15%;
-                    position-x:95%;
-                    position-y:95%;
-                    color: #343a40;
                 }
-                padding: 5% 5% 0% 5%;
                 border: {
-                    left: 2px solid #6c757d;
-                    top: 2px solid #6c757d;
+                    left: 2px solid map-get($colores, bordes);
+                    top: 2px solid map-get($colores, bordes);
                 }
-                box-shadow: 0px 9px #6c757d;
-                color:white;
-        
+                box-shadow: 0px 9px map-get($colores, bordes);
+
                 article {
                     h3 {
                         font: {
@@ -303,26 +287,26 @@
                             style:italic;
                             family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
                         }
-                        a {
-                            color: white;
+                        /* a {
+                            color: map-get($colores, texto);
                             text-decoration: underline;
                         }
                         a:hover {
-                            color:tomato;
-                        } 
+                            color:map-get($colores, textoTouchS);
+                        }  */
                     }
                 }
 
                 &:hover {
-                    background-color:rgb(247, 184, 173);
-                    color: #212529;
-                    box-shadow: 0px 9px #212529;
-                    border-left: 2px solid #212529;
-                    border-top: 2px solid #212529;
+                    background-color:map-get($colores, fondoTouch);
+                    color: map-get($colores, textoTouch);
+                    box-shadow: 0px 9px map-get($colores, bordesTouch);
+                    border-left: 2px solid map-get($colores, bordesTouch);
+                    border-top: 2px solid map-get($colores, bordesTouch);
                     article {
                         p {
                             a {
-                                color: #212529;
+                                color: map-get($colores, textoTouch);
                             }
                         }
                     }
@@ -330,22 +314,56 @@
             }
         }
 
+                    .boton {
+                        display: inline-block;
+                        width: 120px;
+                        height: 40px;
+                        background-color: #6c757d;
+                        text-align: center;
+                        color: #212529;
+                        border-radius: 20px;
+                        text-decoration: underline;
+                    }
+                    
+                    .boton--n {
+                        @extend .boton;
+                        background-color: rgb(253, 253, 156);
+                        color: #212529;
+                    
+                    }
+                    .boton--s {
+                        @extend .boton;
+                        background-color: skyblue;
+                        color: #212529;
+                    
+                    }
+                    .boton--a {
+                        @extend .boton;
+                        background-color: greenyellow;
+                        color: #212529;
+                    }
+                    .boton--c {
+                        @extend .boton;
+                        background-color: rgb(206, 69, 69);
+                        color: #212529;
+                    }
+
             #redes {
                 grid-area: retoof;
                 display: flex;
-                background-color: #343a40;
+                background-color: map-get($colores, fondo);
                 flex-flow: row;
                 justify-content: space-between;
                 align-items: center;
                 height: 100%;
             
                 &:hover {
-                    background-color:#212529;
-                    color: white;
-                    box-shadow: 0px -9px rgb(247, 184, 173);
+                    background-color:map-get($colores, fondoTouchS);
+                    color: map-get($colores, texto);
+                    box-shadow: 0px -9px map-get($colores, bordesTouchS);
 
                     .ubic-F {
-                        color: white;
+                        color: map-get($colores, texto);
                     }
                 }
 
@@ -360,7 +378,7 @@
                 
                 .ubic-F {
                     padding: 10px 85px 10px 10px;
-                    color:white;
+                    color:map-get($colores, texto);
                     h3{
                         font: {
                             size: 23px;
@@ -398,8 +416,8 @@
             flex-flow: column nowrap;
             justify-content: center;
             align-items: center;
-            color: #343a40;
-            text-shadow: 2px 2px 2px rgb(247, 184, 173);
+            color: map-get($colores,textoP);
+            text-shadow: 2px 2px 2px map-get($colores, textoTouchP);
             opacity: 0.6;
         
             h1 {
@@ -424,14 +442,14 @@
                 size:20%;
                 position-x: 85%;
                 position-y:center;
-                color: #343a40;
+                color: map-get($colores, fondo);
             }
             padding: 5%;
             border: {
-                top: 9px solid #6c757d;
-                bottom: 9px solid #6c757d;
+                top: 9px solid map-get($colores, bordes);
+                bottom: 9px solid map-get($colores, bordes);
             }
-            color:white;
+            color:map-get($colores, texto);
     
             &::-webkit-scrollbar{
                 display: none;
@@ -444,25 +462,25 @@
                     family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
                 }
                 width: 50%;
-                color: white;
+                color: map-get($colores, texto);
                 h3 {
                     font-size:40px;
-                    color: white;
+                    color: map-get($colores, texto);
                     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
                 }
             }
      
             &:hover {
-                background-color:rgb(247, 184, 173);
-                color: #212529;
-                box-shadow: 0px 9px #212529;
+                background-color:map-get($colores, fondoTouch);
+                color: map-get($colores, textoTouch);
+                box-shadow: 0px 9px map-get($colores, bordesTouch);
                 border: {
-                    bottom: 9px solid #212529;
-                    top: 9px solid #212529;
+                    bottom: 9px solid map-get($colores, bordesTouch);
+                    top: 9px solid map-get($colores, bordesTouch);
                 }
 
                 article {
-                    color: #212529;
+                    color: map-get($colores, textoTouch);
                 }
             }
         }
@@ -489,8 +507,8 @@
             flex-flow: column nowrap;
             justify-content: center;
             align-items: center;
-            color: #343a40;
-            text-shadow: 2px 2px 2px rgb(247, 184, 173) ;
+            color: map-get($colores,textoP);
+            text-shadow: 2px 2px 2px map-get($colores, textoTouchP);;
             opacity: 0.6;
             
             h1 {
@@ -510,10 +528,10 @@
             height: auto;
             font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
             border: {
-                top: 9px solid #6c757d;
-                bottom: 9px solid #6c757d;
+                top: 9px solid map-get($colores, bordes);
+                bottom: 9px solid map-get($colores, bordes);
             }
-            background-color: #343a40;
+            background-color: map-get($colores, fondo);
         }
    
     
@@ -534,8 +552,8 @@
             flex-flow: column nowrap;
             justify-content: center;
             align-items: center;
-            color: #343a40;
-            text-shadow: 2px 2px 2px rgb(247, 184, 173);
+            color: map-get($colores, fondo);
+            text-shadow: 2px 2px 2px map-get($colores,textoTouchP);
             opacity: 0.7;
             
             h1 {
@@ -551,16 +569,15 @@
             grid-area: niam;
             display: flex;
             flex-flow: row nowrap;
-            background-color: white;
-            border-bottom: 9px solid #6c757d;
-            border-top: 9px solid #6c757d;
+            border-bottom: 9px solid map-get($colores,bordes);
+            border-top: 9px solid map-get($colores,bordes);
             height: 500px;
 
             #parana{
                 width: 100%;
                 height: 100%;
                 background: {
-                    color: #343a40;
+                    color: map-get($colores, fondo);
                     image: url(../img/parana-seguros-removebg-preview.png);
                     repeat: no-repeat;
                     size: 80%;
@@ -572,7 +589,7 @@
                 h3 {
                     text-align: center;
                     padding-top:10%;
-                    color: white;
+                    color: map-get($colores,texto);
                     font: {
                         size: 25px;
                         family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
@@ -581,7 +598,7 @@
 
                 p{
                     text-align: center;
-                    color: white;
+                    color: map-get($colores,texto);
                     font: {
                         size: 14px;
                         family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
@@ -592,24 +609,24 @@
                     }
                     a {
                         text-decoration: underline;
-                        color: white;
+                        color: map-get($colores,texto);
                     }
                     a:hover {
-                        color: tomato;
+                        color: map-get($colores,textoTouchS);
                     }
                 }
 
                 &:hover {
-                    box-shadow: 0px -9px #212529;
-                    background-color:rgb(247, 184, 173);
-                    border-right: 2px solid #212529;
+                    box-shadow: 0px -9px map-get($colores, bordesTouch);
+                    background-color:map-get($colores, fondoTouch);
+                    border-right: 2px solid map-get($colores, bordesTouch);
                     h3{
-                        color:#212529;
+                        color:map-get($colores, textoTouch);
                     }
                     p{
-                        color:#212529;
+                        color:map-get($colores, textoTouch);
                         a{
-                            color:#212529;
+                            color: map-get($colores,textoTouch);
                         }
                     }
                 }
@@ -619,7 +636,7 @@
                 width: 100%;
                 height: 100%;
                 background: {
-                    color: #343a40;
+                    color: map-get($colores,fondo);
                     image: url(../img/la-perseverancia-seguros-removebg-preview.png);
                     repeat: no-repeat;
                     size: 80%;
@@ -627,14 +644,14 @@
                     position-x: 50%;
                 }
                 border: {
-                    right: 2px solid #6c757d;
-                    left: 2px solid #6c757d;
+                    right: 2px solid map-get($colores,bordes);
+                    left: 2px solid map-get($colores,bordes);
                 }
             
                 h3 {
                     text-align: center;
                     padding-top:10%;
-                    color: white;
+                    color: map-get($colores, texto);
                     font: {
                         size: 25px;
                         family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
@@ -642,7 +659,7 @@
                 }
                 p{
                     text-align: center;
-                    color: white;
+                    color: map-get($colores, texto);
                     font: {
                         size: 14px;
                         family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
@@ -653,27 +670,27 @@
                     }
                     a{
                         text-decoration: underline;
-                        color: white;
+                        color: map-get($colores, texto);
                     }
                     a:hover {
-                        color:tomato;
+                        color:map-get($colores,textoTouchS);
                     }
                 }
 
                 &:hover {
-                    box-shadow: 0px -9px #212529;
+                    box-shadow: 0px -9px map-get($colores,bordesTouch);
                     background-color:rgb(247, 184, 173);
                     border: {
-                        right: 2px solid #212529;
-                        left: 2px solid #212529;
+                        right: 2px solid map-get($colores,bordesTouch);
+                        left: 2px solid map-get($colores,bordesTouch);
                     }
                     h3 {
-                        color:#212529;
+                        color:map-get($colores, textoTouch);
                     }
                     p{
-                        color:#212529;
+                        color:map-get($colores, textoTouch);
                         a{
-                            color:#212529;
+                            color: map-get($colores, textoTouch);
                         }
                     }
                 }
@@ -683,7 +700,7 @@
                 width: 100%;
                 height: 100%;
                 background: {
-                    color: #343a40;
+                    color: map-get($colores,fondo);
                     image: url(../img/beneficio_sa-removebg-preview.png);
                     repeat: no-repeat;
                     size: 60%;
@@ -691,14 +708,14 @@
                     position-x: 50%;
                 }
                 border: {
-                    right: 2px solid #6c757d;
-                    left: 2px solid #6c757d;
+                    right: 2px solid map-get($colores,bordes);
+                    left: 2px solid map-get($colores,bordes);
                 }
             
                 h3 {
                     text-align: center;
                     padding-top:10%;
-                    color: white;
+                    color: map-get($colores, texto);
                     font: {
                         size: 25px;
                         family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
@@ -707,7 +724,7 @@
 
                 p{
                     text-align: center;
-                    color: white;
+                    color: map-get($colores, texto);
                     font: {
                         size: 14px;
                         family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
@@ -718,27 +735,27 @@
                     }
                     a{
                         text-decoration: underline;
-                        color: white;
+                        color: map-get($colores, texto);
                     }
                     a:hover {
-                        color: tomato;
+                        color: map-get($colores,textoTouchS);
                     }
                 }
                 
                 &:hover {
-                    box-shadow: 0px -9px #212529;
-                    background-color:rgb(247, 184, 173);
+                    box-shadow: 0px -9px map-get($colores,bordesTouch);
+                    background-color:map-get($colores,fondoTouch);
                     border: {
-                        right: 2px solid #212529;
-                        left: 2px solid #212529;
+                        right: 2px solid map-get($colores,bordesTouch);
+                        left: 2px solid map-get($colores,bordesTouch);
                     }
                     h3 {
-                        color:#212529;
+                        color:map-get($colores,textoTouch);
                     }
                     p {
-                        color:#212529;
+                        color:map-get($colores,textoTouch);
                         a {
-                            color:#212529;
+                            color:map-get($colores,textoTouch);
                         }
                     }
                 }
@@ -748,7 +765,7 @@
                 width: 100%;
                 height: 100%;
                 background: {
-                    color: #343a40;
+                    color: map-get($colores,fondo);
                     image: url(../img/swiss_medical-removebg-preview.png);
                     repeat: no-repeat;
                     size: 90%;
@@ -756,14 +773,14 @@
                     position-x: 50%;
                 }
                 border: {
-                    right: 2px solid #6c757d;
-                    left: 2px solid #6c757d;
+                    right: 2px solid map-get($colores,bordes);
+                    left: 2px solid map-get($colores,bordes);
                 }
             
                 h3 {
                     text-align: center;
                     padding-top:10%;
-                    color: white;
+                    color: map-get($colores,texto);
                     font: {
                         size: 25px;
                         family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
@@ -771,7 +788,7 @@
                 }
                 p{
                     text-align: center;
-                    color: white;
+                    color: map-get($colores,texto);
                     font: {
                         size: 14px;
                         family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
@@ -782,27 +799,27 @@
                     } 
                     a{
                         text-decoration: underline;
-                        color: white;
+                        color: map-get($colores,texto);
                     }
                     a:hover {
-                        color:tomato;
+                        color:map-get($colores,textoTouchS);
                     }
                 }
 
                 &:hover {
-                    box-shadow: 0px -9px #212529;
+                    box-shadow: 0px -9px map-get($colores,bordesTouch);
                     background-color:rgb(247, 184, 173);
                     border: {
-                        right: 2px solid #212529;
-                        left: 2px solid #212529;
+                        right: 2px solid map-get($colores,bordesTouch);
+                        left: 2px solid map-get($colores,bordesTouch);
                     }
                     h3{
-                        color:#212529;
+                        color:map-get($colores, textoTouch);
                     }
                     p{
-                        color:#212529;
+                        color:map-get($colores, textoTouch);
                         a{
-                            color:#212529;
+                            color:map-get($colores, textoTouch);
                         }
                     }
                 }
@@ -812,7 +829,7 @@
                 width: 100%;
                 height: 100%;
                 background: {
-                    color: #343a40;
+                    color: map-get($colores,fondo);
                     image: url(../img/medicar_work-removebg-preview.png);
                     repeat: no-repeat;
                     size: 60%;
@@ -820,13 +837,13 @@
                     position-x: 50%;
                 }
                 border: {
-                    right: 2px solid #6c757d;
-                    left: 2px solid #6c757d;
+                    right: 2px solid map-get($colores,bordes);
+                    left: 2px solid map-get($colores,bordes);
                 }
                 h3 {
                     text-align: center;
                     padding-top:10%;
-                    color: white;
+                    color: map-get($colores,texto);
                     font: {
                         size: 25px;
                         family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
@@ -834,7 +851,7 @@
                 }
                 p{
                     text-align: center;
-                    color: white;
+                    color: map-get($colores,texto);
                     font: {
                         size: 14px;
                         family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
@@ -846,27 +863,27 @@
                     
                     a{
                         text-decoration: underline;
-                        color: white;
+                        color: map-get($colores,texto);
                     }
                     a:hover{
-                        color:tomato;
+                        color:map-get($colores,textoTouchS);
                     }
                 }
 
                 &:hover {
-                    box-shadow: 0px -9px #212529;
-                    background-color:rgb(247, 184, 173);
+                    box-shadow: 0px -9px map-get($colores,bordesTouch);
+                    background-color:map-get($colores,fondoTouch);
                     border: {
-                        right: 2px solid #212529;
-                        left: 2px solid #212529;
+                        right: 2px solid map-get($colores,bordesTouch);
+                        left: 2px solid map-get($colores,bordesTouch);
                     }
                     h3{
-                        color:#212529;
+                        color:map-get($colores,textoTouch);
                     }
                     p{
-                        color:#212529;
+                        color:map-get($colores,textoTouch);
                         a{
-                            color:#212529;
+                            color:map-get($colores,textoTouch);
                         }
                     }
                 }
@@ -876,19 +893,19 @@
                 width: 100%;
                 height: 100%;
                 background: {
-                    color: #343a40;
+                    color: map-get($colores,fondo);
                     image: url(../img/seguros-rivadavia-removebg-preview.png);
                     repeat: no-repeat;
                     size: 100%;
                     position-y: 100%;
                     position-x: 50%;
                 }
-                border-left: 2px solid #6c757d;
+                border-left: 2px solid map-get($colores,bordes);
              
                 h3 {
                     text-align: center;
                     padding-top:10%;
-                    color: white;
+                    color: map-get($colores,texto);
                     font: {
                         size: 25px;
                         family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
@@ -896,7 +913,7 @@
                 }
                 p{
                     text-align: center;
-                    color: white;
+                    color: map-get($colores,texto);
                     font: {
                         size: 14px;
                         family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
@@ -907,24 +924,24 @@
                     } 
                     a{
                         text-decoration: underline;
-                        color: white;
+                        color: map-get($colores,texto);
                     }
                     a:hover{
-                        color:tomato;
+                        color:map-get($colores,textoTouchS);
                     }
                 }
         
                 &:hover {
-                    box-shadow: 0px -9px #212529;
+                    box-shadow: 0px -9px map-get($colores,bordesTouch);
                     background-color:rgb(247, 184, 173);
-                    border-left: 2px solid #212529;
+                    border-left: 2px solid map-get($colores,bordesTouch);
                     h3{
-                        color:#212529;
+                        color:map-get($colores,textoTouch);
                     }
                     p{
-                        color:#212529;
+                        color:map-get($colores,textoTouch);
                         a{
-                            color:#212529;
+                            color:map-get($colores,textoTouch);
                         }
                     }
                 }
@@ -953,7 +970,7 @@
             flex-flow: column nowrap;
             justify-content: center;
             align-items: center;
-            text-shadow: 2px 2px 2px rgb(247, 184, 173) ;
+            text-shadow: 2px 2px 2px map-get($colores,textoTouchP);
             opacity: 0.7;
             
             h1 {
@@ -965,22 +982,21 @@
             grid-area: niam;
             display: flex;
             flex-flow: row nowrap;
-            background-color: white;
             border: {
-                bottom: 9px solid #6c757d;
-                top: 9px solid #6c757d;
+                bottom: 9px solid map-get($colores,bordes);
+                top: 9px solid map-get($colores,bordes);
             }
             height: 100%;
         
             #contactosp {
                 width: 30%;
-                background-color: #343a40;
-                border-right: 2px solid #6c757d;
+                background-color: map-get($colores,fondo);
+                border-right: 2px solid map-get($colores,bordes);
             
                 .formulario {
 
                     h3{
-                        color:white;
+                        color:map-get($colores,texto);
                         padding: 2%;
                         font: {
                             size: 25px;
@@ -989,7 +1005,7 @@
                     }
     
                     article{
-                        color: white;
+                        color: map-get($colores,texto);
                         font: {
                             size: 18px;
                             family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
@@ -999,17 +1015,17 @@
                 }
 
                 &:hover {
-                    box-shadow: 0px -9px #212529;
-                    background-color:rgb(247, 184, 173);
-                    border-right: 2px solid #212529;
+                    box-shadow: 0px -9px map-get($colores,bordesTouch);
+                    background-color:map-get($colores,fondoTouch);
+                    border-right: 2px solid map-get($colores,bordesTouch);
                     
                     .formulario {
                         h3{
-                            color:#212529;
+                            color:map-get($colores,textoTouch);
                         }
                     }
                     article{
-                        color:#212529;
+                        color:map-get($colores,textoTouch);
                     }
                 }
             }
@@ -1021,7 +1037,7 @@
                 section {
 
                     h3{
-                        color:white;
+                        color:map-get($colores,texto);
                         font: {
                             size: 25px;
                             family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
@@ -1035,12 +1051,12 @@
                 }
 
                 &:hover {
-                    box-shadow: 0px -9px #212529;
-                    background-color:rgb(247, 184, 173);
-                    border-left: 2px solid #212529;
+                    box-shadow: 0px -9px map-get($colores,bordesTouch);
+                    background-color:map-get($colores,fondoTouch);
+                    border-left: 2px solid map-get($colores,bordesTouch);
                     section {
                         h3{
-                            color:#212529;
+                            color:map-get($colores,textoTouch);
                         }
                     }
                 }
