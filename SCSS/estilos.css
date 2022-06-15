@@ -954,7 +954,7 @@ map-get($colores,bordesTouchS)
   .tainercon .secciones #nosotros:hover {
     -webkit-box-shadow: 9px 9px #212529;
             box-shadow: 9px 9px #212529;
-    background-color: #212529;
+    background-color: #f7b8ad;
     color: #212529;
   }
   .tainercon .secciones #nosotros:hover p a {

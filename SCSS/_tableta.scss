@@ -97,7 +97,7 @@
 
                         &:hover {
                             box-shadow: 9px 9px map-get($colores,bordesTouch);
-                            background-color:map-get($colores,fondoTouchS);
+                            background-color:map-get($colores,fondoTouch);
                             color: map-get($colores,textoTouch);
 
                             p {
