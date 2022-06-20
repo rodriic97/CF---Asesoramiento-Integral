@@ -90,7 +90,7 @@
             #nosotros {
                 @include secc;
                 background: {
-                    image: url(/img/empresa.png);
+                    image: url(../img/empresa.png);
                 }
                 box-shadow: 0px -9px map-get($colores,bordes);
                 border: {
@@ -128,13 +128,13 @@
                         family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji"; 
                     }
 
-                   /*  a {
+                    a {
                         color: map-get($colores, texto);
                         text-decoration: underline;
-                    } */
-                    /* a:hover {
+                    } 
+                     a:hover {
                         color: map-get($colores, textoTouchS);
-                    } */
+                    }
                 }
             }
     
@@ -142,7 +142,7 @@
             #servicios {
                 @include secc;
                 background: {
-                    image: url(/img/objetivo.png);   
+                    image: url(../img/objetivo.png);   
                 }
                 border: {
                     left: 2px solid map-get($colores, bordes);
@@ -194,13 +194,13 @@
                             style:italic;
                             family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
                         }
-                        /* a {
+                        a {
                             color: map-get($colores, texto);
                             text-decoration: underline;
                         }
                         a:hover {
                             color: map-get($colores, textoTouchS);
-                        } */
+                        }
                     }
                 }
             }
@@ -210,7 +210,7 @@
             #aseguradoras {
                 @include secc;
                 background: {
-                    image: url(/img/compania.png);
+                    image: url(../img/compania.png);
                 }
                 border: {
                     right: 2px solid map-get($colores, bordes);
@@ -251,13 +251,13 @@
                             family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
                         }
                         
-                        /* a {
+                        a {
                             color: map-get($colores, texto);
                             text-decoration: underline;
                         }
                         a:hover {
                             color: map-get($colores, textoTouchS);
-                        } */
+                        }
                     }
                 }
             }
@@ -273,30 +273,6 @@
                 }
                 box-shadow: 0px 9px map-get($colores, bordes);
 
-                article {
-                    h3 {
-                        font: {
-                            size: 30px;
-                            family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-                        } 
-                    }
-                    p{
-                        margin-top:5%;
-                        font: {
-                            size: 23px;
-                            style:italic;
-                            family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-                        }
-                        /* a {
-                            color: map-get($colores, texto);
-                            text-decoration: underline;
-                        }
-                        a:hover {
-                            color:map-get($colores, textoTouchS);
-                        }  */
-                    }
-                }
-
                 &:hover {
                     background-color:map-get($colores, fondoTouch);
                     color: map-get($colores, textoTouch);
@@ -311,10 +287,34 @@
                         }
                     }
                 }
+
+                article {
+                    h3 {
+                        font: {
+                            size: 30px;
+                            family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+                        } 
+                    }
+                    p{
+                        margin-top:5%;
+                        font: {
+                            size: 23px;
+                            style:italic;
+                            family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+                        }
+                        a {
+                            color: map-get($colores, texto);
+                            text-decoration: underline;
+                        }
+                        a:hover {
+                            color:map-get($colores, textoTouchS);
+                        } 
+                    }
+                }
             }
         }
 
-                    .boton {
+                    /* .boton {
                         display: inline-block;
                         width: 120px;
                         height: 40px;
@@ -346,7 +346,7 @@
                         @extend .boton;
                         background-color: rgb(206, 69, 69);
                         color: #212529;
-                    }
+                    } */
 
             #redes {
                 grid-area: retoof;
@@ -437,9 +437,9 @@
             width:100%;
             height:550px;
             background: {
-                image: url(/img/history-book.png);
+                image: url(../img/history-book.png);
                 repeat: no-repeat;
-                size:20%;
+                size:25%;
                 position-x: 85%;
                 position-y:center;
                 color: map-get($colores, fondo);

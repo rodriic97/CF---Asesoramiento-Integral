@@ -79,7 +79,7 @@ map-get($colores,bordesTouchS)
     margin: 10% 10% 10% 10%;
   }
   .tainercon .secciones #nosotros {
-    background-image: url(/img/empresa.png);
+    background-image: url(../img/empresa.png);
     background-repeat: no-repeat;
     background-size: 20%;
     background-position-x: 95%;
@@ -120,7 +120,7 @@ map-get($colores,bordesTouchS)
     color: tomato;
   }
   .tainercon .secciones #servicios {
-    background-image: url(/img/objetivo.png);
+    background-image: url(../img/objetivo.png);
     background-repeat: no-repeat;
     background-size: 20%;
     background-position-x: 95%;
@@ -168,7 +168,7 @@ map-get($colores,bordesTouchS)
     color: tomato;
   }
   .tainercon .secciones #aseguradoras {
-    background-image: url(/img/compania.png);
+    background-image: url(../img/compania.png);
     background-repeat: no-repeat;
     background-size: 20%;
     background-position-x: 95%;
@@ -209,7 +209,7 @@ map-get($colores,bordesTouchS)
     color: tomato;
   }
   .tainercon .secciones #contacto {
-    background-image: url(/img/ubicacion.png);
+    background-image: url(../img/ubicacion.png);
     background-repeat: no-repeat;
     background-size: 20%;
     background-position-x: 95%;
@@ -920,7 +920,7 @@ map-get($colores,bordesTouchS)
     margin: 10% 10% 10% 10%;
   }
   .tainercon .secciones #nosotros {
-    background-image: url(/img/empresa.png);
+    background-image: url(../img/empresa.png);
     background-repeat: no-repeat;
     background-size: 15%;
     background-position-x: 95%;
@@ -961,7 +961,7 @@ map-get($colores,bordesTouchS)
     color: #212529;
   }
   .tainercon .secciones #servicios {
-    background-image: url(/img/objetivo.png);
+    background-image: url(../img/objetivo.png);
     background-repeat: no-repeat;
     background-size: 15%;
     background-position-x: 95%;
@@ -1009,7 +1009,7 @@ map-get($colores,bordesTouchS)
     color: tomato;
   }
   .tainercon .secciones #aseguradoras {
-    background-image: url(/img/compania.png);
+    background-image: url(../img/compania.png);
     background-repeat: no-repeat;
     background-size: 15%;
     background-position-x: 95%;
@@ -1050,7 +1050,7 @@ map-get($colores,bordesTouchS)
     color: #212529;
   }
   .tainercon .secciones #contacto {
-    background-image: url(/img/ubicacion.png);
+    background-image: url(../img/ubicacion.png);
     background-repeat: no-repeat;
     background-size: 15%;
     background-position-x: 95%;
@@ -1698,6 +1698,39 @@ map-get($colores,bordesTouchS)
         grid-template-rows: 50px 0.5fr auto 135px;
     -ms-grid-columns: 160px 1fr;
         grid-template-columns: 160px 1fr;
+    /* .boton {
+                        display: inline-block;
+                        width: 120px;
+                        height: 40px;
+                        background-color: #6c757d;
+                        text-align: center;
+                        color: #212529;
+                        border-radius: 20px;
+                        text-decoration: underline;
+                    }
+                    
+                    .boton--n {
+                        @extend .boton;
+                        background-color: rgb(253, 253, 156);
+                        color: #212529;
+                    
+                    }
+                    .boton--s {
+                        @extend .boton;
+                        background-color: skyblue;
+                        color: #212529;
+                    
+                    }
+                    .boton--a {
+                        @extend .boton;
+                        background-color: greenyellow;
+                        color: #212529;
+                    }
+                    .boton--c {
+                        @extend .boton;
+                        background-color: rgb(206, 69, 69);
+                        color: #212529;
+                    } */
   }
   .tainercon .titulop {
     -ms-grid-row: 1;
@@ -1790,7 +1823,7 @@ map-get($colores,bordesTouchS)
     background-color: #343a40;
     padding: 5% 5% 0% 5%;
     color: white;
-    background-image: url(/img/empresa.png);
+    background-image: url(../img/empresa.png);
     -webkit-box-shadow: 0px -9px #6c757d;
             box-shadow: 0px -9px #6c757d;
     border-right: 2px solid #6c757d;
@@ -1817,13 +1850,13 @@ map-get($colores,bordesTouchS)
     font-size: 23px;
     font-style: italic;
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-    /*  a {
-                        color: map-get($colores, texto);
-                        text-decoration: underline;
-                    } */
-    /* a:hover {
-                        color: map-get($colores, textoTouchS);
-                    } */
+  }
+  .tainercon .secciones #nosotros p a {
+    color: white;
+    text-decoration: underline;
+  }
+  .tainercon .secciones #nosotros p a:hover {
+    color: tomato;
   }
   .tainercon .secciones #servicios {
     width: 50%;
@@ -1835,7 +1868,7 @@ map-get($colores,bordesTouchS)
     background-color: #343a40;
     padding: 5% 5% 0% 5%;
     color: white;
-    background-image: url(/img/objetivo.png);
+    background-image: url(../img/objetivo.png);
     border-left: 2px solid #6c757d;
     border-bottom: 2px solid #6c757d;
     -webkit-box-shadow: 0px -9px #6c757d;
@@ -1870,13 +1903,13 @@ map-get($colores,bordesTouchS)
     font-size: 23px;
     font-style: italic;
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-    /* a {
-                            color: map-get($colores, texto);
-                            text-decoration: underline;
-                        }
-                        a:hover {
-                            color: map-get($colores, textoTouchS);
-                        } */
+  }
+  .tainercon .secciones #servicios article p a {
+    color: white;
+    text-decoration: underline;
+  }
+  .tainercon .secciones #servicios article p a:hover {
+    color: tomato;
   }
   .tainercon .secciones #aseguradoras {
     width: 50%;
@@ -1888,7 +1921,7 @@ map-get($colores,bordesTouchS)
     background-color: #343a40;
     padding: 5% 5% 0% 5%;
     color: white;
-    background-image: url(/img/compania.png);
+    background-image: url(../img/compania.png);
     border-right: 2px solid #6c757d;
     border-top: 2px solid #6c757d;
     -webkit-box-shadow: 0px 9px #6c757d;
@@ -1914,13 +1947,13 @@ map-get($colores,bordesTouchS)
     font-size: 23px;
     font-style: italic;
     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-    /* a {
-                            color: map-get($colores, texto);
-                            text-decoration: underline;
-                        }
-                        a:hover {
-                            color: map-get($colores, textoTouchS);
-                        } */
+  }
+  .tainercon .secciones #aseguradoras article p a {
+    color: white;
+    text-decoration: underline;
+  }
+  .tainercon .secciones #aseguradoras article p a:hover {
+    color: tomato;
   }
   .tainercon .secciones #contacto {
     width: 50%;
@@ -1938,23 +1971,6 @@ map-get($colores,bordesTouchS)
     -webkit-box-shadow: 0px 9px #6c757d;
             box-shadow: 0px 9px #6c757d;
   }
-  .tainercon .secciones #contacto article h3 {
-    font-size: 30px;
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-  }
-  .tainercon .secciones #contacto article p {
-    margin-top: 5%;
-    font-size: 23px;
-    font-style: italic;
-    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-    /* a {
-                            color: map-get($colores, texto);
-                            text-decoration: underline;
-                        }
-                        a:hover {
-                            color:map-get($colores, textoTouchS);
-                        }  */
-  }
   .tainercon .secciones #contacto:hover {
     background-color: #f7b8ad;
     color: #212529;
@@ -1966,31 +1982,22 @@ map-get($colores,bordesTouchS)
   .tainercon .secciones #contacto:hover article p a {
     color: #212529;
   }
-  .tainercon .boton, .tainercon .boton--n, .tainercon .boton--s, .tainercon .boton--a, .tainercon .boton--c {
-    display: inline-block;
-    width: 120px;
-    height: 40px;
-    background-color: #6c757d;
-    text-align: center;
-    color: #212529;
-    border-radius: 20px;
+  .tainercon .secciones #contacto article h3 {
+    font-size: 30px;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  }
+  .tainercon .secciones #contacto article p {
+    margin-top: 5%;
+    font-size: 23px;
+    font-style: italic;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  }
+  .tainercon .secciones #contacto article p a {
+    color: white;
     text-decoration: underline;
   }
-  .tainercon .boton--n {
-    background-color: #fdfd9c;
-    color: #212529;
-  }
-  .tainercon .boton--s {
-    background-color: skyblue;
-    color: #212529;
-  }
-  .tainercon .boton--a {
-    background-color: greenyellow;
-    color: #212529;
-  }
-  .tainercon .boton--c {
-    background-color: #ce4545;
-    color: #212529;
+  .tainercon .secciones #contacto article p a:hover {
+    color: tomato;
   }
   .tainercon #redes {
     -ms-grid-row: 4;
@@ -2093,9 +2100,9 @@ map-get($colores,bordesTouchS)
         align-content: center;
     width: 100%;
     height: 550px;
-    background-image: url(/img/history-book.png);
+    background-image: url(../img/history-book.png);
     background-repeat: no-repeat;
-    background-size: 20%;
+    background-size: 25%;
     background-position-x: 85%;
     background-position-y: center;
     background-color: #343a40;
