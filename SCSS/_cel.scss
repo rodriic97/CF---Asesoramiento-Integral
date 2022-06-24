@@ -2,6 +2,10 @@
 
 @media (max-width:400px){
 
+body {
+    background: map-get($colores, fondot);
+}
+
 .tainercon {
     display: grid;
     grid-template: {
@@ -306,7 +310,10 @@
                 padding-top: 10px;
 
                 a {
-                padding:0px 0% 0px 0%;    
+                padding:0px 0% 0px 0%;  
+                    img {
+                        width: 50px;
+                    }    
                 }
             } 
             

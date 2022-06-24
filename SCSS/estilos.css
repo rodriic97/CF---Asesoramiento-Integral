@@ -1,17 +1,7 @@
-/* 
-map-get($colores,fondo)
-map-get($colores,fondoTouch)
-map-get($colores,fondoTouchS)
-map-get($colores,texto)
-map-get($colores,textoP)
-map-get($colores,textoTouch)
-map-get($colores,textoTouchP)
-map-get($colores,textoTouchS)
-map-get($colores,bordes)
-map-get($colores,bordesTouch)
-map-get($colores,bordesTouchS)
- */
 @media (max-width: 400px) {
+  body {
+    background: #9fa8b1;
+  }
   .tainercon {
     display: -ms-grid;
     display: grid;
@@ -281,6 +271,9 @@ map-get($colores,bordesTouchS)
   }
   .tainercon #redes .redes1 a {
     padding: 0px 0% 0px 0%;
+  }
+  .tainercon #redes .redes1 a img {
+    width: 50px;
   }
   .tainercon #redes .ubic-F {
     display: none;
@@ -839,20 +832,10 @@ map-get($colores,bordesTouchS)
   }
 }
 
-/* 
-map-get($colores,fondo)
-map-get($colores,fondoTouch)
-map-get($colores,fondoTouchS)
-map-get($colores,texto)
-map-get($colores,textoP)
-map-get($colores,textoTouch)
-map-get($colores,textoTouchP)
-map-get($colores,textoTouchS)
-map-get($colores,bordes)
-map-get($colores,bordesTouch)
-map-get($colores,bordesTouchS)
- */
 @media (min-width: 401px) and (max-width: 960px) {
+  body {
+    background: #9fa8b1;
+  }
   .tainercon {
     display: -ms-grid;
     display: grid;
@@ -1122,6 +1105,9 @@ map-get($colores,bordesTouchS)
   }
   .tainercon #redes .redes1 a {
     padding: 0px 10% 0px 10%;
+  }
+  .tainercon #redes .redes1 a img {
+    width: 50px;
   }
   .tainercon #redes .ubic-F {
     display: none;
@@ -1676,19 +1662,6 @@ map-get($colores,bordesTouchS)
   }
 }
 
-/* 
-map-get($colores,fondo)
-map-get($colores,fondoTouch)
-map-get($colores,fondoTouchS)
-map-get($colores,texto)
-map-get($colores,textoP)
-map-get($colores,textoTouch)
-map-get($colores,textoTouchP)
-map-get($colores,textoTouchS)
-map-get($colores,bordes)
-map-get($colores,bordesTouch)
-map-get($colores,bordesTouchS)
- */
 @media (min-width: 960px) {
   .tainercon {
     display: -ms-grid;
@@ -2636,18 +2609,4 @@ map-get($colores,bordesTouchS)
     color: #212529;
   }
 }
-
-/* 
-map-get($colores,fondo)
-map-get($colores,fondoTouch)
-map-get($colores,fondoTouchS)
-map-get($colores,texto)
-map-get($colores,textoP)
-map-get($colores,textoTouch)
-map-get($colores,textoTouchP)
-map-get($colores,textoTouchS)
-map-get($colores,bordes)
-map-get($colores,bordesTouch)
-map-get($colores,bordesTouchS)
- */
 /*# sourceMappingURL=estilos.css.map */
